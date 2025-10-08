@@ -1,0 +1,596 @@
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.logo {}
+.logoimage {margin-right:20px}
+.choosefile {padding-left:5px;}
+.topics {white-space:nowrap;}
+.Database {white-space:nowrap;}
+.formdiv {display:inline-block; text-align: left;}
+.resultdiv {display:inline-block; vertical-align:top; margin-left:30px; margin-top:10px; text-align:left; background-color:darkcyan; color:white; padding:15px; min-width:200px; border: solid thin black; max-width:200px;}
+.header {text-align:center;}
+.wrapper {text-align:center;}
+.intro {text-align:center;}
+.introbody {text-align:left; display:inline-block}
+.topic {display:inline-block;}
+.databasediv {display:inline-block; vertical-align:top; margin-left:30px;}
+.footer {text-align:center; font-size:.6em;}
+.copyright {margin-right:260px;}
+.resultscolumn {width: 55%; border: 1px inset grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:.8em; white-space:no-wrap;}
+.selectlist {background-color:white; max-width:150px;}
+.DatabaseResults {max-width:200px;}
+.DatabaseInResults {white-space:wrap; min-width:120px;}
+.refreshbutton {background-color:white; font-size:.7em; font-family:arial; border: solid thin white; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px;}
+.refresh {text-align:right; margin-top:10px;}
+.previousbutton {background-color:#fbd507; font-size:.7em; font-family:arial; border: solid thin #fbd507; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; margin-top:10px; border-radius:2px;}
+
+@media only screen and (max-width: 900px) {
+  .database {min-width: none;}
+  .databasediv {margin-left:1px; display:block; margin-top:4px;}
+  .copyright {margin-right:0px; display:block; text-align:left}
+  .resultdiv {margin-left:1px; display:block; margin-top:30px; max-width:none; min-width:none;}
+  .footer {display:block}
+  .formdiv {display:block}}
+
+  
+</style>
+</head>
+<body>
+<div class="wrapper" style="width:100%">
+<div class="header">
+<h1 style="font-family:arial;">SR Calculator Tool</h1>
+</div>
+<div class="intro">
+<div class="introbody">
+<span style="font-size:.8em; text-align:left;">This calculator can be used to determine overall number of anticipated records for knowledge synthesis projects based on preliminary Medline results.</span><br><br>
+<span style="font-size:.8em; text-align:left;">Consult the <a href="https://google.ca" target="_blank">readme</a> for additional information</span>
+</div>
+</div>
+<div class="formdiv">
+<form class="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
+<div class="records" style="font-family:arial; padding-right:15px;">
+<p style="font-size:.8em; font-family: arial"><label for="TotalMedline"><b>Total Number of Medline/PubMed records</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" placeholder="enter a number" required></td></tr></p>
+</div>
+<div class="topic">
+<table style="font-size:.8em; font-family: arial">
+<tr><td class="topics" style="vertical-align:top; padding-bottom:10px;"><b>Topics</b></td></tr>
+<tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" /><label for="AgricultureTopic">Agriculture</label></td></tr>
+<tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" /><label for="AlliedTopic">Allied Health</label></td></tr>
+<tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.9em;">
+	<tr><td class="topics"style="padding-left:15px; padding-top:5px;"><input disabled="disabled" type="checkbox" id="ArtTopic" name="ArtTopic" /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="AudiologyTopic" name="AudiologyTopic" /><label for="AudiologyTopic">Audiology and speech-language pathology</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="DieteticsTopic" name="DieteticsTopic" /><label for="DieteticsTopic">Dietetics</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ImagingTopic" name="ImagingTopic" /><label for="ImagingTopic">Imaging</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="OccupationalTopic" name="OccupationalTopic" /><label for="OccupationalTopic">Occupational therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PhysiotherapyTopic" name="PhysiotherapyTopic" /><label for="PhysiotherapyTopic">Physiotherapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PrehospitalTopic" name="PrehospitalTopic" /><label for="PrehospitalTopic">Prehospital care</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ProstheticsTopic" name="ProstheticsTopic" /><label for="ProstheticsTopic">Prosthetics and orthotics</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RecreationTopic" name="RecreationTopic" /><label for="RecreationTopic">Recreation therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RespiratoryTherapyTopic" name="RespiratoryTherapyTopic" /><label for="RespiratoryTherapyTopic">Respiratory therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SocialTopic" name="SocialTopic" /><label for="SocialTopic">Social work</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px; padding-bottom:5px;"><input disabled="disabled" type="checkbox" id="SpiritualTopic" name="SpiritualTopic" /><label for="SpiritualTopic">Spiritual care</label></td></tr>
+</table>
+</td></tr>
+<tr><td class="topics" ><input type="checkbox" id="BiochemistryTopic" name="BiochemistryTopic" /><label for="BiochemistryTopic">Biochemistry, Genetics, and Microbiology</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="BusinessTopic" name="BusinessTopic" /><label for="BusinessTopic">Business and Economics</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="DentistryTopic" name="DentistryTopic" /><label for="DentistryTopic">Dentistry</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="DrugsTopic" name="DrugsTopic" /><label for="DrugsTopic">Drugs and Supplements (not toxicology)</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="EcologyTopic" name="EcologyTopic" /><label for="EcologyTopic">Ecology and Zoology</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="EducationTopic" name="EducationTopic" /><label for="EducationTopic">Education</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="EngineeringTopic" name="EngineeringTopic" /><label for="EngineeringTopic">Engineering</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="EnvironmentalTopic" name="EnvironmentalTopic" /><label for="EnvironmentalTopic">Environmental Science</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="MedicineTopic" name="MedicineTopic" onclick="MedicineToggle()" /><label for="MedicineTopic">Medicine</label></td></tr>
+<tr id="MedicineSubTopics" style="{{MedicineDisplay}}"><td><table style="font-size:.9em;">
+		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input disabled="disabled" type="checkbox" id="BloodTopic" name="BloodTopic" /><label for="BloodTopic">Blood and hematology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CancerTopic" name="CancerTopic" /><label for="CancerTopic">Cancer</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CardiovascularTopic" name="CardiovascularTopic" /><label for="CardiovascularTopic">Cardiovascular</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ComplementaryTopic" name="ComplementaryTopic" /><label for="ComplementaryTopic">Complementary and alternative medicine</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CongenitalTopic" name="CongenitalTopic" /><label for="CongenitalTopic">Congenital disorders</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="EarTopic" name="EarTopic" /><label for="EarTopic">Ear and hearing</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="EyeTopic" name="EyeTopic" /><label for="EyeTopic">Eye and vision</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="GeriatricsTopic" name="GeriatricsTopic" /><label for="GeriatricsTopic">Geriatrics and gerontology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InfectionTopic" name="InfectionTopic" /><label for="InfectionTopic">Infection</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InflammatoryTopic" name="InflammatoryTopic" /><label for="InflammatoryTopic">Inflammatory and immune system</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InjuriesTopic" name="InjuriesTopic" /><label for="InjuriesTopic">Injuries and accidents</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="MetabolicTopic" name="MetabolicTopic" /><label for="MetabolicTopic">Metabolic and endocrine</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="MusculoskeletalTopic" name="MusculoskeletalTopic" /><label for="MusculoskeletalTopic">Musculoskeletal</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="NeurologicalTopic" name="NeurologicalTopic" /><label for="NeurologicalTopic">Neurological</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="OralTopic" name="OralTopic" /><label for="OralTopic">Oral and gastrointestinal</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PediatricsTopic" name="PediatricsTopic" /><label for="PediatricsTopic">Pediatrics and neonatology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RenalTopic" name="RenalTopic" /><label for="RenalTopic">Renal, gynecological and urogenital</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ReproductiveTopic" name="ReproductiveTopic" /><label for="ReproductiveTopic">Reproductive health and childbirth</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RespiratoryTopic" name="RespiratoryTopic" /><label for="RespiratoryTopic">Respiratory</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SkinTopic" name="SkinTopic" /><label for="SkinTopic">Skin</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SleepTopic" name="SleepTopic" /><label for="SleepTopic">Sleep</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="StrokeTopic" name="StrokeTopic" /><label for="StrokeTopic">Stroke</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SurgeryTopic" name="SurgeryTopic" /><label for="SurgeryTopic">Surgery</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px; padding-bottom:5px;"><input disabled="disabled" type="checkbox" id="GeneralTopic" name="GeneralTopic" /><label for="GeneralTopic">General and public health and safety</label></td></tr>
+</td></tr></table>
+<tr><td class="topics" ><input type="checkbox" id="NursingTopic" name="NursingTopic" /><label for="NursingTopic">Nursing</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="PhysicalTopic" name="PhysicalTopic" /><label for="PhysicalTopic">Physical Sciences and Mathematics</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="PsychologyTopic" name="PsychologyTopic" /><label for="PsychologyTopic">Psychology, Psychiaty, and Mental Health</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="SportsTopic" name="SportsTopic" /><label for="SportsTopic">Sports and Recreation</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="VeterinaryTopic" name="VeterinaryTopic" /><label for="VeterinaryTopic">Veterinary</label></td></tr>
+</tr>
+</table>
+</div>
+<div class="databasediv">
+<td style="vertical-align:top; padding-left:5%">
+<table style="font-size:.8em; font-family: arial; max-width:150px;">
+<tr><td class="Database" style="padding-bottom:10px"><b>Primary Databases</b></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" /><label for="CINAHL">CINAHL</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" /><label for="CochraneLibrary">Cochrane Library (Not Specific)</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" /><label for="CochraneCentral">Cochrane Central</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Embase" name="Embase" /><label for="Embase">Embase</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="ERIC" name="ERIC" /><label for="ERIC">ERIC</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="PEDro" name="PEDro" /><label for="PEDro">PEDro</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="PsycINFO" name="PsycINFO" /><label for="PsycINFO">PsycINFO</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Scopus" name="Scopus" /><label for="Scopus">Scopus</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Web of Science" name="Web of Science" /><label for="Web of Science">Web of Science</label></td></tr>
+<tr><td class="Database" style="padding-top:10px; padding-bottom:10px;"><a href="#" onclick="AddDatabase()">Add another database</a>
+<div id="AdditionalDatabase"><br>
+</div>
+</td></tr>
+</table>
+<div class="logo">
+<img class="logoimage" width="150px" src="{{ url_for('static', filename='images/prisma.png') }}"/>
+</div>
+<br>
+<button type="submit" style="color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px;"}>Calculate</button>
+</div>
+</form>
+</div>
+<div class="resultdiv" style="font-family:arial;">
+<h2 style="margin-top:0px; padding-top:0px;">Results</h2>
+<table id="DatabaseResults" style="font-size:.8em; color:white;">
+<tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
+<tr><td class="DatabaseInResults">CINAHL</td><td class="resultscolumn">{{ CINAHLRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Cochrane Library</td><td class="resultscolumn">{{ CochraneLibraryRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Cochrane Central</td><td class="resultscolumn">{{ CochraneCentralRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Embase</td><td class="resultscolumn">{{ EmbaseRecords }}</td></tr>
+<tr><td class="DatabaseInResults">ERIC</td><td class="resultscolumn">{{ ERICRecords }}</td></tr>
+<tr><td class="DatabaseInResults">PEDro</td><td class="resultscolumn">{{ PEDroRecords }}</td></tr>
+<tr><td class="DatabaseInResults">PsycINFO</td><td class="resultscolumn">{{ PsycINFORecords }}</td></tr>
+<tr><td class="DatabaseInResults">Scopus</td><td class="resultscolumn">{{ ScopusRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Web of Science</td><td class="resultscolumn">{{ WebOfScienceRecords }}</td></tr>
+<tr id="DatabaseSelection1Row" style="{{ display1 }}"><td class="DatabaseInResults">{{ DatabaseSelection1Name }}</td><td class="resultscolumn">{{ DatabaseSelection1Records }}</td></tr>
+<tr id="DatabaseSelection2Row" style="{{ display2 }}"><td class="DatabaseInResults">{{ DatabaseSelection2Name }}</td><td class="resultscolumn">{{ DatabaseSelection2Records }}</td></tr>
+<tr id="DatabaseSelection3Row" style="{{ display3 }}"><td class="DatabaseInResults">{{ DatabaseSelection3Name }}</td><td class="resultscolumn">{{ DatabaseSelection3Records }}</td></tr>
+<tr id="DatabaseSelection4Row" style="{{ display4 }}"><td class="DatabaseInResults">{{ DatabaseSelection4Name }}</td><td class="resultscolumn">{{ DatabaseSelection4Records }}</td></tr>
+<tr id="DatabaseSelection5Row" style="{{ display5 }}"><td class="DatabaseInResults">{{ DatabaseSelection5Name }}</td><td class="resultscolumn">{{ DatabaseSelection5Records }}</td></tr>
+<tr id="DatabaseSelection6Row" style="{{ display6 }}"><td class="DatabaseInResults">{{ DatabaseSelection6Name }}</td><td class="resultscolumn">{{ DatabaseSelection6Records }}</td></tr>
+<tr id="DatabaseSelection7Row" style="{{ display7 }}"><td class="DatabaseInResults">{{ DatabaseSelection7Name }}</td><td class="resultscolumn">{{ DatabaseSelection7Records }}</td></tr>
+<tr id="DatabaseSelection8Row" style="{{ display8 }}"><td class="DatabaseInResults">{{ DatabaseSelection8Name }}</td><td class="resultscolumn">{{ DatabaseSelection8Records }}</td></tr>
+<tr id="DatabaseSelection9Row" style="{{ display9 }}"><td class="DatabaseInResults">{{ DatabaseSelection9Name }}</td><td class="resultscolumn">{{ DatabaseSelection9Records }}</td></tr>
+<tr id="DatabaseSelection10Row" style="{{ display10 }}"><td class="DatabaseInResults">{{ DatabaseSelection10Name }}</td><td class="resultscolumn">{{ DatabaseSelection10Records }}</td></tr>
+</table>
+<table style="font-size:.8em; color:white;">
+<tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
+<tr><td class="DatabaseInResults">Unique Records:</td><td class="resultscolumn">{{ UniqueRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Total Includes:</td><td class="resultscolumn">{{ IncludesRecords }}</td></tr>
+<tr><td class="DatabaseInResults">Grey Literature:</td><td class="resultscolumn">{{ GreyLiteratureRecords }}</td></tr>
+<tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
+<tr><td class="DatabaseInResults"><strong>Total to screen</strong></td><td class="resultscolumn">{{ TotalScreen }}</td></tr>
+</table>
+<div class="refresh"><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button><br>
+<button class="previousbutton" onClick="history.go(-1);">Previous selections</button></div>
+</div>
+<div class="footer">
+<div class="copyright">
+<p class="copyright">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p></div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+var counter = "0"
+function MedicineToggle() {
+        if (document.getElementById('MedicineTopic').checked) {
+            document.getElementById("BloodTopic").disabled = false;
+            document.getElementById("CancerTopic").disabled = false;
+            document.getElementById("CardiovascularTopic").disabled = false;
+            document.getElementById("ComplementaryTopic").disabled = false;
+            document.getElementById("CongenitalTopic").disabled = false;
+            document.getElementById("EarTopic").disabled = false;
+            document.getElementById("EyeTopic").disabled = false;
+            document.getElementById("GeriatricsTopic").disabled = false;
+            document.getElementById("InfectionTopic").disabled = false;
+            document.getElementById("InflammatoryTopic").disabled = false;
+            document.getElementById("InjuriesTopic").disabled = false;
+            document.getElementById("MetabolicTopic").disabled = false;
+            document.getElementById("MusculoskeletalTopic").disabled = false;
+            document.getElementById("NeurologicalTopic").disabled = false;
+            document.getElementById("OralTopic").disabled = false;
+            document.getElementById("PediatricsTopic").disabled = false;
+            document.getElementById("RenalTopic").disabled = false;
+            document.getElementById("ReproductiveTopic").disabled = false;
+            document.getElementById("RespiratoryTopic").disabled = false;
+            document.getElementById("SkinTopic").disabled = false;
+            document.getElementById("SleepTopic").disabled = false;
+			document.getElementById("StrokeTopic").disabled = false;
+            document.getElementById("SurgeryTopic").disabled = false;
+            document.getElementById("GeneralTopic").disabled = false;
+			document.getElementById("MedicineSubTopics").style.display = 'block';
+
+
+
+        } else {
+            document.getElementById("BloodTopic").disabled = true;
+			document.getElementById("BloodTopic").checked = false;
+            document.getElementById("CancerTopic").disabled = true;
+			document.getElementById("CancerTopic").checked = false;
+			document.getElementById("CardiovascularTopic").disabled = true;
+			document.getElementById("CardiovascularTopic").checked = false;
+            document.getElementById("ComplementaryTopic").disabled = true;
+			document.getElementById("ComplementaryTopic").checked = false;
+            document.getElementById("CongenitalTopic").disabled = true;
+			document.getElementById("CongenitalTopic").checked = false;
+            document.getElementById("EarTopic").disabled = true;
+			document.getElementById("EarTopic").checked = false;
+            document.getElementById("EyeTopic").disabled = true;
+			document.getElementById("EyeTopic").checked = false;
+            document.getElementById("GeriatricsTopic").disabled = true;
+			document.getElementById("GeriatricsTopic").checked = false;
+            document.getElementById("InfectionTopic").disabled = true;
+			document.getElementById("InfectionTopic").checked = false;
+            document.getElementById("InflammatoryTopic").disabled = true;
+			document.getElementById("InflammatoryTopic").checked = false;
+            document.getElementById("InjuriesTopic").disabled = true;
+			document.getElementById("InjuriesTopic").checked = false;
+            document.getElementById("MetabolicTopic").disabled = true;
+			document.getElementById("MetabolicTopic").checked = false;
+            document.getElementById("MusculoskeletalTopic").disabled = true;
+			document.getElementById("MusculoskeletalTopic").checked = false;
+            document.getElementById("NeurologicalTopic").disabled = true;
+			document.getElementById("NeurologicalTopic").checked = false;
+            document.getElementById("OralTopic").disabled = true;
+			document.getElementById("OralTopic").checked = false;
+            document.getElementById("PediatricsTopic").disabled = true;
+			document.getElementById("PediatricsTopic").checked = false;
+            document.getElementById("RenalTopic").disabled = true;
+			document.getElementById("RenalTopic").checked = false;
+            document.getElementById("ReproductiveTopic").disabled = true;
+			document.getElementById("ReproductiveTopic").checked = false;
+            document.getElementById("RespiratoryTopic").disabled = true;
+			document.getElementById("RespiratoryTopic").checked = false;
+            document.getElementById("SkinTopic").disabled = true;
+			document.getElementById("SkinTopic").checked = false;
+            document.getElementById("SleepTopic").disabled = true;
+			document.getElementById("SleepTopic").checked = false;
+            document.getElementById("StrokeTopic").disabled = true;
+			document.getElementById("StrokeTopic").checked = false;
+            document.getElementById("SurgeryTopic").disabled = true;
+			document.getElementById("SurgeryTopic").checked = false;
+            document.getElementById("GeneralTopic").disabled = true;
+			document.getElementById("GeneralTopic").checked = false;
+			document.getElementById("MedicineSubTopics").style.display = 'none';
+        }
+    }
+function AlliedToggle() {
+        if (document.getElementById('AlliedTopic').checked) {
+            document.getElementById("PhysiotherapyTopic").disabled = false;
+			document.getElementById("ArtTopic").disabled = false;
+			document.getElementById("AudiologyTopic").disabled = false;
+			document.getElementById("DieteticsTopic").disabled = false;
+			document.getElementById("ImagingTopic").disabled = false;
+			document.getElementById("OccupationalTopic").disabled = false;
+			document.getElementById("PrehospitalTopic").disabled = false;
+			document.getElementById("ProstheticsTopic").disabled = false;
+			document.getElementById("RecreationTopic").disabled = false;
+			document.getElementById("RespiratoryTherapyTopic").disabled = false;
+			document.getElementById("SocialTopic").disabled = false;
+			document.getElementById("SpiritualTopic").disabled = false;
+			document.getElementById("AlliedSubTopics").style.display = 'block';
+
+        } else {
+            document.getElementById("PhysiotherapyTopic").disabled = true;
+			document.getElementById("PhysiotherapyTopic").checked = false;
+			document.getElementById("ArtTopic").disabled = true;
+			document.getElementById("ArtTopic").checked = false;
+			document.getElementById("AudiologyTopic").disabled = true;
+			document.getElementById("AudiologyTopic").checked = false;
+			document.getElementById("DieteticsTopic").disabled = true;
+			document.getElementById("DieteticsTopic").checked = false;
+			document.getElementById("ImagingTopic").disabled = true;
+			document.getElementById("ImagingTopic").checked = false;
+			document.getElementById("OccupationalTopic").disabled = true;
+			document.getElementById("OccupationalTopic").checked = false;
+			document.getElementById("PrehospitalTopic").disabled = true;
+			document.getElementById("PrehospitalTopic").checked = false;
+			document.getElementById("ProstheticsTopic").disabled = true;
+			document.getElementById("ProstheticsTopic").checked = false;
+			document.getElementById("RecreationTopic").disabled = true;
+			document.getElementById("RecreationTopic").checked = false;
+			document.getElementById("RespiratoryTherapyTopic").disabled = true;
+			document.getElementById("RespiratoryTherapyTopic").checked = false;
+			document.getElementById("SocialTopic").disabled = true;
+			document.getElementById("SocialTopic").checked = false;
+			document.getElementById("SpiritualTopic").disabled = true;
+			document.getElementById("SpiritualTopic").checked = false;
+			document.getElementById("AlliedSubTopics").style.display = 'none';
+        }
+    }
+function AddDatabase() {
+  var container = document.getElementById('AdditionalDatabase');
+  counter++;
+  if (counter > 10) {
+  alert ("You can add a maximum of 10 additional databases")
+  }
+  else {
+  const newElem = document.createElement("select");
+    const optionsData = [
+        { value: 'selectone', text: 'Select One',},
+        { value: 'Academic Search Complete', text: 'Academic Search Complete',},
+        { value: 'Academic Search Premier', text: 'Academic Search Premier',},
+        { value: 'ACM', text: 'ACM',},
+        { value: 'ACP', text: 'ACP',},
+        { value: 'AEI', text: 'AEI',},
+        { value: 'AESC', text: 'AESC',},
+        { value: 'AgeLine', text: 'AgeLine',},
+        { value: 'Agricola', text: 'Agricola',},
+        { value: 'AGRIS', text: 'AGRIS',},
+        { value: 'AIM', text: 'AIM',},
+        { value: 'Airiti', text: 'Airiti',},
+        { value: 'AJOL', text: 'AJOL',},
+        { value: 'AMED', text: 'AMED',},
+        { value: 'Annual Review', text: 'Annual Review',},
+        { value: 'ARC', text: 'ARC',},
+        { value: 'ASSIA', text: 'ASSIA',},
+        { value: 'ASTS', text: 'ASTS',},
+        { value: 'ASU', text: 'ASU',},
+        { value: 'AUSPORT', text: 'AUSPORT',},
+        { value: 'AWI', text: 'AWI',},
+        { value: 'BanglaJol', text: 'BanglaJol',},
+        { value: 'BASE', text: 'BASE',},
+        { value: 'BBO', text: 'BBO',},
+        { value: 'BDENF', text: 'BDENF',},
+        { value: 'BEI', text: 'BEI',},
+        { value: 'BIOSIS', text: 'BIOSIS',},
+        { value: 'BMC', text: 'BMC',},
+        { value: 'BMC Vet', text: 'BMC Vet',},
+        { value: 'BNI', text: 'BNI',},
+        { value: 'B-On', text: 'B-On',},
+        { value: 'BSC', text: 'BSC',},
+        { value: 'Business Source Complete', text: 'Business Source Complete',},
+        { value: 'Business Source Elite', text: 'Business Source Elite',},
+        { value: 'Business Source Premier', text: 'Business Source Premier',},
+        { value: 'BVS', text: 'BVS',},
+        { value: 'BVS Vet', text: 'BVS Vet',},
+        { value: 'CAB', text: 'CAB',},
+        { value: 'CABI', text: 'CABI',},
+        { value: 'Cairn', text: 'Cairn',},
+        { value: 'CAJ', text: 'CAJ',},
+        { value: 'Campbell', text: 'Campbell',},
+        { value: 'Capes Periodicos', text: 'Capes Periodicos',},
+        { value: 'CBCA', text: 'CBCA',},
+        { value: 'CBM', text: 'CBM',},
+        { value: 'CDAS', text: 'CDAS',},
+        { value: 'CDSR', text: 'CDSR',},
+        { value: 'CEA', text: 'CEA',},
+        { value: 'CEBAM', text: 'CEBAM',},
+        { value: 'CiNii', text: 'CiNii',},
+        { value: 'ClinicalKey', text: 'ClinicalKey',},
+        { value: 'CMAD', text: 'CMAD',},
+        { value: 'CNKI', text: 'CNKI',},
+        { value: 'COHG', text: 'COHG',},
+        { value: 'Communications and Mass Media Complete', text: 'Communications and Mass Media Complete',},
+        { value: 'Coronavirus Research Database', text: 'Coronavirus Research Database',},
+        { value: 'CPI', text: 'CPI',},
+        { value: 'CRD', text: 'CRD',},
+        { value: 'CUIDEN', text: 'CUIDEN',},
+        { value: 'DARE', text: 'DARE',},
+        { value: 'Dbpia', text: 'Dbpia',},
+        { value: 'Dialnet', text: 'Dialnet',},
+        { value: 'Dimensions AI', text: 'Dimensions AI',},
+        { value: 'DOAJ', text: 'DOAJ',},
+        { value: 'DOSS', text: 'DOSS',},
+        { value: 'Dynamed', text: 'Dynamed',},
+        { value: 'EAA', text: 'EAA',},
+        { value: 'EB practicenet ', text: 'EB practicenet ',},
+        { value: 'EBM Reviews', text: 'EBM Reviews',},
+        { value: 'EconBiz', text: 'EconBiz',},
+        { value: 'EconLit', text: 'EconLit',},
+        { value: 'EconPapers', text: 'EconPapers',},
+        { value: 'Education Full Text', text: 'Education Full Text',},
+        { value: 'Education Research Complete', text: 'Education Research Complete',},
+		{ value: 'Education Source', text: 'Education Source',},
+        { value: 'eLibrary.ru', text: 'eLibrary.ru',},
+        { value: 'Emcare', text: 'Emcare',},
+        { value: 'Emerald', text: 'Emerald',},
+        { value: 'EMF', text: 'EMF',},
+        { value: 'ENFISPO', text: 'ENFISPO',},
+        { value: 'Engineering Village', text: 'Engineering Village',},
+        { value: 'Environment Complete', text: 'Environment Complete',},
+        { value: 'Epistemonikos', text: 'Epistemonikos',},
+        { value: 'ERN', text: 'ERN',},
+        { value: 'ESCI', text: 'ESCI',},
+        { value: 'Europe PMC', text: 'Europe PMC',},
+        { value: 'FSTA', text: 'FSTA',},
+        { value: 'Gender Studies', text: 'Gender Studies',},
+        { value: 'GHL', text: 'GHL',},
+        { value: 'GIM', text: 'GIM',},
+        { value: 'Global Health', text: 'Global Health',},
+        { value: 'Greenfile', text: 'Greenfile',},
+        { value: 'HAPI', text: 'HAPI',},
+        { value: 'Health Research Premium', text: 'Health Research Premium',},
+        { value: 'Health Source', text: 'Health Source',},
+        { value: 'HealthSTAR', text: 'HealthSTAR',},
+        { value: 'HEED', text: 'HEED',},
+        { value: 'Hinari', text: 'Hinari',},
+        { value: 'HMIC', text: 'HMIC',},
+        { value: 'HPRC', text: 'HPRC',},
+        { value: 'HTA', text: 'HTA',},
+        { value: 'IASJ', text: 'IASJs',},
+        { value: 'IBECS', text: 'IBECS',},
+        { value: 'IBSS', text: 'IBSS',},
+        { value: 'IBTD', text: 'IBTD',},
+        { value: 'Ichushi-Web', text: 'Ichushi-Web',},
+        { value: 'ICL', text: 'ICL',},
+        { value: 'IDEAS', text: 'IDEAS',},
+        { value: 'IEEE Xplore', text: 'IEEE Xplore',},
+        { value: 'IMBIOMED', text: 'IMBIOMED',},
+        { value: 'IMEMR', text: 'IMEMR',},
+        { value: 'IMSEAR', text: 'IMSEAR',},
+        { value: 'INAHTA', text: 'INAHTA',},
+        { value: 'IndexPsi', text: 'IndexPsi',},
+        { value: 'Inspec', text: 'Inspec',},
+        { value: 'IPA', text: 'IPA',},
+        { value: 'IranDoc', text: 'IranDoc',},
+        { value: 'IranMedex', text: 'IranMedex',},
+        { value: 'ISJD', text: 'ISJD',},
+        { value: 'JBI', text: 'JBI',},
+        { value: 'JMEDPlus', text: 'JMEDPlus',},
+        { value: 'Journals@Ovid', text: 'Journals@Ovid',},
+        { value: 'JSTOR', text: 'JSTOR',},
+        { value: 'KCI', text: 'KCI',},
+        { value: 'KISS', text: 'KISS',},
+        { value: 'KMbase', text: 'KMbase',},
+        { value: 'KoreaMed', text: 'KoreaMed',},
+        { value: 'KTKP', text: 'KTKP',},
+        { value: 'LILACS', text: 'LILACS',},
+        { value: 'LISSA', text: 'LISSA',},
+        { value: 'LISTA', text: 'LISTA',},
+        { value: 'LitCovid', text: 'LitCovid',},
+        { value: 'LIVIVO', text: 'LIVIVO',},
+        { value: 'LLBA', text: 'LLBA',},
+        { value: 'LOVE', text: 'LOVE',},
+        { value: 'Magiran', text: 'Magiran',},
+        { value: 'MasterFILE', text: 'MasterFILE',},
+        { value: 'Maternity and Infant Care', text: 'Maternity and Infant Care',},
+        { value: 'MDPI', text: 'MDPI',},
+        { value: 'Medes', text: 'Medes',},
+        { value: 'Medic', text: 'Medic',},
+        { value: 'MINERVA', text: 'MINERVAt',},
+        { value: 'NAHC', text: 'NAHC',},
+        { value: 'NatMed', text: 'NatMed',},
+        { value: 'NCJRS', text: 'NCJRS',},
+        { value: 'NCL', text: 'NCL',},
+        { value: 'NDSL', text: 'NDSL',},
+        { value: 'NFS', text: 'NFS',},
+        { value: 'NHS EED', text: 'NHS EED',},
+        { value: 'NTIS', text: 'NTIS',},       
+	    { value: 'OASIS', text: 'OASIS',},
+        { value: 'OSTMED', text: 'OSTMED',},
+        { value: 'OTseeker', text: 'OTseeker',},
+        { value: 'Ovid Nursing', text: 'Ovid Nursing',},
+        { value: 'PBSC', text: 'PBSC',},
+        { value: 'PCORI', text: 'PCORI',},
+        { value: 'PEDE', text: 'PEDE',},
+        { value: 'PePsic', text: 'PePsic',},
+        { value: 'PHD', text: 'PHD',},
+        { value: 'PLOS', text: 'PLOS',},
+        { value: 'PMC', text: 'PMC',},
+        { value: 'Popline', text: 'Popline',},
+        { value: 'PreMedline', text: 'PreMedline',},
+        { value: 'Proquest Central', text: 'Proquest Central',},
+        { value: 'Proquest Health & Medical', text: 'Proquest Health & Medical',},
+        { value: 'Proquest Nursing & Allied Health', text: 'Proquest Nursing & Allied Health',},
+        { value: 'PSICODOC', text: 'PSICODOC',},
+        { value: 'PsycARTICLES', text: 'PsycARTICLES',},
+        { value: 'PsycEXTRA', text: 'PsycEXTRA',},
+        { value: 'Psychological and Behavioural Health', text: 'Psychological and Behavioural Health',},
+        { value: 'PsycNet', text: 'PsycNet',},
+        { value: 'PSYINDEX', text: 'PSYINDEX',},
+        { value: 'PTSDpubs', text: 'PTSDpubs',},
+        { value: 'PubPsych', text: 'PubPsych',},
+        { value: 'PubSpace', text: 'PubSpace',},
+        { value: 'Qikan', text: 'Qikan',},
+        { value: 'Redalyc', text: 'Redalyc',},
+        { value: 'REDIB', text: 'REDIB',},
+        { value: 'REHABDATA', text: 'REHABDATA',},
+        { value: 'REPEC', text: 'REPEC',},
+        { value: 'Retraction Watch', text: 'Retraction Watch',},
+        { value: 'RISS', text: 'RISS',},
+        { value: 'Rx for Change', text: 'Rx for Change',},
+        { value: 'Sage', text: 'Sage',},
+        { value: 'Saudi Digital Library', text: 'Saudi Digital Library',},
+        { value: 'ScHARRHUD', text: 'ScHARRHUD',},
+        { value: 'SCI', text: 'SCI',},
+        { value: 'SciELO', text: 'SciELO',},
+        { value: 'Science.gov', text: 'Science.gov',},
+        { value: 'ScienceDirect', text: 'ScienceDirect',},
+        { value: 'ScienceON', text: 'ScienceON',},
+        { value: 'SciFinder', text: 'SciFinder',},
+        { value: 'Scilit', text: 'Scilit',},
+        { value: 'SID', text: 'SID',},
+        { value: 'Sinomed', text: 'Sinomed',},
+        { value: 'SINTA', text: 'SINTA',},
+        { value: 'SMEI', text: 'SMEI',},
+        { value: 'SocINDEX', text: 'SocINDEX',},
+        { value: 'Sociological Abstracts', text: 'Sociological Abstracts',},
+        { value: 'speechBITE', text: 'speechBITE',},
+        { value: 'SPIE', text: 'SPIE',},
+        { value: 'SPORTDiscus', text: 'SPORTDiscus',},
+        { value: 'SPP', text: 'SPP',},
+        { value: 'Springer', text: 'Springer',},
+        { value: 'SSCI', text: 'SSCI',},
+        { value: 'SSD', text: 'SSD',},
+        { value: 'SSFT', text: 'SSFT',},
+        { value: 'SSPC', text: 'SSPC',},
+        { value: 'STC', text: 'STC',},
+        { value: 'SURF', text: 'SURF',},
+        { value: 'SWA', text: 'SWA',},
+        { value: 'TANDF', text: 'TANDF',},
+        { value: 'Teacher Reference Center', text: 'Teacher Reference Center',},
+        { value: 'TEL', text: 'TEL',},
+        { value: 'ThaiJo', text: 'ThaiJo',},
+        { value: 'TRDizin', text: 'TRDizin',},
+        { value: 'TRID', text: 'TRID',},
+        { value: 'Trip', text: 'Trip',},
+        { value: 'UpToDate', text: 'UpToDate',},
+        { value: 'VIP', text: 'VIP',},
+        { value: 'Virology and AIDS Abstracts', text: 'Virology and AIDS Abstracts',},
+        { value: 'Wanfang', text: 'Wanfang',},
+        { value: 'WAO', text: 'WAO',},
+        { value: 'WHO COVID', text: 'WHO COVID',},
+        { value: 'WIKISTIM', text: 'WIKISTIM',},
+        { value: 'Wiley', text: 'Wiley',},
+        { value: 'WorldCat', text: 'WorldCat',},
+        { value: 'WPRIM', text: 'WPRIM',},
+        { value: 'Yiigle', text: 'Yiigle',},
+        { value: 'Zetoc', text: 'Zetoc',}
+    
+    ];
+
+    optionsData.forEach(data => {
+        const option = document.createElement('option');
+        option.value = data.value;
+        option.textContent = data.text;
+        newElem.appendChild(option);
+    });
+  container.appendChild(newElem);
+  DatabaseSelection = "DatabaseSelection" + counter
+  newElem.setAttribute("id", DatabaseSelection)
+  newElem.setAttribute("name", DatabaseSelection)
+  newElem.setAttribute("onchange", "AddResult(this.id)")
+  newElem.setAttribute("class", "selectlist")
+  linebreak = document.createElement("br");
+  container.appendChild(linebreak);
+  container.appendChild(linebreak.cloneNode(true));
+
+}
+}
+
+function AddResult(selectedid) {
+
+	var sel = document.getElementById(selectedid).value;
+	var databaserow = selectedid + "Row"
+	var currentrow = document.getElementById(databaserow)
+		
+	var check = "newcell" + selectedid
+	var checking = document.getElementById(check)
+	if (checking) {
+		checking.innerHTML = "" + sel
+		}
+	else {
+		const DatabaseTable = document.getElementById('DatabaseResults');
+		var selecteddbnumber = ""
+		var selecteddatabase = "<td class='DatabaseInResults' id='newcell" + selectedid + "'>" + sel + "</td>" 
+		var selecteddbcolumn = "<td class='resultscolumn'>" + selecteddbnumber + "</td>"
+		// Append a text node to the cell
+		currentrow.outerHTML = "<tr style='display:'>" + selecteddatabase + selecteddbcolumn + "</tr>"
+  } 
+}
+
+
+</script>
+</html>
