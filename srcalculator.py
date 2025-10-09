@@ -109,7 +109,7 @@ def recordsdata():
        else:
            AlliedDisplay = "display: none;"
            AlliedChecked = ""
-           AlliedDisabled = "disabled = 'disabled'"
+           AlliedDisabled = "disabled='disabled'"
        if BiochemistryTopic=="on":
            Topics.append("Biochemistry, Genetics, and Microbiology")
            BiochemistryChecked = "checked"
@@ -158,7 +158,7 @@ def recordsdata():
        else:
            MedicineDisplay = "display: none;"
            MedicineChecked = ""
-           MedicineDisabled = "disabled = 'disabled'"
+           MedicineDisabled = "disabled='disabled'"
        if NursingTopic=="on":
            Topics.append("Nursing")
            NursingChecked = "checked"
@@ -757,6 +757,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
