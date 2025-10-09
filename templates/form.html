@@ -22,7 +22,6 @@
 .DatabaseInResults {white-space:wrap; min-width:120px;}
 .refreshbutton {background-color:white; font-size:.7em; font-family:arial; border: solid thin white; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px;}
 .refresh {text-align:right; margin-top:10px;}
-.previousbutton {background-color:#fbd507; font-size:.7em; font-family:arial; border: solid thin #fbd507; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; margin-top:10px; border-radius:2px;}
 
 @media only screen and (max-width: 900px) {
   .database {min-width: none;}
@@ -58,16 +57,16 @@
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
 <tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.9em;">
 	<tr><td class="topics"style="padding-left:15px; padding-top:5px;"><input disabled="disabled" type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="AudiologyTopic" name="AudiologyTopic" {{ AudiologyChecked }} /><label for="AudiologyTopic">Audiology and speech-language pathology</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="DieteticsTopic" name="DieteticsTopic" {{ DieteticsChecked }} /><label for="DieteticsTopic">Dietetics</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ImagingTopic" name="ImagingTopic" {{ ImagingChecked }} /><label for="ImagingTopic">Imaging</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="OccupationalTopic" name="OccupationalTopic" {{ OccupationalChecked }} /><label for="OccupationalTopic">Occupational therapy</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PhysiotherapyTopic" name="PhysiotherapyTopic" {{ PhysiotherapyChecked }} /><label for="PhysiotherapyTopic">Physiotherapy</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PrehospitalTopic" name="PrehospitalTopic" {{ PrehospitalChecked }} /><label for="PrehospitalTopic">Prehospital care</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ProstheticsTopic" name="ProstheticsTopic" {{ ProstheticsChecked }} /><label for="ProstheticsTopic">Prosthetics and orthotics</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RecreationTopic" name="RecreationTopic" {{ RecreationChecked }} /><label for="RecreationTopic">Recreation therapy</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RespiratoryTherapyTopic" name="RespiratoryTherapyTopic" {{ RespiratoryTherapyChecked }} /><label for="RespiratoryTherapyTopic">Respiratory therapy</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SocialTopic" name="SocialTopic" {{ SocialChecked }} /><label for="SocialTopic">Social work</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="AudiologyTopic" name="AudiologyTopic" {{ AudiologyChecked }} /><label for="AudiologyTopic">Audiology and speech-language pathology</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="DieteticsTopic" name="DieteticsTopic" {{ DieteticsChecked }} /><label for="DieteticsTopic">Dietetics</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="ImagingTopic" name="ImagingTopic" {{ ImagingChecked }} /><label for="ImagingTopic">Imaging</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="OccupationalTopic" name="OccupationalTopic" {{ OccupationalChecked }} /><label for="OccupationalTopic">Occupational therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="PhysiotherapyTopic" name="PhysiotherapyTopic" {{ PhysiotherapyChecked }} /><label for="PhysiotherapyTopic">Physiotherapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="PrehospitalTopic" name="PrehospitalTopic" {{ PrehospitalChecked }} /><label for="PrehospitalTopic">Prehospital care</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="ProstheticsTopic" name="ProstheticsTopic" {{ ProstheticsChecked }} /><label for="ProstheticsTopic">Prosthetics and orthotics</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="RecreationTopic" name="RecreationTopic" {{ RecreationChecked }} /><label for="RecreationTopic">Recreation therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="RespiratoryTherapyTopic" name="RespiratoryTherapyTopic" {{ RespiratoryTherapyChecked }} /><label for="RespiratoryTherapyTopic">Respiratory therapy</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px;"><input disabled="{{ AlliedDisabled }}" type="checkbox" id="SocialTopic" name="SocialTopic" {{ SocialChecked }} /><label for="SocialTopic">Social work</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px; padding-bottom:5px;"><input disabled="disabled" type="checkbox" id="SpiritualTopic" name="SpiritualTopic" {{ SpiritualChecked }} /><label for="SpiritualTopic">Spiritual care</label></td></tr>
 </table>
 </td></tr>
@@ -81,30 +80,30 @@
 <tr><td class="topics" ><input type="checkbox" id="EnvironmentalTopic" name="EnvironmentalTopic" {{ EnvironmentalChecked }} /><label for="EnvironmentalTopic">Environmental Science</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="MedicineTopic" name="MedicineTopic" onclick="MedicineToggle()" {{ MedicineChecked }} /><label for="MedicineTopic">Medicine</label></td></tr>
 <tr id="MedicineSubTopics" style="{{MedicineDisplay}}"><td><table style="font-size:.9em;">
-		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input disabled="disabled" type="checkbox" id="BloodTopic" name="BloodTopic" {{ BloodChecked }} /><label for="BloodTopic">Blood and hematology</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CancerTopic" name="CancerTopic" {{ CancerChecked }} /><label for="CancerTopic">Cancer</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CardiovascularTopic" name="CardiovascularTopic" {{ CardiovascularChecked }} /><label for="CardiovascularTopic">Cardiovascular</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ComplementaryTopic" name="ComplementaryTopic" {{ ComplementaryChecked }} /><label for="ComplementaryTopic">Complementary and alternative medicine</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="CongenitalTopic" name="CongenitalTopic" {{ CongenitalChecked }} /><label for="CongenitalTopic">Congenital disorders</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="EarTopic" name="EarTopic" {{ EarChecked }} /><label for="EarTopic">Ear and hearing</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="EyeTopic" name="EyeTopic" {{ EyeChecked }} /><label for="EyeTopic">Eye and vision</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="GeriatricsTopic" name="GeriatricsTopic" {{ GeriatricsChecked }} /><label for="GeriatricsTopic">Geriatrics and gerontology</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InfectionTopic" name="InfectionTopic" {{ InfectionChecked }} /><label for="InfectionTopic">Infection</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InflammatoryTopic" name="InflammatoryTopic" {{ InflammatoryChecked }} /><label for="InflammatoryTopic">Inflammatory and immune system</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="InjuriesTopic" name="InjuriesTopic" {{ InjuriesChecked }} /><label for="InjuriesTopic">Injuries and accidents</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="MetabolicTopic" name="MetabolicTopic" {{ MetabolicChecked }} /><label for="MetabolicTopic">Metabolic and endocrine</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="MusculoskeletalTopic" name="MusculoskeletalTopic" {{ MusculoskeletalChecked }} /><label for="MusculoskeletalTopic">Musculoskeletal</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="NeurologicalTopic" name="NeurologicalTopic" {{ NeurologicalChecked }} /><label for="NeurologicalTopic">Neurological</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="OralTopic" name="OralTopic" {{ OralChecked }} /><label for="OralTopic">Oral and gastrointestinal</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="PediatricsTopic" name="PediatricsTopic" {{ PediatricsChecked }} /><label for="PediatricsTopic">Pediatrics and neonatology</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RenalTopic" name="RenalTopic" {{ RenalChecked }} /><label for="RenalTopic">Renal, gynecological and urogenital</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="ReproductiveTopic" name="ReproductiveTopic" {{ ReproductiveChecked }} /><label for="ReproductiveTopic">Reproductive health and childbirth</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="RespiratoryTopic" name="RespiratoryTopic" {{ RespiratoryChecked }} /><label for="RespiratoryTopic">Respiratory</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SkinTopic" name="SkinTopic" {{ SkinChecked }} /><label for="SkinTopic">Skin</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SleepTopic" name="SleepTopic" {{ SleepChecked }} /><label for="SleepTopic">Sleep</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="StrokeTopic" name="StrokeTopic" {{ StrokeChecked }} /><label for="StrokeTopic">Stroke</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px;"><input disabled="disabled" type="checkbox" id="SurgeryTopic" name="SurgeryTopic" {{ SurgeryChecked }} /><label for="SurgeryTopic">Surgery</label></td></tr>
-		<tr><td class="topics"  style="padding-left:15px; padding-bottom:5px;"><input disabled="disabled" type="checkbox" id="GeneralTopic" name="GeneralTopic" {{ GeneralChecked }} /><label for="GeneralTopic">General and public health and safety</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="BloodTopic" name="BloodTopic" {{ BloodChecked }} /><label for="BloodTopic">Blood and hematology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="CancerTopic" name="CancerTopic" {{ CancerChecked }} /><label for="CancerTopic">Cancer</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="CardiovascularTopic" name="CardiovascularTopic" {{ CardiovascularChecked }} /><label for="CardiovascularTopic">Cardiovascular</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="ComplementaryTopic" name="ComplementaryTopic" {{ ComplementaryChecked }} /><label for="ComplementaryTopic">Complementary and alternative medicine</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="CongenitalTopic" name="CongenitalTopic" {{ CongenitalChecked }} /><label for="CongenitalTopic">Congenital disorders</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="EarTopic" name="EarTopic" {{ EarChecked }} /><label for="EarTopic">Ear and hearing</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="EyeTopic" name="EyeTopic" {{ EyeChecked }} /><label for="EyeTopic">Eye and vision</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="GeriatricsTopic" name="GeriatricsTopic" {{ GeriatricsChecked }} /><label for="GeriatricsTopic">Geriatrics and gerontology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="InfectionTopic" name="InfectionTopic" {{ InfectionChecked }} /><label for="InfectionTopic">Infection</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="InflammatoryTopic" name="InflammatoryTopic" {{ InflammatoryChecked }} /><label for="InflammatoryTopic">Inflammatory and immune system</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="InjuriesTopic" name="InjuriesTopic" {{ InjuriesChecked }} /><label for="InjuriesTopic">Injuries and accidents</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="MetabolicTopic" name="MetabolicTopic" {{ MetabolicChecked }} /><label for="MetabolicTopic">Metabolic and endocrine</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="MusculoskeletalTopic" name="MusculoskeletalTopic" {{ MusculoskeletalChecked }} /><label for="MusculoskeletalTopic">Musculoskeletal</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="NeurologicalTopic" name="NeurologicalTopic" {{ NeurologicalChecked }} /><label for="NeurologicalTopic">Neurological</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="OralTopic" name="OralTopic" {{ OralChecked }} /><label for="OralTopic">Oral and gastrointestinal</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="PediatricsTopic" name="PediatricsTopic" {{ PediatricsChecked }} /><label for="PediatricsTopic">Pediatrics and neonatology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="RenalTopic" name="RenalTopic" {{ RenalChecked }} /><label for="RenalTopic">Renal, gynecological and urogenital</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="ReproductiveTopic" name="ReproductiveTopic" {{ ReproductiveChecked }} /><label for="ReproductiveTopic">Reproductive health and childbirth</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="RespiratoryTopic" name="RespiratoryTopic" {{ RespiratoryChecked }} /><label for="RespiratoryTopic">Respiratory</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="SkinTopic" name="SkinTopic" {{ SkinChecked }} /><label for="SkinTopic">Skin</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="SleepTopic" name="SleepTopic" {{ SleepChecked }} /><label for="SleepTopic">Sleep</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="StrokeTopic" name="StrokeTopic" {{ StrokeChecked }} /><label for="StrokeTopic">Stroke</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="SurgeryTopic" name="SurgeryTopic" {{ SurgeryChecked }} /><label for="SurgeryTopic">Surgery</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px; padding-bottom:5px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="GeneralTopic" name="GeneralTopic" {{ GeneralChecked }} /><label for="GeneralTopic">General and public health and safety</label></td></tr>
 </td></tr></table>
 <tr><td class="topics" ><input type="checkbox" id="NursingTopic" name="NursingTopic" {{ NursingChecked }} /><label for="NursingTopic">Nursing</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="PhysicalTopic" name="PhysicalTopic" {{ PhysicalChecked }} /><label for="PhysicalTopic">Physical Sciences and Mathematics</label></td></tr>
@@ -173,7 +172,6 @@
 <tr><td class="DatabaseInResults"><strong>Total to screen</strong></td><td class="resultscolumn">{{ TotalScreen }}</td></tr>
 </table>
 <div class="refresh"><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button><br>
-<button class="previousbutton" onClick="history.go(-1);">Previous selections</button></div>
 </div>
 <div class="footer">
 <div class="copyright">
@@ -595,6 +593,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
