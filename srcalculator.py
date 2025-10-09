@@ -339,7 +339,7 @@ def recordsdata():
            RespiratoryChecked = ""
        if SkinTopic=="on":
            Topics.append("Skin")
-           SkinChecked = "checked'
+           SkinChecked = "checked"
        else:
            SkinChecked = ""
        if SleepTopic=="on":
@@ -750,4 +750,5 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
