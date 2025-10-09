@@ -98,116 +98,270 @@ def recordsdata():
 
        if AgricultureTopic=="on":
            Topics.append("Agriculture")
+           AgricultureChecked = "checked"
+       else:
+           AgricultureChecked = ""
        if AlliedTopic=="on":
            Topics.append("Allied Health")
            AlliedDisplay = ""
+           AlliedChecked = "checked"
        else:
            AlliedDisplay = "display: none;"
+           AlliedChecked = ""
        if BiochemistryTopic=="on":
            Topics.append("Biochemistry, Genetics, and Microbiology")
+           BiochemistryChecked = "checked"
+       else:
+           BiochemistryChecked = ""
        if BusinessTopic=="on":
            Topics.append("Business and Economics")
+           BusinessChecked = "checked"
+       else:
+           BusinessChecked = ""
        if DentistryTopic=="on":
            Topics.append("Dentistry")
+           DentistryChecked = "checked"
+       else:
+           DentistryChecked = ""
        if DrugsTopic=="on":
            Topics.append("Drugs and Supplements (not toxicology)")    
+           DrugsChecked = "checked"
+       else:
+           DrugsChecked = ""
        if EcologyTopic=="on":
            Topics.append("Ecology and Zoology")
+           EcologyChecked = "checked"
+       else:
+           EcologyChecked = ""
        if EducationTopic=="on":
            Topics.append("Education")
+           EducationChecked = "checked"
+       else:
+           EducationChecked = ""
        if EngineeringTopic=="on":
            Topics.append("Engineering")
+           EngineeringChecked = "checked"
+       else:
+           EngineeringChecked = ""
        if EnvironmentalTopic=="on":
            Topics.append("Environmental Science")
+           EnvironmentalChecked = "checked"
+       else:
+           EnvironmentalChecked = ""
        if MedicineTopic=="on":
            Topics.append("Medicine")
            MedicineDisplay = ""
+           MedicineChecked = "checked"
        else:
            MedicineDisplay = "display: none;"
+           MedicineChecked = ""
        if NursingTopic=="on":
            Topics.append("Nursing")
+           NursingChecked = "checked"
+       else:
+           NursingChecked = ""
        if PhysicalTopic=="on":
            Topics.append("Physical Sciences and Mathematics")
+           PhysicalChecked = "checked"
+       else:
+           PhysicalChecked = ""
        if PsychologyTopic=="on":
            Topics.append("Psychology, Psychiatry, and Mental Health")
+           PsychologyChecked = "checked"
+       else:
+           PsychologyChecked = ""
        if SportsTopic=="on":
            Topics.append("Sports and Recreation")
+           SportsChecked = "checked"
+       else:
+           SportsChecked = ""
        if VeterinaryTopic=="on":
            Topics.append("Veterinary")
+           VeterinaryChecked = "checked"
+       else:
+           VeterinaryChecked = ""
 
        if ArtTopic=="on":
            Topics.append("Art/music/drama therapy")
+           ArtChecked = "checked"
+       else:
+           ArtChecked = ""
        if AudiologyTopic=="on":
            Topics.append("Audiology and speech-language pathology")
+           AudiologyChecked = "checked"
+       else:
+           AudiologyChecked = ""
        if DieteticsTopic=="on":
            Topics.append("Dietetics")
+           DieteticsChecked = "checked"
+       else:
+           DieteticsChecked = ""
        if ImagingTopic=="on":
            Topics.append("Imaging")
+           ImagingChecked = "checked"
+       else:
+           ImagingChecked = ""
        if OccupationalTopic=="on":
            Topics.append("Occupational therapy")
+           OccupationalChecked = "checked"
+       else:
+           OccupationalChecked = ""
        if PhysiotherapyTopic=="on":
            Topics.append("Physiotherapy")
+           PhysiotherapyChecked = "checked"
+       else:
+           PhysiotherapyChecked = ""
        if PrehospitalTopic=="on":
            Topics.append("Prehospital care")
+           PrehospitalChecked = "checked"
+       else:
+           PrehospitalChecked = ""
        if ProstheticsTopic=="on":
            Topics.append("Prosthetics and orthotics")
+           ProstheticsChecked = "checked"
+       else:
+           ProstheticsChecked = ""
        if RecreationTopic=="on":
            Topics.append("Recreation therapy")
+           RecreationChecked = "checked"
+       else:
+           RecreationChecked = ""
        if RespiratoryTherapyTopic=="on":
            Topics.append("Respiratory therapy")
+           RespiratoryChecked = "checked"
+       else:
+           RespiratoryChecked = ""
        if SocialTopic=="on":
            Topics.append("Social work")
+           SocialChecked = "checked"
+       else:
+           SocialChecked = ""
        if SpiritualTopic=="on":
            Topics.append("Spiritual care")
+           SpiritualChecked = "checked"
+       else:
+           SpiritualChecked = ""
 
        if BloodTopic=="on":
            Topics.append("Blood and hematology")
+           BloodChecked = "checked"
+       else:
+           BloodChecked = ""
        if CancerTopic=="on":
            Topics.append("Cancer")
+           CancerChecked = "checked"
+       else:
+           CancerChecked = ""
        if CardiovascularTopic=="on":
            Topics.append("Cardiovascular")
+           CardiovascularChecked = "checked"
+       else:
+           CardiovascularChecked = ""
        if ComplementaryTopic=="on":
            Topics.append("Complementary and alternative medicine")
+           ComplementaryChecked = "checked"
+       else:
+           ComplementaryChecked = ""
        if CongenitalTopic=="on":
            Topics.append("Congenital disorders")
+           CongenitalChecked = "checked"
+       else:
+           CongenitalChecked = ""
        if EarTopic=="on":
            Topics.append("Ear and hearing")
+           EarChecked = "checked"
+       else:
+           EarChecked = ""
        if EyeTopic=="on":
            Topics.append("Eye and vision")
+           EyeChecked = "checked"
+       else:
+           EyeChecked = ""
        if GeriatricsTopic=="on":
            Topics.append("Geriatrics and gerontology")
+           GeriatricsChecked = "checked"
+       else:
+           GeriatricsChecked = ""
        if InfectionTopic=="on":
            Topics.append("Infection")
+           InfectionChecked = "checked"
+       else:
+           InfectionChecked = ""
        if InflammatoryTopic=="on":
            Topics.append("Inflammatory and immune system")
+           InflammatoryChecked = "checked"
+       else:
+           InflammatoryChecked = ""
        if InjuriesTopic=="on":
            Topics.append("Injuries and accidents")
+           InjuriesChecked = "checked"
+       else:
+           InjuriesChecked = ""
        if MetabolicTopic=="on":
            Topics.append("Metabolic and endocrine")
+           MetabolicChecked = "checked"
+       else:
+           MetabolicChecked = ""
        if MusculoskeletalTopic=="on":
            Topics.append("Musculoskeletal")
+           MusculoskeletalChecked = "checked"
+       else:
+           MusculoskeletalChecked = ""
        if NeurologicalTopic=="on":
            Topics.append("Neurological")
+           NeurologicalChecked = "checked"
+       else:
+           NeurologicalChecked = ""
        if OralTopic=="on":
            Topics.append("Oral and gastrointestinal")
+           OralChecked = "checked"
+       else:
+           OralChecked = ""
        if PediatricsTopic=="on":
            Topics.append("Pediatrics and neonatology")
+           PediatricsChecked = "checked"
+       else:
+           PediatricsChecked = ""
        if RenalTopic=="on":
            Topics.append("Renal, gynecological and urogenital")
+           RenalChecked = "checked"
+       else:
+           RenalChecked = ""
        if ReproductiveTopic=="on":
            Topics.append("Reproductive health and childbirth")
+           ReproductiveChecked = "checked"
+       else:
+           ReproductiveChecked = ""
        if RespiratoryTopic=="on":
            Topics.append("Respiratory")
+           RespiratoryChecked = "checked"
+       else:
+           RespiratoryChecked = ""
        if SkinTopic=="on":
            Topics.append("Skin")
+           SkinChecked = "checked'
+       else:
+           SkinChecked = ""
        if SleepTopic=="on":
            Topics.append("Sleep")
+           SleepChecked = "checked"
+       else:
+           SleepChecked = ""
        if StrokeTopic=="on":
            Topics.append("Stroke")
+           StrokeChecked = "checked"
+       else:
+           StrokeChecked = ""
        if SurgeryTopic=="on":
            Topics.append("Surgery")
+           SurgeryChecked = "checked"
+       else:
+           SurgeryChecked = ""
        if GeneralTopic=="on":
            Topics.append("General and public health and safety")
+           GeneralChecked = "checked"
+       else:
+           GeneralChecked = ""
 
        Topics = "; ".join(Topics)
        print(Topics)
@@ -540,8 +694,60 @@ def recordsdata():
         DatabaseSelection10Records = ""
         AlliedDisplay = "display: none"
         MedicineDisplay = "display: none"
+        AgricultureChecked = ""
+        AlliedChecked = ""
+        BiochemistryChecked = ""
+        DentistryChecked = ""
+        DrugsChecked = ""
+        EcologyChecked = ""
+        EducationChecked = ""
+        EngineeringChecked = ""
+        EnvironmentalChecked = ""
+        MedicineChecked = ""
+        NursingChecked = ""
+        PhysicalChecked = ""
+        PsychologyChecked = ""
+        SportsChecked = ""
+        VeterinaryChecked = ""
+        BloodChecked = ""
+        CancerChecked = ""
+        CardiovascularChecked = ""
+        ComplementaryChecked = ""
+        CongenitalChecked = ""
+        EarChecked = ""
+        EyeChecked = ""
+        GeriatricsChecked = ""
+        InfectionChecked = ""
+        InflammatoryChecked = ""
+        InjuriesChecked = ""
+        MetabolicChecked = ""
+        MusculoskeletalChecked = ""
+        NeurologicalChecked = ""
+        OralChecked = ""
+        PediatricsChecked = ""
+        RenalChecked = ""
+        ReproductiveChecked = ""
+        RespiratoryChecked = ""
+        SkinChecked = ""
+        SleepChecked = ""
+        StrokeChecked = ""
+        SurgeryChecked = ""
+        GeneralChecked = ""
+        ArtChecked = ""
+        AudiologyChecked = ""
+        DieteticsChecked = ""
+        ImagingChecked = ""
+        OccupationalChecked = ""
+        PhysiotherapyChecked = ""
+        PrehospitalChecked = ""
+        ProstheticsChecked = ""
+        RecreationChecked = ""
+        RespiratoryChecked = ""
+        SocialChecked = ""
+        SpiritualChecked = ""  
 
-    return render_template("form.html",CINAHLRecords = CINAHLAverage, CochraneLibraryRecords = CochraneLibraryAverage, CochraneCentralRecords = CochraneCentralAverage, ERICRecords = ERICAverage, PEDroRecords = PEDroAverage, PsycINFORecords = PsycINFOAverage, WebOfScienceRecords = WebOfScienceAverage, EmbaseRecords = EmbaseAverage, ScopusRecords = ScopusAverage, IncludesRecords = IncludesAverage, UniqueRecords = UniqueAverage, TotalScreen=TotalScreen, MedlineRecords=TotalMedline, GreyLiteratureRecords=GreyLiteratureAverage, display1 = display1, display2 = display2, display3 = display3, display4 = display4, display5 = display5, display6 = display6, display7 = display7, display8 = display8, display9 = display9, display10 = display10, DatabaseSelection1Name = DatabaseSelection1, DatabaseSelection1Records = DatabaseSelection1Records, DatabaseSelection2Name = DatabaseSelection2, DatabaseSelection2Records = DatabaseSelection2Records, DatabaseSelection3Name = DatabaseSelection3, DatabaseSelection3Records = DatabaseSelection3Records, DatabaseSelection4Name = DatabaseSelection4, DatabaseSelection4Records = DatabaseSelection4Records, DatabaseSelection5Name = DatabaseSelection5, DatabaseSelection5Records = DatabaseSelection5Records, DatabaseSelection6Name = DatabaseSelection6, DatabaseSelection6Records = DatabaseSelection6Records, DatabaseSelection7Name = DatabaseSelection7, DatabaseSelection7Records = DatabaseSelection7Records, DatabaseSelection8Name = DatabaseSelection8, DatabaseSelection8Records = DatabaseSelection8Records, DatabaseSelection9Name = DatabaseSelection9, DatabaseSelection9Records = DatabaseSelection9Records, DatabaseSelection10Name = DatabaseSelection10, DatabaseSelection10Records = DatabaseSelection10Records, MedicineDisplay = MedicineDisplay, AlliedDisplay = AlliedDisplay)
+    return render_template("form.html",CINAHLRecords = CINAHLAverage, CochraneLibraryRecords = CochraneLibraryAverage, CochraneCentralRecords = CochraneCentralAverage, ERICRecords = ERICAverage, PEDroRecords = PEDroAverage, PsycINFORecords = PsycINFOAverage, WebOfScienceRecords = WebOfScienceAverage, EmbaseRecords = EmbaseAverage, ScopusRecords = ScopusAverage, IncludesRecords = IncludesAverage, UniqueRecords = UniqueAverage, TotalScreen=TotalScreen, MedlineRecords=TotalMedline, GreyLiteratureRecords=GreyLiteratureAverage, display1 = display1, display2 = display2, display3 = display3, display4 = display4, display5 = display5, display6 = display6, display7 = display7, display8 = display8, display9 = display9, display10 = display10, DatabaseSelection1Name = DatabaseSelection1, DatabaseSelection1Records = DatabaseSelection1Records, DatabaseSelection2Name = DatabaseSelection2, DatabaseSelection2Records = DatabaseSelection2Records, DatabaseSelection3Name = DatabaseSelection3, DatabaseSelection3Records = DatabaseSelection3Records, DatabaseSelection4Name = DatabaseSelection4, DatabaseSelection4Records = DatabaseSelection4Records, DatabaseSelection5Name = DatabaseSelection5, DatabaseSelection5Records = DatabaseSelection5Records, DatabaseSelection6Name = DatabaseSelection6, DatabaseSelection6Records = DatabaseSelection6Records, DatabaseSelection7Name = DatabaseSelection7, DatabaseSelection7Records = DatabaseSelection7Records, DatabaseSelection8Name = DatabaseSelection8, DatabaseSelection8Records = DatabaseSelection8Records, DatabaseSelection9Name = DatabaseSelection9, DatabaseSelection9Records = DatabaseSelection9Records, DatabaseSelection10Name = DatabaseSelection10, DatabaseSelection10Records = DatabaseSelection10Records, MedicineDisplay = MedicineDisplay, AlliedDisplay = AlliedDisplay, AgricultureChecked = AgricultureChecked, AlliedChecked = AlliedChecked, BiochemistryChecked = BiochemistryChecked, BusinessChecked = BusinessChecked, DentistryChecked = DentistryChecked, DrugsChecked = DrugsChecked, EcologyChecked = EcologyChecked, EducationChecked = EducationChecked, EngineeringChecked = EngineeringChecked, EnvironmentalChecked = EnvironmentalChecked, MedicineChecked = MedicineChecked, NursingChecked = NursingChecked, PhysicalChecked = PhysicalChecked, PsychologyChecked = PsychologyChecked, SportsChecked = SportsChecked, VeterinaryChecked = VeterinaryChecked, BloodChecked = BloodChecked, CancerChecked = CancerChecked, ComplementaryChecked = ComplementaryChecked, CongenitalChecked = CongenitalChecked, EarChecked = EarChecked, EyeChecked = EyeChecked, GeriatricsChecked = GeriatricsChecked, InfectionChecked = InfectionChecked, InflammatoryChecked = InflammatoryChecked, InjuriesChecked = InjuriesChecked, MetabolicChecked = MetabolicChecked, MusculoskeletalChecked = MusculoskeletalChecked, NeurologicalChecked = NeurologicalChecked, OralChecked = OralChecked, PediatricsChecked = PediatricsChecked, RenalChecked = RenalChecked, ReproductiveChecked = ReproductiveChecked, RespiratoryChecked = RespiratoryChecked, SkinChecked = SkinChecked, SleepChecked = SleepChecked, StrokeChecked = StrokeChecked, SurgeryChecked = SurgeryChecked, GeneralChecked = GeneralChecked, ArtChecked = ArtChecked, AudiologyChecked = AudiologyChecked, DieteticsChecked = DieteticsChecked, ImagingChecked = ImagingChecked, OccupationalChecked = OccupationalChecked, PhysiotherapyChecked = PhysiotherapyChecked, PrehospitalChecked = PrehospitalChecked, ProstheticsChecked = ProstheticsChecked, RecreationChecked = RecreationChecked, RespiratoryChecked = RespiratoryChecked, SocialChecked = SocialChecked, SpiritualChecked = SpiritualChecked)
 
 if __name__=='__main__':
    app.run()
+
