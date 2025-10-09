@@ -119,15 +119,15 @@
 <td style="vertical-align:top; padding-left:5%">
 <table style="font-size:.8em; font-family: arial; max-width:150px;">
 <tr><td class="Database" style="padding-bottom:10px"><b>Primary Databases</b></td></tr>
-<tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" /><label for="CINAHL">CINAHL</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" /><label for="CochraneLibrary">Cochrane Library (Not Specific)</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" /><label for="CochraneCentral">Cochrane Central</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Embase" name="Embase" /><label for="Embase">Embase</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="ERIC" name="ERIC" /><label for="ERIC">ERIC</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="PEDro" name="PEDro" /><label for="PEDro">PEDro</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="PsycINFO" name="PsycINFO" /><label for="PsycINFO">PsycINFO</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Scopus" name="Scopus" /><label for="Scopus">Scopus</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Web of Science" name="Web of Science" /><label for="Web of Science">Web of Science</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" {{ CINAHLChecked }} /><label for="CINAHL">CINAHL</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" {{ CochraneLibraryChecked }} /><label for="CochraneLibrary">Cochrane Library (Not Specific)</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" {{ CochraneCentralChecked }} /><label for="CochraneCentral">Cochrane Central</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Embase" name="Embase" {{ EmbaseChecked }} /><label for="Embase">Embase</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="ERIC" name="ERIC" {{ ERICChecked }} /><label for="ERIC">ERIC</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="PEDro" name="PEDro" {{ PEDroChecked }} /><label for="PEDro">PEDro</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="PsycINFO" name="PsycINFO" {{ PsycINFOCHecked }} /><label for="PsycINFO">PsycINFO</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Scopus" name="Scopus" {{ ScopusChecked }} /><label for="Scopus">Scopus</label></td></tr>
+<tr><td class="Database"><input type="checkbox" id="Web of Science" name="Web of Science" {{ WebOfScienceChecked }} /><label for="Web of Science">Web of Science</label></td></tr>
 <tr><td class="Database" style="padding-top:10px;"><a href="#" onclick="AddDatabase()" style="color:black;">Add another database</a>
 <div id="AdditionalDatabase"><br>
 </div>
@@ -597,6 +597,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
