@@ -113,7 +113,7 @@ input:checked + .slider:before {
 <div class="topic">
 <table style="font-size:.8em; font-family: arial">
 <tr><td class="topics" style="vertical-align:top; padding-bottom:10px;"><b>Topics</b></td></tr>
-<tr><td class="topics"><label for="AgricultureTopic">Agriculture</label><label class="switch"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><span class="slider"></span></label></td></tr>
+<tr><td class="topics"><label for="AgricultureTopic">Agriculture</label><label class="switch"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><span class="slider round"></span></label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
 <tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.9em;">
 	<tr><td class="topics"style="padding-left:15px; padding-top:5px;"><input {{ AlliedDisabled }} type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
@@ -656,6 +656,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
