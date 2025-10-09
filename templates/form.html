@@ -80,7 +80,7 @@
 <tr><td class="topics" ><input type="checkbox" id="EnvironmentalTopic" name="EnvironmentalTopic" {{ EnvironmentalChecked }} /><label for="EnvironmentalTopic">Environmental Science</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="MedicineTopic" name="MedicineTopic" onclick="MedicineToggle()" {{ MedicineChecked }} /><label for="MedicineTopic">Medicine</label></td></tr>
 <tr id="MedicineSubTopics" style="{{MedicineDisplay}}"><td><table style="font-size:.9em;">
-		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input disabled="{{ MedicineDisabled }}" type="checkbox" id="BloodTopic" name="BloodTopic" {{ BloodChecked }} /><label for="BloodTopic">Blood and hematology</label></td></tr>
+		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input {{ MedicineDisabled }} type="checkbox" id="BloodTopic" name="BloodTopic" {{ BloodChecked }} /><label for="BloodTopic">Blood and hematology</label></td></tr>
 		<tr><td class="topics"  style="padding-left:15px;"><input {{ MedicineDisabled }} type="checkbox" id="CancerTopic" name="CancerTopic" {{ CancerChecked }} /><label for="CancerTopic">Cancer</label></td></tr>
 		<tr><td class="topics"  style="padding-left:15px;"><input {{ MedicineDisabled }} type="checkbox" id="CardiovascularTopic" name="CardiovascularTopic" {{ CardiovascularChecked }} /><label for="CardiovascularTopic">Cardiovascular</label></td></tr>
 		<tr><td class="topics"  style="padding-left:15px;"><input {{ MedicineDisabled }} type="checkbox" id="ComplementaryTopic" name="ComplementaryTopic" {{ ComplementaryChecked }} /><label for="ComplementaryTopic">Complementary and alternative medicine</label></td></tr>
@@ -593,6 +593,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
