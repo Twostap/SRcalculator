@@ -697,6 +697,7 @@ def recordsdata():
         AgricultureChecked = ""
         AlliedChecked = ""
         BiochemistryChecked = ""
+        BusinessChecked = ""
         DentistryChecked = ""
         DrugsChecked = ""
         EcologyChecked = ""
@@ -750,6 +751,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
