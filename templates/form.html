@@ -56,7 +56,7 @@
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
 <tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.9em;">
-	<tr><td class="topics"style="padding-left:15px; padding-top:5px;"><input disabled="disabled" type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
+	<tr><td class="topics"style="padding-left:15px; padding-top:5px;"><input {{ AlliedDisabled }} type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="AudiologyTopic" name="AudiologyTopic" {{ AudiologyChecked }} /><label for="AudiologyTopic">Audiology and speech-language pathology</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="DieteticsTopic" name="DieteticsTopic" {{ DieteticsChecked }} /><label for="DieteticsTopic">Dietetics</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="ImagingTopic" name="ImagingTopic" {{ ImagingChecked }} /><label for="ImagingTopic">Imaging</label></td></tr>
@@ -67,7 +67,7 @@
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="RecreationTopic" name="RecreationTopic" {{ RecreationChecked }} /><label for="RecreationTopic">Recreation therapy</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="RespiratoryTherapyTopic" name="RespiratoryTherapyTopic" {{ RespiratoryTherapyChecked }} /><label for="RespiratoryTherapyTopic">Respiratory therapy</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="SocialTopic" name="SocialTopic" {{ SocialChecked }} /><label for="SocialTopic">Social work</label></td></tr>
-	<tr><td class="topics" style="padding-left:15px; padding-bottom:5px;"><input disabled="disabled" type="checkbox" id="SpiritualTopic" name="SpiritualTopic" {{ SpiritualChecked }} /><label for="SpiritualTopic">Spiritual care</label></td></tr>
+	<tr><td class="topics" style="padding-left:15px; padding-bottom:5px;"><input {{ AlliedDisabled }} type="checkbox" id="SpiritualTopic" name="SpiritualTopic" {{ SpiritualChecked }} /><label for="SpiritualTopic">Spiritual care</label></td></tr>
 </table>
 </td></tr>
 <tr><td class="topics" ><input type="checkbox" id="BiochemistryTopic" name="BiochemistryTopic" {{ BiochemistryChecked }} /><label for="BiochemistryTopic">Biochemistry, Genetics, and Microbiology</label></td></tr>
@@ -593,6 +593,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
