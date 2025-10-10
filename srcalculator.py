@@ -405,7 +405,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection2Average):
                 DatabaseSelection2Records = "No data"
            else:
-                DatabaseSelection2Records = DatabaseSelection1Average.round(0)
+                DatabaseSelection2Records = DatabaseSelection2Average.round(0)
 
        if DatabaseSelection3=="selectone":
            display3 = "display: none;"
@@ -784,6 +784,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
