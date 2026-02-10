@@ -185,67 +185,6 @@ def recordsdata():
        else:
            VeterinaryChecked = ""
 
-       if ArtTopic=="on":
-           Topics.append("Art/music/drama therapy")
-           ArtChecked = "checked"
-       else:
-           ArtChecked = ""
-       if AudiologyTopic=="on":
-           Topics.append("Audiology and speech-language pathology")
-           AudiologyChecked = "checked"
-       else:
-           AudiologyChecked = ""
-       if DieteticsTopic=="on":
-           Topics.append("Dietetics")
-           DieteticsChecked = "checked"
-       else:
-           DieteticsChecked = ""
-       if ImagingTopic=="on":
-           Topics.append("Imaging")
-           ImagingChecked = "checked"
-       else:
-           ImagingChecked = ""
-       if OccupationalTopic=="on":
-           Topics.append("Occupational therapy")
-           OccupationalChecked = "checked"
-       else:
-           OccupationalChecked = ""
-       if PhysiotherapyTopic=="on":
-           Topics.append("Physiotherapy")
-           PhysiotherapyChecked = "checked"
-       else:
-           PhysiotherapyChecked = ""
-       if PrehospitalTopic=="on":
-           Topics.append("Prehospital care")
-           PrehospitalChecked = "checked"
-       else:
-           PrehospitalChecked = ""
-       if ProstheticsTopic=="on":
-           Topics.append("Prosthetics and orthotics")
-           ProstheticsChecked = "checked"
-       else:
-           ProstheticsChecked = ""
-       if RecreationTopic=="on":
-           Topics.append("Recreation therapy")
-           RecreationChecked = "checked"
-       else:
-           RecreationChecked = ""
-       if RespiratoryTherapyTopic=="on":
-           Topics.append("Respiratory therapy")
-           RespiratoryTherapyChecked = "checked"
-       else:
-           RespiratoryTherapyChecked = ""
-       if SocialTopic=="on":
-           Topics.append("Social work")
-           SocialChecked = "checked"
-       else:
-           SocialChecked = ""
-       if SpiritualTopic=="on":
-           Topics.append("Spiritual care")
-           SpiritualChecked = "checked"
-       else:
-           SpiritualChecked = ""
-
        if BloodTopic=="on":
            Topics.append("Blood and hematology")
            BloodChecked = "checked"
@@ -367,6 +306,67 @@ def recordsdata():
        else:
            GeneralChecked = ""
 
+       if ArtTopic=="on":
+           Topics.append("Art/music/drama therapy")
+           ArtChecked = "checked"
+       else:
+           ArtChecked = ""
+       if AudiologyTopic=="on":
+           Topics.append("Audiology and speech-language pathology")
+           AudiologyChecked = "checked"
+       else:
+           AudiologyChecked = ""
+       if DieteticsTopic=="on":
+           Topics.append("Dietetics")
+           DieteticsChecked = "checked"
+       else:
+           DieteticsChecked = ""
+       if ImagingTopic=="on":
+           Topics.append("Imaging")
+           ImagingChecked = "checked"
+       else:
+           ImagingChecked = ""
+       if OccupationalTopic=="on":
+           Topics.append("Occupational therapy")
+           OccupationalChecked = "checked"
+       else:
+           OccupationalChecked = ""
+       if PhysiotherapyTopic=="on":
+           Topics.append("Physiotherapy")
+           PhysiotherapyChecked = "checked"
+       else:
+           PhysiotherapyChecked = ""
+       if PrehospitalTopic=="on":
+           Topics.append("Prehospital care")
+           PrehospitalChecked = "checked"
+       else:
+           PrehospitalChecked = ""
+       if ProstheticsTopic=="on":
+           Topics.append("Prosthetics and orthotics")
+           ProstheticsChecked = "checked"
+       else:
+           ProstheticsChecked = ""
+       if RecreationTopic=="on":
+           Topics.append("Recreation therapy")
+           RecreationChecked = "checked"
+       else:
+           RecreationChecked = ""
+       if RespiratoryTherapyTopic=="on":
+           Topics.append("Respiratory therapy")
+           RespiratoryTherapyChecked = "checked"
+       else:
+           RespiratoryTherapyChecked = ""
+       if SocialTopic=="on":
+           Topics.append("Social work")
+           SocialChecked = "checked"
+       else:
+           SocialChecked = ""
+       if SpiritualTopic=="on":
+           Topics.append("Spiritual care")
+           SpiritualChecked = "checked"
+       else:
+           SpiritualChecked = ""
+        
        Topics = "; ".join(Topics)
        
        pd.options.display.float_format = '{:.0f}'.format
@@ -785,6 +785,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
