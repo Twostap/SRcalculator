@@ -385,7 +385,7 @@ def recordsdata():
            DatabaseSelection1Records = "Not selected"
        else:
            display1 = ""
-           DatabaseSelection1Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection1].mean()
+           DatabaseSelection1Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection1].mean(numeric_only=True)
            if pd.isna(DatabaseSelection1Average):
                 DatabaseSelection1Records = "No data"
            else:
@@ -401,7 +401,7 @@ def recordsdata():
            DatabaseSelection2Records = "Not selected"
        else:
            display2 = ""
-           DatabaseSelection2Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection2].mean()
+           DatabaseSelection2Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection2].mean(numeric_only=True)
            if pd.isna(DatabaseSelection2Average):
                 DatabaseSelection2Records = "No data"
            else:
@@ -417,7 +417,7 @@ def recordsdata():
            DatabaseSelection3Records = "Not selected"
        else:
            display3 = ""
-           DatabaseSelection3Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection3].mean()
+           DatabaseSelection3Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection3].mean(numeric_only=True)
            if pd.isna(DatabaseSelection3Average):
                 DatabaseSelection3Records = "No data"
            else:
@@ -433,7 +433,7 @@ def recordsdata():
            DatabaseSelection4Records = "Not selected"
        else:
            display4 = ""
-           DatabaseSelection4Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection4].mean()
+           DatabaseSelection4Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection4].mean(numeric_only=True)
            if pd.isna(DatabaseSelection4Average):
                 DatabaseSelection4Records = "No data"
            else:
@@ -449,7 +449,7 @@ def recordsdata():
            DatabaseSelection5Records = "Not selected"
        else:
            display5 = ""
-           DatabaseSelection5Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection5].mean()
+           DatabaseSelection5Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection5].mean(numeric_only=True)
            if pd.isna(DatabaseSelection5Average):
                 DatabaseSelection5Records = "No data"
            else:
@@ -465,7 +465,7 @@ def recordsdata():
            DatabaseSelection6Records = "Not selected"
        else:
            display6 = ""
-           DatabaseSelection6Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection6].mean()
+           DatabaseSelection6Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection6].mean(numeric_only=True)
            if pd.isna(DatabaseSelection6Average):
                 DatabaseSelection6Records = "No data"
            else:
@@ -481,7 +481,7 @@ def recordsdata():
            DatabaseSelection7Records = "Not selected"
        else:
            display7 = ""
-           DatabaseSelection7Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection7].mean()
+           DatabaseSelection7Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection7].mean(numeric_only=True)
            if pd.isna(DatabaseSelection7Average):
                 DatabaseSelection7Records = "No data"
            else:
@@ -497,7 +497,7 @@ def recordsdata():
            DatabaseSelection8Records = "Not selected"
        else:
            display8 = ""
-           DatabaseSelection8Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection8].mean()
+           DatabaseSelection8Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection8].mean(numeric_only=True)
            if pd.isna(DatabaseSelection8Average):
                 DatabaseSelection8Records = "No data"
            else:
@@ -513,7 +513,7 @@ def recordsdata():
            DatabaseSelection9Records = "Not selected"
        else:
            display9 = ""
-           DatabaseSelection9Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection9].mean()
+           DatabaseSelection9Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection9].mean(numeric_only=True)
            if pd.isna(DatabaseSelection9Average):
                 DatabaseSelection9Records = "No data"
            else:
@@ -529,7 +529,7 @@ def recordsdata():
            DatabaseSelection10Records = "Not selected"
        else:
            display10 = ""
-           DatabaseSelection10Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection10].mean()
+           DatabaseSelection10Average = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')[DatabaseSelection10].mean(numeric_only=True)
            if pd.isna(DatabaseSelection10Average):
                 DatabaseSelection10Records = "No data"
            else:
@@ -537,7 +537,7 @@ def recordsdata():
 
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
-           CINAHLAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['CINAHL'].mean()
+           CINAHLAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['CINAHL'].mean(numeric_only=True)
            if pd.isna(CINAHLAverage):
                 CINAHLAverage = "No data"
            else:
@@ -549,7 +549,7 @@ def recordsdata():
 
        if EmbaseDatabase=="on":
            EmbaseChecked = "checked"
-           EmbaseAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Embase'].mean()
+           EmbaseAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Embase'].mean(numeric_only=True)
            if pd.isna(EmbaseAverage):
                 EmbaseAverage = "No data"
            else:
@@ -561,7 +561,7 @@ def recordsdata():
 
        if ScopusDatabase=="on":
            ScopusChecked = "checked"
-           ScopusAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Scopus'].mean()
+           ScopusAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Scopus'].mean(numeric_only=True)
            if pd.isna(ScopusAverage):
                 ScopusAverage = "No data"
            else:
@@ -573,7 +573,7 @@ def recordsdata():
 
        if CochraneLibraryDatabase=="on":
            CochraneLibraryChecked = "checked"
-           CochraneLibraryAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Cochrane Library'].mean()
+           CochraneLibraryAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Cochrane Library'].mean(numeric_only=True)
            if pd.isna(CochraneLibraryAverage):
                 CochraneLibraryAverage = "No data"
            else:
@@ -585,7 +585,7 @@ def recordsdata():
 
        if CochraneCentralDatabase=="on":
            CochraneCentralChecked = "checked"
-           CochraneCentralAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Cochrane Central'].mean()
+           CochraneCentralAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Cochrane Central'].mean(numeric_only=True)
            if pd.isna(CochraneCentralAverage):
                 CochraneCentralAverage = "No data"
            else:
@@ -597,7 +597,7 @@ def recordsdata():
 
        if ERICDatabase=="on":
            ERICChecked = "checked"
-           ERICAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['ERIC'].mean()
+           ERICAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['ERIC'].mean(numeric_only=True)
            if pd.isna(ERICAverage):
                 ERICAverage = "No data"
            else:
@@ -609,7 +609,7 @@ def recordsdata():
 
        if PEDroDatabase=="on":
            PEDroChecked = "checked"
-           PEDroAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['PEDro'].mean()
+           PEDroAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['PEDro'].mean(numeric_only=True)
            if pd.isna(PEDroAverage):
                 PEDroAverage = "No data"
            else:
@@ -621,7 +621,7 @@ def recordsdata():
 
        if PsycINFODatabase=="on":
            PsycINFOChecked = "checked"
-           PsycINFOAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['PsycINFO'].mean()
+           PsycINFOAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['PsycINFO'].mean(numeric_only=True)
            if pd.isna(PsycINFOAverage):
                 PsycINFOAverage = "No data"
            else:
@@ -633,7 +633,7 @@ def recordsdata():
 
        if WebOfScienceDatabase=="on":
            WebOfScienceChecked = "checked"
-           WebOfScienceAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Web of Science'].mean()
+           WebOfScienceAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Web of Science'].mean(numeric_only=True)
            if pd.isna(WebOfScienceAverage):
                 WebOfScienceAverage = "No data"
            else:
@@ -643,20 +643,20 @@ def recordsdata():
            WebOfScienceChecked = ""
            WebOfScienceAverage = "Not selected"
   
-       UniqueAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Unique'].mean()
+       UniqueAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Unique'].mean(numeric_only=True)
        if pd.isna(UniqueAverage):
            UniqueAverage = "No data"
        else:
            UniqueAverage = UniqueAverage.round(0)    
 
        
-       IncludesAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Includes'].mean()
+       IncludesAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Includes'].mean(numeric_only=True)
        if pd.isna(IncludesAverage):
            IncludesAverage = "No data"
        else:
            IncludesAverage = IncludesAverage.round(0) 
 
-       GreyLiteratureAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Grey Literature'].mean()
+       GreyLiteratureAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')['Grey Literature'].mean(numeric_only=True)
        if pd.isna(GreyLiteratureAverage):
            GreyLiteratureAverage = "No data"
        else:
@@ -784,6 +784,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
