@@ -368,7 +368,6 @@ def recordsdata():
            GeneralChecked = ""
 
        Topics = "; ".join(Topics)
-       print(Topics)
        
        pd.options.display.float_format = '{:.0f}'.format
        EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
@@ -786,6 +785,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
