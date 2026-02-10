@@ -379,11 +379,11 @@ def recordsdata():
        if DatabaseSelection1=="selectone":
            display1 = "display: none;"
            DatabaseSelection1 = ""
-           DatabaseSelection1Records = "Not selected"
+           DatabaseSelection1Records = ""
        elif DatabaseSelection1==None:
            display1 = "display: none;"
            DatabaseSelection1 = ""
-           DatabaseSelection1Records = "Not selected"
+           DatabaseSelection1Records = ""
        else:
            display1 = ""
            DatabaseSelection1Average = Medlinedf[DatabaseSelection1].mean(numeric_only=True)
@@ -395,11 +395,11 @@ def recordsdata():
        if DatabaseSelection2=="selectone":
            display2 = "display: none;"
            DatabaseSelection2 = ""
-           DatabaseSelection2Records = "Not selected"
+           DatabaseSelection2Records = ""
        elif DatabaseSelection2==None:
            display2 = "display: none;"
            DatabaseSelection2 = ""
-           DatabaseSelection2Records = "Not selected"
+           DatabaseSelection2Records = ""
        else:
            display2 = ""
            DatabaseSelection2Average = Medlinedf[DatabaseSelection2].mean(numeric_only=True)
@@ -411,11 +411,11 @@ def recordsdata():
        if DatabaseSelection3=="selectone":
            display3 = "display: none;"
            DatabaseSelection = ""
-           DatabaseSelection3Records = "Not selected"
+           DatabaseSelection3Records = ""
        elif DatabaseSelection3==None:
            display3 = "display: none;"
            DatabaseSelection3 = ""
-           DatabaseSelection3Records = "Not selected"
+           DatabaseSelection3Records = ""
        else:
            display3 = ""
            DatabaseSelection3Average = Medlinedf[DatabaseSelection3].mean(numeric_only=True)
@@ -427,11 +427,11 @@ def recordsdata():
        if DatabaseSelection4=="selectone":
            display4 = "display: none;"
            DatabaseSelection4 = ""
-           DatabaseSelection4Records = "Not selected"
+           DatabaseSelection4Records = ""
        elif DatabaseSelection4==None:
            display4 = "display: none;"
            DatabaseSelection4 = ""
-           DatabaseSelection4Records = "Not selected"
+           DatabaseSelection4Records = ""
        else:
            display4 = ""
            DatabaseSelection4Average = Medlinedf[DatabaseSelection4].mean(numeric_only=True)
@@ -443,11 +443,11 @@ def recordsdata():
        if DatabaseSelection5=="selectone":
            display5 = "display: none;"
            DatabaseSelection5 = ""
-           DatabaseSelection5Records = "Not selected"
+           DatabaseSelection5Records = ""
        elif DatabaseSelection5==None:
            display5 = "display: none;"
            DatabaseSelection5 = ""
-           DatabaseSelection5Records = "Not selected"
+           DatabaseSelection5Records = ""
        else:
            display5 = ""
            DatabaseSelection5Average = Medlinedf[DatabaseSelection5].mean(numeric_only=True)
@@ -459,11 +459,11 @@ def recordsdata():
        if DatabaseSelection6=="selectone":
            display6 = "display: none;"
            DatabaseSelection6 = ""
-           DatabaseSelection6Records = "Not selected"
+           DatabaseSelection6Records = ""
        elif DatabaseSelection6==None:
            display6 = "display: none;"
            DatabaseSelection6 = ""
-           DatabaseSelection6Records = "Not selected"
+           DatabaseSelection6Records = ""
        else:
            display6 = ""
            DatabaseSelection6Average = Medlinedf[DatabaseSelection6].mean(numeric_only=True)
@@ -475,11 +475,11 @@ def recordsdata():
        if DatabaseSelection7=="selectone":
            display7 = "display: none;"
            DatabaseSelection7 = ""
-           DatabaseSelection7Records = "Not selected"
+           DatabaseSelection7Records = ""
        elif DatabaseSelection7==None:
            display7 = "display: none;"
            DatabaseSelection7 = ""
-           DatabaseSelection7Records = "Not selected"
+           DatabaseSelection7Records = ""
        else:
            display7 = ""
            DatabaseSelection7Average = Medlinedf[DatabaseSelection7].mean(numeric_only=True)
@@ -491,11 +491,11 @@ def recordsdata():
        if DatabaseSelection8=="selectone":
            display8 = "display: none;"
            DatabaseSelection8 = ""
-           DatabaseSelection8Records = "Not selected"
+           DatabaseSelection8Records = ""
        elif DatabaseSelection8==None:
            display8 = "display: none;"
            DatabaseSelection8 = ""
-           DatabaseSelection8Records = "Not selected"
+           DatabaseSelection8Records = ""
        else:
            display8 = ""
            DatabaseSelection8Average = Medlinedf[DatabaseSelection8].mean(numeric_only=True)
@@ -507,11 +507,11 @@ def recordsdata():
        if DatabaseSelection9=="selectone":
            display9 = "display: none;"
            DatabaseSelection9 = ""
-           DatabaseSelection9Records = "Not selected"
+           DatabaseSelection9Records = ""
        elif DatabaseSelection9==None:
            display9 = "display: none;"
            DatabaseSelection9 = ""
-           DatabaseSelection9Records = "Not selected"
+           DatabaseSelection9Records = ""
        else:
            display9 = ""
            DatabaseSelection9Average = Medlinedf[DatabaseSelection9].mean(numeric_only=True)
@@ -523,11 +523,11 @@ def recordsdata():
        if DatabaseSelection10=="selectone":
            display10 = "display: none;"
            DatabaseSelection10 = ""
-           DatabaseSelection10Records = "Not selected"
+           DatabaseSelection10Records = ""
        elif DatabaseSelection10==None:
            display10 = "display: none;"
            DatabaseSelection10 = ""
-           DatabaseSelection10Records = "Not selected"
+           DatabaseSelection10Records = ""
        else:
            display10 = ""
            DatabaseSelection10Average = Medlinedf[DatabaseSelection10].mean(numeric_only=True)
@@ -545,7 +545,7 @@ def recordsdata():
                 CINAHLAverage = CINAHLAverage.round(0)
 
        else:
-           CINAHLAverage = "Not selected"
+           CINAHLAverage = ""
            CINAHLChecked = ""
 
        if EmbaseDatabase=="on":
@@ -557,7 +557,7 @@ def recordsdata():
                 EmbaseAverage = EmbaseAverage.round(0)
 
        else:
-           EmbaseAverage = "Not selected"
+           EmbaseAverage = ""
            EmbaseChecked = ""
 
        if ScopusDatabase=="on":
@@ -569,7 +569,7 @@ def recordsdata():
                 ScopusAverage = ScopusAverage.round(0)
 
        else:
-           ScopusAverage = "Not selected"
+           ScopusAverage = ""
            ScopusChecked = ""
 
        if CochraneLibraryDatabase=="on":
@@ -582,7 +582,7 @@ def recordsdata():
 
        else:
            CochraneLibraryChecked = ""
-           CochraneLibraryAverage = "Not selected"
+           CochraneLibraryAverage = ""
 
        if CochraneCentralDatabase=="on":
            CochraneCentralChecked = "checked"
@@ -594,7 +594,7 @@ def recordsdata():
 
        else:
            CochraneCentralChecked = ""
-           CochraneCentralAverage = "Not selected"
+           CochraneCentralAverage = ""
 
        if ERICDatabase=="on":
            ERICChecked = "checked"
@@ -606,7 +606,7 @@ def recordsdata():
 
        else:
            ERICChecked = ""
-           ERICAverage = "Not selected"
+           ERICAverage = ""
 
        if PEDroDatabase=="on":
            PEDroChecked = "checked"
@@ -618,7 +618,7 @@ def recordsdata():
 
        else:
            PEDroChecked = ""
-           PEDroAverage = "Not selected"
+           PEDroAverage = ""
 
        if PsycINFODatabase=="on":
            PsycINFOChecked = "checked"
@@ -630,7 +630,7 @@ def recordsdata():
 
        else:
            PsycINFOChecked = ""
-           PsycINFOAverage = "Not selected"
+           PsycINFOAverage = ""
 
        if WebOfScienceDatabase=="on":
            WebOfScienceChecked = "checked"
@@ -642,7 +642,7 @@ def recordsdata():
 
        else:
            WebOfScienceChecked = ""
-           WebOfScienceAverage = "Not selected"
+           WebOfScienceAverage = ""
   
        UniqueAverage = Medlinedf['Unique'].mean(numeric_only=True)
        if pd.isna(UniqueAverage):
@@ -785,6 +785,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
