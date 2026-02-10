@@ -374,7 +374,7 @@ def recordsdata():
        df = pd.read_excel(EXCEL_FILE_PATH)
        df.head()
 
-       Medlinedf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics))
+       Medlinedf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics)')
         
        if DatabaseSelection1=="selectone":
            display1 = "display: none;"
@@ -785,6 +785,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
