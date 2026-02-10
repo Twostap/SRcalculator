@@ -387,7 +387,7 @@ def recordsdata():
            DatabaseSelection1Records = "Not selected"
        else:
            display1 = ""
-           DatabaseSelection1Average = Medlinedf['DatabaseSelection1'].mean(numeric_only=True)
+           DatabaseSelection1Average = Medlinedf[DatabaseSelection1].mean(numeric_only=True)
            if pd.isna(DatabaseSelection1Average):
                 DatabaseSelection1Records = "No data"
            else:
@@ -403,7 +403,7 @@ def recordsdata():
            DatabaseSelection2Records = "Not selected"
        else:
            display2 = ""
-           DatabaseSelection2Average = Medlinedf['DatabaseSelection2'].mean(numeric_only=True)
+           DatabaseSelection2Average = Medlinedf[DatabaseSelection2].mean(numeric_only=True)
            if pd.isna(DatabaseSelection2Average):
                 DatabaseSelection2Records = "No data"
            else:
@@ -419,7 +419,7 @@ def recordsdata():
            DatabaseSelection3Records = "Not selected"
        else:
            display3 = ""
-           DatabaseSelection3Average = Medlinedf['DatabaseSelection3'].mean(numeric_only=True)
+           DatabaseSelection3Average = Medlinedf[DatabaseSelection3].mean(numeric_only=True)
            if pd.isna(DatabaseSelection3Average):
                 DatabaseSelection3Records = "No data"
            else:
@@ -435,7 +435,7 @@ def recordsdata():
            DatabaseSelection4Records = "Not selected"
        else:
            display4 = ""
-           DatabaseSelection4Average = Medlinedf['DatabaseSelection4'].mean(numeric_only=True)
+           DatabaseSelection4Average = Medlinedf[DatabaseSelection4].mean(numeric_only=True)
            if pd.isna(DatabaseSelection4Average):
                 DatabaseSelection4Records = "No data"
            else:
@@ -451,7 +451,7 @@ def recordsdata():
            DatabaseSelection5Records = "Not selected"
        else:
            display5 = ""
-           DatabaseSelection5Average = Medlinedf['DatabaseSelection5'].mean(numeric_only=True)
+           DatabaseSelection5Average = Medlinedf[DatabaseSelection5].mean(numeric_only=True)
            if pd.isna(DatabaseSelection5Average):
                 DatabaseSelection5Records = "No data"
            else:
@@ -467,7 +467,7 @@ def recordsdata():
            DatabaseSelection6Records = "Not selected"
        else:
            display6 = ""
-           DatabaseSelection6Average = Medlinedf['DatabaseSelection6'].mean(numeric_only=True)
+           DatabaseSelection6Average = Medlinedf[DatabaseSelection6].mean(numeric_only=True)
            if pd.isna(DatabaseSelection6Average):
                 DatabaseSelection6Records = "No data"
            else:
@@ -483,7 +483,7 @@ def recordsdata():
            DatabaseSelection7Records = "Not selected"
        else:
            display7 = ""
-           DatabaseSelection7Average = Medlinedf['DatabaseSelection7'].mean(numeric_only=True)
+           DatabaseSelection7Average = Medlinedf[DatabaseSelection7].mean(numeric_only=True)
            if pd.isna(DatabaseSelection7Average):
                 DatabaseSelection7Records = "No data"
            else:
@@ -499,7 +499,7 @@ def recordsdata():
            DatabaseSelection8Records = "Not selected"
        else:
            display8 = ""
-           DatabaseSelection8Average = Medlinedf['DatabaseSelection8'].mean(numeric_only=True)
+           DatabaseSelection8Average = Medlinedf[DatabaseSelection8].mean(numeric_only=True)
            if pd.isna(DatabaseSelection8Average):
                 DatabaseSelection8Records = "No data"
            else:
@@ -515,7 +515,7 @@ def recordsdata():
            DatabaseSelection9Records = "Not selected"
        else:
            display9 = ""
-           DatabaseSelection9Average = Medlinedf['DatabaseSelection9'].mean(numeric_only=True)
+           DatabaseSelection9Average = Medlinedf[DatabaseSelection9].mean(numeric_only=True)
            if pd.isna(DatabaseSelection9Average):
                 DatabaseSelection9Records = "No data"
            else:
@@ -531,7 +531,7 @@ def recordsdata():
            DatabaseSelection10Records = "Not selected"
        else:
            display10 = ""
-           DatabaseSelection10Average = Medlinedf['DatabaseSelection10'].mean(numeric_only=True)
+           DatabaseSelection10Average = Medlinedf[DatabaseSelection10].mean(numeric_only=True)
            if pd.isna(DatabaseSelection10Average):
                 DatabaseSelection10Records = "No data"
            else:
@@ -786,6 +786,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
