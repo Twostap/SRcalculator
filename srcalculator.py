@@ -538,8 +538,9 @@ def recordsdata():
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
            CINAHLdf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics == @Topics')
+           print(CINAHLdf.to_string())
            CINAHLAverage = CINAHLdf['CINAHL'].mean(numeric_only=True)
-           print(CINAHLAverage.round(0))
+           print(CINAHLAverage)
            if pd.isna(CINAHLAverage):
                 CINAHLAverage = "No data"
            else:
@@ -786,6 +787,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
