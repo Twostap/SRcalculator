@@ -572,7 +572,7 @@ def recordsdata():
            if pd.isna(CINAHLAverage):
                 CINAHLAverage = "No data"
            else:
-                CINAHLAverage = CINAHLAverage.round(0)
+                CINAHLAverage = CINAHLAverage.round(0).astype(int)
 
        else:
            CINAHLAverage = ""
@@ -823,6 +823,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
