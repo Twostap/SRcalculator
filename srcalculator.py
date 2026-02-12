@@ -91,7 +91,7 @@ def recordsdata():
        DatabaseSelection9 = request.form.get("DatabaseSelection9")
        DatabaseSelection10 = request.form.get("DatabaseSelection10")
 
-       Theses = request.form.get("Theses or dissertations")
+       Theses = request.form.get("Theses")
         
        Topics = []
        GreyLiteratureSelection = []
@@ -370,7 +370,7 @@ def recordsdata():
            SpiritualChecked = ""
 
        if Theses=="on":
-           GreyLiteratureSelection.append("Theses")
+           GreyLiteratureSelection.append("Theses or dissertations")
            ThesesChecked = "checked"
        else:
            ThesesChecked = ""
@@ -799,6 +799,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
