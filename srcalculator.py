@@ -384,8 +384,10 @@ def recordsdata():
            CitationsChecked = ""
 
        if Scholarly=="on":
+           print("in scholarly")
            GreyLiteratureSelection.append("Scholarly search engines (Google Scholar, ResearchGate, etc.)")
            ScholarlyChecked = "checked"
+           print(GreyLiteratureSelection)
        else:
            ScholarlyChecked = ""
 
@@ -814,6 +816,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
