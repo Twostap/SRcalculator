@@ -420,7 +420,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection1Average):
                 DatabaseSelection1Records = "No data"
            else:
-                DatabaseSelection1Records = DatabaseSelection1Average.round(0)
+                DatabaseSelection1Records = DatabaseSelection1Average.round(0).astype(int)
 
        if DatabaseSelection2=="selectone":
            display2 = "display: none;"
@@ -436,7 +436,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection2Average):
                 DatabaseSelection2Records = "No data"
            else:
-                DatabaseSelection2Records = DatabaseSelection2Average.round(0)
+                DatabaseSelection2Records = DatabaseSelection2Average.round(0).astype(int)
 
        if DatabaseSelection3=="selectone":
            display3 = "display: none;"
@@ -452,7 +452,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection3Average):
                 DatabaseSelection3Records = "No data"
            else:
-                DatabaseSelection3Records = DatabaseSelection3Average.round(0)      
+                DatabaseSelection3Records = DatabaseSelection3Average.round(0).astype(int)      
 
        if DatabaseSelection4=="selectone":
            display4 = "display: none;"
@@ -468,7 +468,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection4Average):
                 DatabaseSelection4Records = "No data"
            else:
-                DatabaseSelection4Records = DatabaseSelection4Average.round(0)
+                DatabaseSelection4Records = DatabaseSelection4Average.round(0).astype(int)
  
        if DatabaseSelection5=="selectone":
            display5 = "display: none;"
@@ -484,7 +484,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection5Average):
                 DatabaseSelection5Records = "No data"
            else:
-                DatabaseSelection5Records = DatabaseSelection5Average.round(0)
+                DatabaseSelection5Records = DatabaseSelection5Average.round(0).astype(int)
  
        if DatabaseSelection6=="selectone":
            display6 = "display: none;"
@@ -500,7 +500,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection6Average):
                 DatabaseSelection6Records = "No data"
            else:
-                DatabaseSelection6Records = DatabaseSelection6Average.round(0)
+                DatabaseSelection6Records = DatabaseSelection6Average.round(0).astype(int)
  
        if DatabaseSelection7=="selectone":
            display7 = "display: none;"
@@ -516,7 +516,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection7Average):
                 DatabaseSelection7Records = "No data"
            else:
-                DatabaseSelection7Records = DatabaseSelection7Average.round(0)
+                DatabaseSelection7Records = DatabaseSelection7Average.round(0).astype(int)
  
        if DatabaseSelection8=="selectone":
            display8 = "display: none;"
@@ -532,7 +532,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection8Average):
                 DatabaseSelection8Records = "No data"
            else:
-                DatabaseSelection8Records = DatabaseSelection8Average.round(0)
+                DatabaseSelection8Records = DatabaseSelection8Average.round(0).astype(int)
 
        if DatabaseSelection9=="selectone":
            display9 = "display: none;"
@@ -548,7 +548,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection9Average):
                 DatabaseSelection9Records = "No data"
            else:
-                DatabaseSelection9Records = DatabaseSelection9Average.round(0)
+                DatabaseSelection9Records = DatabaseSelection9Average.round(0).astype(int)
  
        if DatabaseSelection10=="selectone":
            display10 = "display: none;"
@@ -564,7 +564,7 @@ def recordsdata():
            if pd.isna(DatabaseSelection10Average):
                 DatabaseSelection10Records = "No data"
            else:
-                DatabaseSelection10Records = DatabaseSelection10Average.round(0)
+                DatabaseSelection10Records = DatabaseSelection10Average.round(0).astype(int)
 
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
@@ -584,7 +584,7 @@ def recordsdata():
            if pd.isna(EmbaseAverage):
                 EmbaseAverage = "No data"
            else:
-                EmbaseAverage = EmbaseAverage.round(0)
+                EmbaseAverage = EmbaseAverage.round(0).astype(int)
 
        else:
            EmbaseAverage = ""
@@ -596,7 +596,7 @@ def recordsdata():
            if pd.isna(ScopusAverage):
                 ScopusAverage = "No data"
            else:
-                ScopusAverage = ScopusAverage.round(0)
+                ScopusAverage = ScopusAverage.round(0).astype(int)
 
        else:
            ScopusAverage = ""
@@ -608,7 +608,7 @@ def recordsdata():
            if pd.isna(CochraneLibraryAverage):
                 CochraneLibraryAverage = "No data"
            else:
-                CochraneLibraryAverage = CochraneLibraryAverage.round(0)
+                CochraneLibraryAverage = CochraneLibraryAverage.round(0).astype(int)
 
        else:
            CochraneLibraryChecked = ""
@@ -620,7 +620,7 @@ def recordsdata():
            if pd.isna(CochraneCentralAverage):
                 CochraneCentralAverage = "No data"
            else:
-                CochraneCentralAverage = CochraneCentralAverage.round(0)
+                CochraneCentralAverage = CochraneCentralAverage.round(0).astype(int)
 
        else:
            CochraneCentralChecked = ""
@@ -632,7 +632,7 @@ def recordsdata():
            if pd.isna(ERICAverage):
                 ERICAverage = "No data"
            else:
-                ERICAverage = ERICAverage.round(0)
+                ERICAverage = ERICAverage.round(0).astype(int)
 
        else:
            ERICChecked = ""
@@ -644,7 +644,7 @@ def recordsdata():
            if pd.isna(PEDroAverage):
                 PEDroAverage = "No data"
            else:
-                PEDroAverage = PEDroAverage.round(0)
+                PEDroAverage = PEDroAverage.round(0).astype(int)
 
        else:
            PEDroChecked = ""
@@ -656,7 +656,7 @@ def recordsdata():
            if pd.isna(PsycINFOAverage):
                 PsycINFOAverage = "No data"
            else:
-                PsycINFOAverage = PsycINFOAverage.round(0)
+                PsycINFOAverage = PsycINFOAverage.round(0).astype(int)
 
        else:
            PsycINFOChecked = ""
@@ -668,7 +668,7 @@ def recordsdata():
            if pd.isna(WebOfScienceAverage):
                 WebOfScienceAverage = "No data"
            else:
-                WebOfScienceAverage = WebOfScienceAverage.round(0)
+                WebOfScienceAverage = WebOfScienceAverage.round(0).astype(int)
 
        else:
            WebOfScienceChecked = ""
@@ -682,20 +682,20 @@ def recordsdata():
            GreyLiteratureAverage = "No data"
 
        else:
-           GreyLiteratureAverage = GreyLiteratureAverage.round(0)
+           GreyLiteratureAverage = GreyLiteratureAverage.round(0).astype(int)
         
        UniqueAverage = Medlinedf['Unique'].mean(numeric_only=True)
        if pd.isna(UniqueAverage):
            UniqueAverage = "No data"
        else:
-           UniqueAverage = UniqueAverage.round(0)    
+           UniqueAverage = UniqueAverage.round(0).astype(int)    
 
        
        IncludesAverage = Medlinedf['Includes'].mean(numeric_only=True)
        if pd.isna(IncludesAverage):
            IncludesAverage = "No data"
        else:
-           IncludesAverage = IncludesAverage.round(0) 
+           IncludesAverage = IncludesAverage.round(0).astype(int) 
             
        TotalScreen = ([TotalMedline, CINAHLAverage, CochraneLibraryAverage, CochraneCentralAverage, ERICAverage, PEDroAverage, PsycINFOAverage, EmbaseAverage, ScopusAverage, WebOfScienceAverage, GreyLiteratureAverage, DatabaseSelection1Records, DatabaseSelection2Records, DatabaseSelection3Records, DatabaseSelection4Records, DatabaseSelection5Records, DatabaseSelection6Records, DatabaseSelection7Records, DatabaseSelection8Records, DatabaseSelection9Records, DatabaseSelection10Records])
        TotalScreen = sum(x if not isinstance(x,str) else 0 for x in TotalScreen)
@@ -823,6 +823,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
