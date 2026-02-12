@@ -708,14 +708,15 @@ def recordsdata():
            IncludesAverage = "No data"
        else:
            IncludesAverage = IncludesAverage.round(0).astype(int) 
-            
-       TotalScreen = ([TotalMedline, CINAHLAverage, CochraneLibraryAverage, CochraneCentralAverage, ERICAverage, PEDroAverage, PsycINFOAverage, EmbaseAverage, ScopusAverage, WebOfScienceAverage, GreyLiteratureAverage, DatabaseSelection1Records, DatabaseSelection2Records, DatabaseSelection3Records, DatabaseSelection4Records, DatabaseSelection5Records, DatabaseSelection6Records, DatabaseSelection7Records, DatabaseSelection8Records, DatabaseSelection9Records, DatabaseSelection10Records])
+       TotalMedline = int(TotalScreen)     
+       TotalScreen = ([TotalMedlineInt, CINAHLAverage, CochraneLibraryAverage, CochraneCentralAverage, ERICAverage, PEDroAverage, PsycINFOAverage, EmbaseAverage, ScopusAverage, WebOfScienceAverage, GreyLiteratureAverage, DatabaseSelection1Records, DatabaseSelection2Records, DatabaseSelection3Records, DatabaseSelection4Records, DatabaseSelection5Records, DatabaseSelection6Records, DatabaseSelection7Records, DatabaseSelection8Records, DatabaseSelection9Records, DatabaseSelection10Records])
        TotalScreen = sum(x if not isinstance(x,str) else 0 for x in TotalScreen)
            
        if TotalScreen==0:
            TotalScreen="No results"
        elif TotalScreen==TotalMedline:
-           TotalScreen="No results"         
+           TotalScreen="No results"
+       TotalScreen = int(TotalScreen)
     else:
         CINAHLAverage = ""
         EmbaseAverage = ""
@@ -836,6 +837,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
