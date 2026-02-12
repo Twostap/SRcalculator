@@ -91,7 +91,7 @@ def recordsdata():
        DatabaseSelection9 = request.form.get("DatabaseSelection9")
        DatabaseSelection10 = request.form.get("DatabaseSelection10")
 
-       Theses = request.form.get("Theses")
+       Theses = request.form.get("Theses or dissertations")
         
        Topics = []
        GreyLiteratureSelection = []
@@ -799,6 +799,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
