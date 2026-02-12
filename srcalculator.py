@@ -681,15 +681,20 @@ def recordsdata():
            WebOfScienceChecked = ""
            WebOfScienceAverage = ""
 
-       GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
-       print(GreyLiteratureSelection)
-       GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
+       if not GreyLiteratureSelection:
+           print("grey lit not checked")
+           GreyLiteratureAverage = ""   
 
-       if pd.isna(GreyLiteratureAverage):
-           GreyLiteratureAverage = "No data"
+       else: 
+           GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
+           print(GreyLiteratureSelection)
+           GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
 
-       else:
-           GreyLiteratureAverage = GreyLiteratureAverage.round(0).astype(int)
+           if pd.isna(GreyLiteratureAverage):
+                GreyLiteratureAverage = "No data"
+
+           else:
+                GreyLiteratureAverage = GreyLiteratureAverage.round(0).astype(int)
         
        UniqueAverage = Medlinedf['Unique'].mean(numeric_only=True)
        if pd.isna(UniqueAverage):
@@ -831,6 +836,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
