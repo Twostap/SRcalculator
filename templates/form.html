@@ -135,8 +135,6 @@
 <tr><td class="Database"><input type="checkbox" id="Theses" name="Theses" {{ ThesesChecked }} /><label for="Theses">Theses or Dissertations</label></td></tr>
 	
 </table>
-<br>
-<p style="text-align:right; padding-right: 20px;"><button type="submit" style="color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px;"}>Calculate</button></p>
 </div>
 </form>
 </div>
@@ -174,6 +172,8 @@
 </table>
 <div class="refresh"><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button><br>
 </div>
+<br>
+<p style="text-align:right; padding-right: 20px;"><button type="submit" style="color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px;"}>Calculate</button></p>
 </div>
 <div class="logo">
 <img class="logoimage" width="250px" src="{{ url_for('static', filename='images/prisma.png') }}"/>
@@ -598,6 +598,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
