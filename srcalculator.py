@@ -654,7 +654,7 @@ def recordsdata():
 
        GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
         
-       GreyLiteraturedf = Medlinedf.query('Other sources searched.str.contains(@GreyLiteratureSelection)')
+       GreyLiteraturedf = Medlinedf.query('Other sources searched == @GreyLiteratureSelection')
 
        GreyLiteratureAverage = GreyLiteraturedf['Grey Literature'].mean(numeric_only=True)
        if pd.isna(GreyLiteratureAverage):
@@ -799,6 +799,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
