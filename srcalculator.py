@@ -653,7 +653,7 @@ def recordsdata():
            WebOfScienceAverage = ""
 
        GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
-       GreyLiteratureAverage = 'Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics) & Other sources searched == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
+       GreyLiteratureAverage = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics) & Other sources searched == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
 
        GreyLiteratureAverage = GreyLiteraturedf['Grey Literature'].mean(numeric_only=True)
        if pd.isna(GreyLiteratureAverage):
@@ -798,6 +798,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
