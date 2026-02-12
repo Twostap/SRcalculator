@@ -372,29 +372,30 @@ def recordsdata():
        else:
            SpiritualChecked = ""
 
-       if Theses=="on":
-           GreyLiteratureSelection.append("Theses or dissertations")
-           ThesesChecked = "checked"
-       else:
-           ThesesChecked = ""
-
        if Citations=="on":
            GreyLiteratureSelection.append("Citation searching (forward or backward)")
            CitationsChecked = "checked"
        else:
            CitationsChecked = ""
 
+       if Hand=="on":
+           GreyLiteratureSelection.append("Hand searching (specific journals, conferences, websites)")
+           HandChecked = "checked"
+       else:
+           HandChecked = ""
+        
        if Scholarly=="on":
            GreyLiteratureSelection.append("Scholarly search engines (Google Scholar, ResearchGate, etc)")
            ScholarlyChecked = "checked"
        else:
            ScholarlyChecked = ""
 
-       if Hand=="on":
-           GreyLiteratureSelection.append("Hand searching (specific journals, conferences, websites)")
-           HandChecked = "checked"
+       if Theses=="on":
+           GreyLiteratureSelection.append("Theses or dissertations")
+           ThesesChecked = "checked"
        else:
-           ScholarlyChecked = ""
+           ThesesChecked = ""
+
 
        Topics = "; ".join(Topics)
        
@@ -674,6 +675,7 @@ def recordsdata():
            WebOfScienceAverage = ""
 
        GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
+       print(GreyLiteratureSelection)
        GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
 
        if pd.isna(GreyLiteratureAverage):
@@ -821,6 +823,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
