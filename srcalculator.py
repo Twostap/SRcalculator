@@ -174,7 +174,7 @@ def recordsdata():
        else:
            PhysicalChecked = ""
        if PsychologyTopic=="on":
-           Topics.append("Psychology, Psychiatry, and Mental Health")
+           Topics.append("Psychology, Psychiatry and Mental Health")
            PsychologyChecked = "checked"
        else:
            PsychologyChecked = ""
@@ -813,6 +813,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
