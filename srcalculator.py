@@ -721,6 +721,7 @@ def recordsdata():
            UniqueAverage = "No data"
        else:
            UniqueAverage = TotalScreen * TopicsUnique
+           UniqueAverage = UniqueAverage.round(0).astype(int)
            print(UniqueAverage)
 
     
@@ -844,6 +845,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
