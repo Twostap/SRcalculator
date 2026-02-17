@@ -612,7 +612,7 @@ def recordsdata():
            CochraneCentralChecked = ""
            CochraneCentralAverage = ""        
       
-        if EmbaseDatabase=="on":
+       if EmbaseDatabase=="on":
            EmbaseChecked = "checked"
            EmbaseAverage = Medlinedf['Embase'].mean(numeric_only=True)
            DatabaseList.append('Embase')
@@ -861,6 +861,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
