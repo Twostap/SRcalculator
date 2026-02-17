@@ -703,25 +703,24 @@ def recordsdata():
        print(UniqueCombined)
         
        if not GreyLiteratureSelection:
-           print("grey lit not checked")
-           GreyLiteratureAverage = ""   
+           GreyLiteratureAverage = ""
+           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString  & Topics.str.contains(@Topics)')
+           IncludesPercent = IncludesPercentdf['DatabaseIncludesPercent'].mean(numeric_only=True)
+           print(IncludesPercent)
 
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
-           print(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
+           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString  & Topics.str.contains(@Topics)')
+           IncludesPercent = IncludesPercentdf['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
+           print(IncludesPercent)
 
            if pd.isna(GreyLiteratureAverage):
                 GreyLiteratureAverage = "No data"
 
            else:
                 GreyLiteratureAverage = GreyLiteratureAverage.round(0).astype(int)
-               
-       IncludesAverage = Medlinedf['Includes'].mean(numeric_only=True)
-       if pd.isna(IncludesAverage):
-           IncludesAverage = "No data"
-       else:
-           IncludesAverage = IncludesAverage.round(0).astype(int) 
+        
        TotalMedline = int(TotalMedline)  
        TotalScreen = ([TotalMedline, CINAHLAverage, CochraneLibraryAverage, CochraneCentralAverage, ERICAverage, PEDroAverage, PsycINFOAverage, EmbaseAverage, ScopusAverage, WebOfScienceAverage, GreyLiteratureAverage, DatabaseSelection1Records, DatabaseSelection2Records, DatabaseSelection3Records, DatabaseSelection4Records, DatabaseSelection5Records, DatabaseSelection6Records, DatabaseSelection7Records, DatabaseSelection8Records, DatabaseSelection9Records, DatabaseSelection10Records])
        TotalScreen = sum(x if not isinstance(x,str) else 0 for x in TotalScreen)
@@ -740,6 +739,13 @@ def recordsdata():
            UniqueAverage = UniqueAverage.round(0).astype(int)
            print(UniqueAverage)
 
+       if pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+           IncludesAverage = "No data"
+       else:
+           IncludesAverage = TotalScreen * IncludesPercent
+           IncludesAverage = IncludesAverage.round(0).astype(int)
+           print(IncludesAverage)
+    
     
     else:
         CINAHLAverage = ""
@@ -861,6 +867,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
