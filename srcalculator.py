@@ -700,22 +700,18 @@ def recordsdata():
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
 # print(TopicsUnique)
 
-       UniqueCombineddf = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')
-       print(UniqueCombineddf)
-       UniqueCombined = UniqueCombineddf['UniquePercent'].mean(numeric_only=True)
+       UniqueCombined = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['UniquePercent'].mean(numeric_only=True)
        print(UniqueCombined)
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
-           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')
-           IncludesPercent = IncludesPercentdf['DatabaseIncludesPercent'].mean(numeric_only=True)
+           IncludesPercent = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['DatabaseIncludesPercent'].mean(numeric_only=True)
            print(IncludesPercent)
 
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
-           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString  & Topics.str.contains(@Topics)')
-           IncludesPercent = IncludesPercentdf['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
+           IncludesPercent = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
            print(IncludesPercent)
 
            if pd.isna(GreyLiteratureAverage):
@@ -870,6 +866,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
