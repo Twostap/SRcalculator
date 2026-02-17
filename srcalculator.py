@@ -412,7 +412,8 @@ def recordsdata():
        df.head()
 
        Medlinedf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics)')
-       TopicsUnique = df.query('Topics.str.contains(@Topics)')[UniquePercent].mean(numeric_only=True)
+       TopicsUniquedf = df[df['Topics'].str.contains(@Topics)]
+       TopicsUnique = TopicsUniquedf['UniquePercentage'].mean(nuemric_only=True)
        print(TopicsUnique)
         
        if DatabaseSelection1=="selectone":
@@ -840,6 +841,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
