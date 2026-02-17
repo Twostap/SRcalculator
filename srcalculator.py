@@ -413,8 +413,9 @@ def recordsdata():
 
        Medlinedf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics)')
        TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
-       TopicsUnique = TopicsUniquedf['UniquePercent'].mean(nuemric_only=True)
+       TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
        print(TopicsUnique)
+
         
        if DatabaseSelection1=="selectone":
            display1 = "display: none;"
@@ -698,14 +699,7 @@ def recordsdata():
 
            else:
                 GreyLiteratureAverage = GreyLiteratureAverage.round(0).astype(int)
-        
-       UniqueAverage = Medlinedf['Unique'].mean(numeric_only=True)
-       if pd.isna(UniqueAverage):
-           UniqueAverage = "No data"
-       else:
-           UniqueAverage = UniqueAverage.round(0).astype(int)    
-
-       
+               
        IncludesAverage = Medlinedf['Includes'].mean(numeric_only=True)
        if pd.isna(IncludesAverage):
            IncludesAverage = "No data"
@@ -721,6 +715,15 @@ def recordsdata():
            TotalScreen="No results"
        else:
            TotalScreen = int(TotalScreen)
+
+       UniqueAverage = Medlinedf['Unique'].mean(numeric_only=True)
+       if pd.isna(TotalScreen) or pd.isna(TopicsUnique):
+           UniqueAverage = "No data"
+       else:
+           UniqueAverage = TotalScreen * TopicsUnique
+           print(UniqueAverage)
+
+    
     else:
         CINAHLAverage = ""
         EmbaseAverage = ""
@@ -841,6 +844,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
