@@ -693,6 +693,7 @@ def recordsdata():
            WebOfScienceAverage = ""
        
        DatabaseListString = "; ".join(DatabaseList)
+       print(DatabaseListString)
 
 # TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
@@ -867,6 +868,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
