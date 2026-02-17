@@ -719,7 +719,8 @@ def recordsdata():
            TotalScreen="No results"
        elif TotalScreen==TotalMedline:
            TotalScreen="No results"
-       TotalScreen = int(TotalScreen)
+       else:
+           TotalScreen = int(TotalScreen)
     else:
         CINAHLAverage = ""
         EmbaseAverage = ""
@@ -840,6 +841,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
