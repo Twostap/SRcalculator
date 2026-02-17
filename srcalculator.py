@@ -700,13 +700,14 @@ def recordsdata():
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
 # print(TopicsUnique)
 
-       UniqueCombineddf = df.query('`Databases used` == @DatabaseListString  & Topics.str.contains(@Topics)')
+       UniqueCombineddf = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')
+       print(UniqueCombineddf)
        UniqueCombined = UniqueCombineddf['UniquePercent'].mean(numeric_only=True)
        print(UniqueCombined)
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
-           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString  & Topics.str.contains(@Topics)')
+           IncludesPercentdf = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')
            IncludesPercent = IncludesPercentdf['DatabaseIncludesPercent'].mean(numeric_only=True)
            print(IncludesPercent)
 
@@ -869,6 +870,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
