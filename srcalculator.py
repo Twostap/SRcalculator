@@ -733,7 +733,7 @@ def recordsdata():
        else:
            TotalScreen = int(TotalScreen)
 
-       if pd.isna(TotalScreen) or pd.isna(TopicsUnique):
+       if pd.isna(TotalScreen) or pd.isna(UniqueCombined):
            UniqueAverage = "No data"
        else:
            UniqueAverage = TotalScreen * UniqueCombined
@@ -861,6 +861,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
