@@ -2,11 +2,8 @@ from flask import Flask, request, render_template
 import pandas as pd
 from pathlib import Path
 
-# Flask constructor
 app = Flask(__name__)  
 
-# A decorator used to tell the application
-# which URL is associated function
 @app.route('/', methods =["GET", "POST"])
 def recordsdata():
     if request.method == "POST":
@@ -866,6 +863,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
