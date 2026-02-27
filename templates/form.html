@@ -6,38 +6,54 @@
 .choosefile {padding-left:5px;}
 .topics {white-space:nowrap;}
 .Database {white-space:nowrap;}
-.formdiv {display:inline-block; text-align: left;}
-.resultdiv {display:inline-block; vertical-align:top; margin-left:30px; margin-top:10px; text-align:left; background-color:darkcyan; color:white; padding:15px; min-width:200px; border: solid thin black; max-width:200px;}
-.header {text-align:center;}
-.wrapper {text-align:center;}
-.intro {text-align:center;}
+.formdiv {text-align: left;}
+.resultdiv {font-size: 1em; display: inline-block; vertical-align:top; text-align:left; background-color:darkcyan; color:white; margin-left:15px; padding: 15px; min-width:200px; border: solid thin black; max-width:200px;}
+.header {text-align:left;}
+.wrapper {text-align:left; font-family:calibri; font-size:.8em;}
+.intro {text-align:left;}
 .introbody {text-align:left; display:inline-block}
-.topic {display:inline-block;}
-.databasediv {display:inline-block; vertical-align:top; margin-left:30px;}
-.footer {text-align:center; font-size:.6em;}
+.topic {display:inline-block; border: inset 1px; margin:5px;}
+.databasediv {display:inline-block; vertical-align:top; margin-left:15px; border: inset 1px; margin:5px;}
+.greylitdiv {display:inline-block; vertical-align:top; margin-left:15px; min-width:200px; border: inset 1px; margin:5px;}
+.footer {text-align:left; font-size:.6em;}
 .copyright {margin-right:260px;}
 .resultscolumn {width: 55%; border: 1px inset grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:.8em; white-space:no-wrap;}
-.selectlist {background-color:white; max-width:150px;}
+.selectlist {background-color:white; max-width:140px;}
 .DatabaseResults {max-width:200px;}
 .DatabaseInResults {white-space:wrap; min-width:120px;}
-.refreshbutton {background-color:white; font-size:.7em; font-family:arial; border: solid thin white; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px;}
+.refreshbutton {background-color:white; font-size:.7em; font-family: calibri; border: solid thin white; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px;}
 .refresh {text-align:right; margin-top:10px;}
+.calculate {text-align:right;}
+.selections {display:inline-flex; background-color:#f7f7f7; border:outset 1px;}
+.resultcalculate {display:inline-block; vertical-align: top;}
+.selectlist {font-size:1em; font-family:Calibri}
+.greylitcolumn {padding-left: 2.0em; text-indent: -1.8em;}
+input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; height: .8em;}
 
 @media only screen and (max-width: 900px) {
   .database {min-width: none;}
   .databasediv {margin-left:1px; display:block; margin-top:4px;}
+  .greylitdiv {margin-left:1px; display:block; margin-top:4px; white-space:nowrap; max-width:none; min-width:none;}
+  .topic {display: block; margin-left:1px;}
   .copyright {margin-right:0px; display:block; text-align:left}
   .resultdiv {margin-left:1px; display:block; margin-top:30px; max-width:none; min-width:none;}
+  .greylitcolumn {white-space:nowrap;}
   .footer {display:block}
   .formdiv {display:block}
   .intro {text-align:left}
-  .header {text-align:left}}
+  .header {text-align:left}
+  .calculate {text-align:left}
+  .databasetable {border: none;}
+  .topictable {border: none;}
+  .greylittable {border: none;}
+  .resultcalculate {display:block; vertical-align: top;}
+  .selections {display:block; border: none;}}
 </style>
 </head>
 <body>
 <div class="wrapper" style="width:100%">
 <div class="header">
-<h1 style="font-family:arial;">SR Record Calculator</h1>
+<h1 style="font-family: calibri; font-size:1.5em">SR Record Calculator</h1>
 </div>
 <div class="intro">
 <div class="introbody">
@@ -47,11 +63,12 @@
 </div>
 <div class="formdiv">
 <form class="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
-<div class="records" style="font-family:arial; padding-right:15px;">
-<p style="font-size:.8em; font-family: arial"><label for="TotalMedline"><b>Total Number of Medline or PubMed records</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" placeholder="enter a number" required></td></tr></p>
-</div>
+<div class="records" style="font-family: calibri; padding-right:15px;">
+<p style="font-size:.8em; font-family: calibri"><label for="TotalMedline"><b>Total Number of Medline or PubMed records:</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:calibri; font-size:.9em;" placeholder="enter a number" required>
+</p></div>
+<div class="selections">
 <div class="topic">
-<table style="font-size:.8em; font-family: arial">
+<table class="topictable" style="font-size:.8em; font-family: calibri; padding:5px;">
 <tr><td class="topics" style="vertical-align:top; padding-bottom:10px;"><b>Topics</b></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
@@ -114,9 +131,8 @@
 </table>
 </div>
 <div class="databasediv">
-<td style="vertical-align:top; padding-left:5%">
-<table style="font-size:.8em; font-family: arial; max-width:150px;">
-<tr><td class="Database" style="padding-bottom:10px"><b>Primary Databases</b></td></tr>
+<table class="databasetable" style="font-size:.8em; font-family: calibri; max-width:150px; padding:5px;">
+<tr><td class="Database" style="padding-bottom:10px"><b>Databases</b></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" {{ CINAHLChecked }} /><label for="CINAHL">CINAHL</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" {{ CochraneLibraryChecked }} /><label for="CochraneLibrary">Cochrane Library (Not Specific)</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" {{ CochraneCentralChecked }} /><label for="CochraneCentral">Cochrane Central</label></td></tr>
@@ -129,22 +145,23 @@
 <tr><td class="Database" style="padding-top:10px;"><button type="button" onclick="AddDatabase()" style="border: solid thin black; font-size:.93em;">Add another database</button>
 <div id="AdditionalDatabase"><br>
 </div>
-</td></tr>
-<tr><td class="Database" style="padding-bottom:10px"><b>Grey Literature</b></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Citations" name="Citations" {{ CitationsChecked }} /><label for="Citations">Citation Searching (Forward or Backward)</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="GeneralGrey" name="GeneralGrey" {{ GeneralGreyChecked }} /><label for="GeneralGrey">General Grey Literature Tools (e.g. Open Grey)</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Hand" name="Hand" {{ HandChecked }} /><label for="Hand">Hand Searching</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Scholarly" name="Scholarly" {{ ScholarlyChecked }} /><label for="Scholarly">Scholarly Search Engines (e.g. Google Scholar)</label></td></tr>
-<tr><td class="Database"><input type="checkbox" id="Theses" name="Theses" {{ ThesesChecked }} /><label for="Theses">Theses or Dissertations</label></td></tr>
+</td></tr></table></div>
+<div class="greylitdiv">
+<table class="greylittable" style="font-size:.8em; font-family: calibri; max-width:150px; padding:5px; min-width:200px;">
+<tr><td style="padding-bottom:10px" colspan="2"><b>Grey Literature</b></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Citations" name="Citations" {{ CitationsChecked }} /><label for="Citations">Citation Searching (Forward or Backward)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="GeneralGrey" name="GeneralGrey" {{ GeneralGreyChecked }} /><label for="GeneralGrey">General Grey Literature Tools (e.g. Open Grey)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Hand" name="Hand" {{ HandChecked }} /><label for="Hand">Hand Searching</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Scholarly" name="Scholarly" {{ ScholarlyChecked }} /><label for="Scholarly">Scholarly Search Engines (e.g. Google Scholar)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Theses" name="Theses" {{ ThesesChecked }} /><label for="Theses">Theses or Dissertations</label></td></tr>
 </table>
 <br>
-<p style="text-align:right; padding-right: 20px;"><button type="submit" style="color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px;"}>Calculate</button></p>
 </div>
-</form>
 </div>
-<div class="resultdiv" style="font-family:arial;">
-<h2 style="margin-top:0px; padding-top:0px;">Results</h2>
-<table id="DatabaseResults" style="font-size:.8em; color:white;">
+<div class="resultcalculate">
+<div class="resultdiv" style="font-family: calibri;">
+<span style="font-size:1.5em;"><strong>Results</strong></span><br><br>
+<table id="DatabaseResults" style="font-size:1em; color:white;">
 <tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
 <tr><td class="DatabaseInResults">CINAHL</td><td class="resultscolumn">{{ CINAHLRecords }}</td></tr>
 <tr><td class="DatabaseInResults">Cochrane Library</td><td class="resultscolumn">{{ CochraneLibraryRecords }}</td></tr>
@@ -166,7 +183,7 @@
 <tr id="DatabaseSelection9Row" style="{{ display9 }}"><td class="DatabaseInResults">{{ DatabaseSelection9Name }}</td><td class="resultscolumn">{{ DatabaseSelection9Records }}</td></tr>
 <tr id="DatabaseSelection10Row" style="{{ display10 }}"><td class="DatabaseInResults">{{ DatabaseSelection10Name }}</td><td class="resultscolumn">{{ DatabaseSelection10Records }}</td></tr>
 </table>
-<table style="font-size:.8em; color:white;">
+<table style="font-size:1em; color:white;">
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
 <tr><td class="DatabaseInResults">Grey Literature:</td><td class="resultscolumn">{{ GreyLiteratureRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
@@ -177,12 +194,18 @@
 <div class="refresh"><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button><br>
 </div>
 </div>
+<div>
+<p class="calculate"><button type="submit" style="font-size: .8em; color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px; font-weight:500;"}>Calculate</button></p>
+</div>
+</div>
+</form>
+</div>
 <div class="logo">
 <img class="logoimage" width="250px" src="{{ url_for('static', filename='images/prisma.png') }}"/>
 </div>
 <div class="footer">
 <div class="copyright">
-<p class="copyright">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p>
+<p class="copyright" style="font-size:1em; font-family: Calibri;">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p>
 </div>
 </div>
 </div>
@@ -600,6 +623,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
