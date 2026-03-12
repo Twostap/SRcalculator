@@ -56,7 +56,9 @@ def recordsdata():
        CardiovascularTopic = request.form.get("CardiovascularTopic")
        ComplementaryTopic = request.form.get("ComplementaryTopic")
        CongenitalTopic = request.form.get("CongenitalTopic")
+       CriticalTopic = request.form.get("CriticalTopic")
        EarTopic = request.form.get("EarTopic")
+       EmergencyTopic = request.form.get("EmergencyTopic")
        EyeTopic = request.form.get("EyeTopic")
        GeriatricsTopic = request.form.get("GeriatricsTopic")
        InfectionTopic = request.form.get("InfectionTopic")
@@ -65,15 +67,20 @@ def recordsdata():
        MetabolicTopic = request.form.get("MetabolicTopic")
        MusculoskeletalTopic = request.form.get("MusculoskeletalTopic")
        NeurologicalTopic = request.form.get("NeurologicalTopic")
+       OccupationalMedTopic = request.form.get("OccupationalMedTopic")
        OralTopic = request.form.get("OralTopic")
+       PalliativeTopic = request.form.get("PalliativeTopic")
+       PathologyTopic = request.form.get("PathologyTopic")
        PediatricsTopic = request.form.get("PediatricsTopic")
        RenalTopic = request.form.get("RenalTopic")
        ReproductiveTopic = request.form.get("ReproductiveTopic")
        RespiratoryTopic = request.form.get("RespiratoryTopic")
        SkinTopic = request.form.get("SkinTopic")
        SleepTopic = request.form.get("SleepTopic")
+       SpaceTopic = request.form.get("SpaceTopic")
        StrokeTopic = request.form.get("StrokeTopic")
        SurgeryTopic = request.form.get("SurgeryTopic")
+       TelemedicineTopic = request.form.get("TelemedicineTopic")
        GeneralTopic = request.form.get("GeneralTopic")
        
  
@@ -308,11 +315,25 @@ def recordsdata():
            CongenitalChecked = "checked"
        else:
            CongenitalChecked = ""
+
+       if CriticalTopic=="on":
+           Topics.append("Critical care medicine")
+           CriticalChecked = "checked"
+       else:
+           CriticalChecked = ""
+        
        if EarTopic=="on":
            Topics.append("Ear and hearing")
            EarChecked = "checked"
        else:
            EarChecked = ""
+
+       if EmergencyTopic=="on":
+           Topics.append("Emergency medicine")
+           EmergencyChecked = "checked"
+       else:
+           EmergencyChecked = ""
+
        if EyeTopic=="on":
            Topics.append("Eye and vision")
            EyeChecked = "checked"
@@ -353,11 +374,31 @@ def recordsdata():
            NeurologicalChecked = "checked"
        else:
            NeurologicalChecked = ""
+
+       if OccupationalMedTopic=="on":
+           Topics.append("Occupational medicine")
+           OccupationalMedChecked = "checked"
+       else:
+           OccupationalMedChecked = ""
+        
        if OralTopic=="on":
            Topics.append("Oral and gastrointestinal")
            OralChecked = "checked"
        else:
            OralChecked = ""
+
+       if PalliativeTopic=="on":
+           Topics.append("Palliative medicine")
+           PalliativeChecked = "checked"
+       else:
+           PalliativeChecked = ""
+
+       if PathologyTopic=="on":
+           Topics.append("Pathology and forensic medicine")
+           PathologyChecked = "checked"
+       else:
+           PathologyChecked = ""
+        
        if PediatricsTopic=="on":
            Topics.append("Pediatrics and neonatology")
            PediatricsChecked = "checked"
@@ -388,6 +429,13 @@ def recordsdata():
            SleepChecked = "checked"
        else:
            SleepChecked = ""
+
+       if SpaceTopic=="on":
+           Topics.append("Space medicine")
+           SpaceChecked = "checked"
+       else:
+           SpaceChecked = ""
+        
        if StrokeTopic=="on":
            Topics.append("Stroke")
            StrokeChecked = "checked"
@@ -398,6 +446,13 @@ def recordsdata():
            SurgeryChecked = "checked"
        else:
            SurgeryChecked = ""
+
+       if TelemedicineTopic=="on":
+           Topics.append("Telemedicine")
+           TelemedicineChecked = "checked"
+       else:
+           TelemedicineChecked = ""
+        
        if GeneralTopic=="on":
            Topics.append("General and public health and safety")
            GeneralChecked = "checked"
@@ -1028,8 +1083,10 @@ def recordsdata():
         CardiovascularChecked = ""
         ComplementaryChecked = ""
         CongenitalChecked = ""
+        CriticalChecked = ""
         EarChecked = ""
-        EyeChecked = ""
+        EarChecked = ""
+        EmergencyChecked = ""
         GeriatricsChecked = ""
         InfectionChecked = ""
         InflammatoryChecked = ""
@@ -1037,15 +1094,20 @@ def recordsdata():
         MetabolicChecked = ""
         MusculoskeletalChecked = ""
         NeurologicalChecked = ""
+        OccupationalMedChecked = ""
         OralChecked = ""
+        PalliativeChecked = ""
+        PathologyChecked = ""
         PediatricsChecked = ""
         RenalChecked = ""
         ReproductiveChecked = ""
         RespiratoryTherapyChecked = ""
         SkinChecked = ""
         SleepChecked = ""
+        SpaceChecked = ""
         StrokeChecked = ""
         SurgeryChecked = ""
+        TelemedicineChecked = ""
         GeneralChecked = ""
         ArtChecked = ""
         AudiologyChecked = ""
@@ -1095,10 +1157,11 @@ def recordsdata():
         UnknownUnclearChecked = ""
         
     return render_template("form.html",CINAHLRecords = CINAHLAverage, CochraneLibraryRecords = CochraneLibraryAverage, CochraneCentralRecords = CochraneCentralAverage, ERICRecords = ERICAverage, PEDroRecords = PEDroAverage, PsycINFORecords = PsycINFOAverage, WebOfScienceRecords = WebOfScienceAverage, EmbaseRecords = EmbaseAverage, ScopusRecords = ScopusAverage, IncludesRecords = IncludesAverage, UniqueRecords = UniqueAverage, TotalScreen=TotalScreen, MedlineRecords=TotalMedline, GreyLiteratureRecords=GreyLiteratureAverage, display1 = display1, display2 = display2, display3 = display3, display4 = display4, display5 = display5, display6 = display6, display7 = display7, display8 = display8, display9 = display9, display10 = display10, DatabaseSelection1Name = DatabaseSelection1, DatabaseSelection1Records = DatabaseSelection1Records, DatabaseSelection2Name = DatabaseSelection2, DatabaseSelection2Records = DatabaseSelection2Records, DatabaseSelection3Name = DatabaseSelection3, DatabaseSelection3Records = DatabaseSelection3Records, DatabaseSelection4Name = DatabaseSelection4, DatabaseSelection4Records = DatabaseSelection4Records, DatabaseSelection5Name = DatabaseSelection5, DatabaseSelection5Records = DatabaseSelection5Records, DatabaseSelection6Name = DatabaseSelection6, DatabaseSelection6Records = DatabaseSelection6Records, DatabaseSelection7Name = DatabaseSelection7, DatabaseSelection7Records = DatabaseSelection7Records, DatabaseSelection8Name = DatabaseSelection8, DatabaseSelection8Records = DatabaseSelection8Records, DatabaseSelection9Name = DatabaseSelection9, DatabaseSelection9Records = DatabaseSelection9Records, DatabaseSelection10Name = DatabaseSelection10, DatabaseSelection10Records = DatabaseSelection10Records, MedicineDisplay = MedicineDisplay, AlliedDisplay = AlliedDisplay, AgricultureChecked = AgricultureChecked, AlliedChecked = AlliedChecked, BiochemistryChecked = BiochemistryChecked, BusinessChecked = BusinessChecked, DentistryChecked = DentistryChecked, DrugsChecked = DrugsChecked, EcologyChecked = EcologyChecked, EducationChecked = EducationChecked, EngineeringChecked = EngineeringChecked, EnvironmentalChecked = EnvironmentalChecked, MedicineChecked = MedicineChecked, NursingChecked = NursingChecked, PhysicalChecked = PhysicalChecked, PsychologyChecked = PsychologyChecked, SportsChecked = SportsChecked, VeterinaryChecked = VeterinaryChecked, BloodChecked = BloodChecked, CancerChecked = CancerChecked, CardiovascularChecked = CardiovascularChecked, ComplementaryChecked = ComplementaryChecked, CongenitalChecked = CongenitalChecked, EarChecked = EarChecked, EyeChecked = EyeChecked, GeriatricsChecked = GeriatricsChecked, InfectionChecked = InfectionChecked, InflammatoryChecked = InflammatoryChecked, InjuriesChecked = InjuriesChecked, MetabolicChecked = MetabolicChecked, MusculoskeletalChecked = MusculoskeletalChecked, NeurologicalChecked = NeurologicalChecked, OralChecked = OralChecked, PediatricsChecked = PediatricsChecked, RenalChecked = RenalChecked, ReproductiveChecked = ReproductiveChecked, RespiratoryTherapyChecked = RespiratoryTherapyChecked, SkinChecked = SkinChecked, SleepChecked = SleepChecked, StrokeChecked = StrokeChecked, SurgeryChecked = SurgeryChecked, GeneralChecked = GeneralChecked, ArtChecked = ArtChecked, AudiologyChecked = AudiologyChecked, DieteticsChecked = DieteticsChecked, ImagingChecked = ImagingChecked, OccupationalChecked = OccupationalChecked, PhysiotherapyChecked = PhysiotherapyChecked, PrehospitalChecked = PrehospitalChecked, ProstheticsChecked = ProstheticsChecked, RecreationChecked = RecreationChecked, RespiratoryChecked = RespiratoryChecked, SocialChecked = SocialChecked, SpiritualChecked = SpiritualChecked, AlliedDisabled = AlliedDisabled, MedicineDisabled = MedicineDisabled, CINAHLChecked = CINAHLChecked, CochraneLibraryChecked = CochraneLibraryChecked, CochraneCentralChecked = CochraneCentralChecked, EmbaseChecked = EmbaseChecked, ERICChecked = ERICChecked, PEDroChecked = PEDroChecked, PsycINFOChecked = PsycINFOChecked, ScopusChecked = ScopusChecked, WebOfScienceChecked = WebOfScienceChecked, ThesesChecked = ThesesChecked, CitationsChecked = CitationsChecked, ScholarlyChecked = ScholarlyChecked, HandChecked = HandChecked, GeneralGreyChecked = GeneralGreyChecked, AlgorithmicChecked = AlgorithmicChecked, AuthorSearchChecked = AuthorSearchChecked, DiscoveryChecked = DiscoveryChecked, GeneralWebChecked = GeneralWebChecked, GuidelinesChecked = GuidelinesChecked, HealthTechnologyChecked = HealthTechnologyChecked, InstitutionalChecked = InstitutionalChecked, NationalChecked = NationalChecked, PersonalCommunicationChecked = PersonalCommunicationChecked, PreprintsChecked = PreprintsChecked, PointOfCareChecked = PointOfCareChecked, PreviousReviewsChecked = PreviousReviewsChecked, PriorKnowledgeChecked = PriorKnowledgeChecked, ProtocolsChecked = ProtocolsChecked, SubjectSearchedChecked 
- = SubjectSearchedChecked, TrialRegistriesChecked = TrialRegistriesChecked, UpdatesAlertsChecked = UpdatesAlertsChecked, UnknownUnclearChecked = UnknownUnclearChecked, ForensicChecked = ForensicChecked, HealthInformaticsChecked = HealthInformaticsChecked, LawEthicsChecked = LawEthicsChecked, LibraryScienceChecked = LibraryScienceChecked, PharmacyChecked = PharmacyChecked, PoliticalChecked = PoliticalChecked, ResearchChecked = ResearchChecked, SociologyChecked = SociologyChecked, ToxicologyChecked = ToxicologyChecked, UrbanChecked = UrbanChecked)
+ = SubjectSearchedChecked, TrialRegistriesChecked = TrialRegistriesChecked, UpdatesAlertsChecked = UpdatesAlertsChecked, UnknownUnclearChecked = UnknownUnclearChecked, ForensicChecked = ForensicChecked, HealthInformaticsChecked = HealthInformaticsChecked, LawEthicsChecked = LawEthicsChecked, LibraryScienceChecked = LibraryScienceChecked, PharmacyChecked = PharmacyChecked, PoliticalChecked = PoliticalChecked, ResearchChecked = ResearchChecked, SociologyChecked = SociologyChecked, ToxicologyChecked = ToxicologyChecked, UrbanChecked = UrbanChecked, CriticalChecked = CriticalChecked, EmergencyChecked = EmergencyChecked, OccupationalMedChecked = OccupationalMedChecked, PalliativeChecked = PalliativeChecked, PathologyChecked = PathologyChecked, SpaceChecked = SpaceChecked, TelemedicineChecked = TelemedicineChecked)
 
 if __name__=='__main__':
    app.run()
+
 
 
 
