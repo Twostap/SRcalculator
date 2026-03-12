@@ -152,11 +152,29 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <div class="greylitdiv">
 <table class="greylittable" style="font-size:.8em; font-family: calibri; max-width:150px; padding:5px; min-width:200px;">
 <tr><td style="padding-bottom:10px" colspan="2"><b>Grey Literature</b></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Algorithmic" name="Algorithmic" {{ AlgorithmicChecked }} /><label for="Algorithmic">Algorithmic and Visualization Tools</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="AuthorSearch" name="AuthorSearch" {{ AuthorSearchChecked }} /><label for="AuthorSearch">Author Search</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Citations" name="Citations" {{ CitationsChecked }} /><label for="Citations">Citation Searching (Forward or Backward)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Discovery" name="Discovery" {{ DiscoveryChecked }} /><label for="Discovery">Discovery Tools and Union Catalogues</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="GeneralGrey" name="GeneralGrey" {{ GeneralGreyChecked }} /><label for="GeneralGrey">General Grey Literature Tools (e.g. Open Grey)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="GeneralWeb" name="GeneralWeb" {{ GeneralWebChecked }} /><label for="GeneralWeb">General Web Searches</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Guidelines" name="Guidelines" {{ GuidelinesChecked }} /><label for="Guidelines">Guidelines</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Hand" name="Hand" {{ HandChecked }} /><label for="Hand">Hand Searching</label></td></tr>
+<tr><td class="greylitcolumn"><input type="HealthTechnology" id="HealthTechnology" name="HealthTechnology" {{ HealthTechnologyChecked }} /><label for="Hand">Health Technology Assessments</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Institutional" name="Institutional" {{ InstitutionalChecked }} /><label for="Institutional">Institutional Repositories</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="National" name="National" {{ NationalChecked }} /><label for="National">National Repositories</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="PersonalCommunication" name="PersonalCommunication" {{ PersonalCommunicationChecked }} /><label for="PersonalCommunication">PersonalCommunication</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Preprints" name="Preprints" {{ PreprintsChecked }} /><label for="Preprints">Preprints</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="PointOfCare" name="PointOfCare" {{ PointOfCareChecked }} /><label for="PointOfCare">Point of Care</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="PreviousReviews" name="PreviousReviews" {{ PreviousReviewsChecked }} /><label for="PreviousReviews">Previous Reviews</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="PriorKnowledge" name="PriorKnowledge" {{ PriorKnowledgeChecked }} /><label for="PriorKnowledge">Prior Knowledge</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="Protocols" name="Protocols" {{ ProtocolsChecked }} /><label for="Protocols">Protocols</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Scholarly" name="Scholarly" {{ ScholarlyChecked }} /><label for="Scholarly">Scholarly Search Engines (e.g. Google Scholar)</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="SubjectSearch" name="SubjectSearch" {{ SubjectSearchedChecked }} /><label for="SubjectSearch">Subject Repositories and Search Tools</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Theses" name="Theses" {{ ThesesChecked }} /><label for="Theses">Theses or Dissertations</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="TrialRegistries" name="TrialRegistries" {{ TrialRegistriesChecked }} /><label for="TrialRegistries">Trial Registries</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="UpdatesAlerts" name="UpdatesAlerts" {{ UpdatesAlertsChecked }} /><label for="UpdatesAlerts">Updates or Alerts</label></td></tr>
+<tr><td class="greylitcolumn"><input type="checkbox" id="UnknownUnclear" name="UnknownUnclear" {{ UnknownUnclearChecked }} /><label for="UnknownUnclear">Unknown or Unclear</label></td></tr>
 </table>
 <br>
 </div>
@@ -642,6 +660,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
