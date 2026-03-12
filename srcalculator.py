@@ -88,11 +88,29 @@ def recordsdata():
        DatabaseSelection9 = request.form.get("DatabaseSelection9")
        DatabaseSelection10 = request.form.get("DatabaseSelection10")
 
-       Theses = request.form.get("Theses")
+       Algorithmic = request.form.get("Algorithmic")
+       AuthorSearch = request.form.get("AuthorSearch")
        Citations = request.form.get("Citations")
-       Scholarly = request.form.get("Scholarly")
-       Hand = request.form.get("Hand")
+       Discovery = request.form.get("Discovery")
        GeneralGrey = request.form.get("GeneralGrey")
+       GeneralWeb = request.form.get("GeneralWeb")
+       Guidelines = request.form.get("Guidelines")
+       Hand = request.form.get("Hand")
+       HealthTechnology = request.form.get("HealthTechnology")
+       Institutional = request.form.get("Institutional")
+       National = request.form.get("National")
+       PersonalCommunication = request.form.get("PersonalCommunication")
+       Preprints = request.form.get("Preprints")
+       PointOfCare = request.form.get("PointOfCare")
+       PreviousReviews = request.form.get("PreviousReviews")
+       PriorKnowledge = request.form.get("PriorKnowledge")
+       Protocols = request.form.get("Protocols")
+       Scholarly = request.form.get("Scholarly")
+       SubjectSearch = request.form.get("SubjectSearch")
+       Theses = request.form.get("Theses")
+       TrialRegistries = request.form.get("TrialRegistries")
+       UpdatesAlerts= request.form.get("UpdatesAlerts")
+       UnknownUnclear = request.form.get("UnknownUnclear")
         
        Topics = []
        GreyLiteratureSelection = []
@@ -881,6 +899,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
