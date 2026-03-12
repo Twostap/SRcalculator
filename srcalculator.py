@@ -18,11 +18,21 @@ def recordsdata():
        EducationTopic = request.form.get("EducationTopic")
        EngineeringTopic = request.form.get("EngineeringTopic")
        EnvironmentalTopic = request.form.get("EnvironmentalTopic")
+       ForensicTopic = request.form.get("ForensicTopic")
+       HealthInformaticsTopic = request.form.get("HealthInformaticsTopic")
+       LawEthicsTopic = request.form.get("LawEthicsTopic")
+       LibraryScienceTopic = request.form.get("LibraryScienceTopic")
        MedicineTopic = request.form.get("MedicineTopic")
        NursingTopic = request.form.get("NursingTopic")
+       PharmacyTopic = request.form.get("PharmacyTopic")
        PhysicalTopic = request.form.get("PhysicalTopic")
+       PoliticalTopic = request.form.get("PoliticalTopic")
        PsychologyTopic = request.form.get("PsychologyTopic")
+       ResearchTopic = request.form.get("ResearchTopic")
+       SociologyTopic = request.form.get("SociologyTopic")
        SportsTopic = request.form.get("SportsTopic")
+       ToxicologyTopic = request.form.get("ToxicologyTopic")
+       UrbanTopic = request.form.get("UrbanTopic")
        VeterinaryTopic = request.form.get("VeterinaryTopic")
        
        ArtTopic = request.form.get("ArtTopic")
@@ -172,6 +182,32 @@ def recordsdata():
            EnvironmentalChecked = "checked"
        else:
            EnvironmentalChecked = ""
+
+       if ForensicTopic=="on":
+           Topics.append("Forensic Science")
+           ForensicChecked = "checked"
+       else:
+           ForensicChecked = ""
+
+       if HealthInformaticsTopic=="on":
+           Topics.append("Health Informatics")
+           HealthInformaticsChecked = "checked"
+       else:
+           HealthInformaticsChecked = ""
+
+       if LawEthicsTopic=="on":
+           Topics.append("Law and Ethics")
+           LawEthicsChecked = "checked"
+       else:
+           LawEthicsChecked = ""
+
+       if LibraryScienceTopic=="on":
+           Topics.append("Library and Information Science")
+           LibraryScienceChecked = "checked"
+       else:
+           LibraryScienceChecked = ""
+
+        
        if MedicineTopic=="on":
            Topics.append("Medicine")
            MedicineDisplay = ""
@@ -186,21 +222,61 @@ def recordsdata():
            NursingChecked = "checked"
        else:
            NursingChecked = ""
+
+       if PharmacyTopic=="on":
+           Topics.append("Pharmacy")
+           PharmacyChecked = "checked"
+       else:
+           PharmacyChecked = ""
+        
        if PhysicalTopic=="on":
            Topics.append("Physical Sciences and Mathematics")
            PhysicalChecked = "checked"
        else:
            PhysicalChecked = ""
+
+       if PoliticalTopic=="on":
+           Topics.append("Political Science")
+           PoliticalChecked = "checked"
+       else:
+           PoliticalChecked = ""
+        
        if PsychologyTopic=="on":
            Topics.append("Psychology, Psychiatry and Mental Health")
            PsychologyChecked = "checked"
        else:
            PsychologyChecked = ""
+
+       if ResearchTopic=="on":
+           Topics.append("Research Methods")
+           ResearchChecked = "checked"
+       else:
+           ResearchChecked = ""
+
+       if SociologyTopic=="on":
+           Topics.append("Sociology")
+           SociologyChecked = "checked"
+       else:
+           SociologyChecked = ""
+        
        if SportsTopic=="on":
            Topics.append("Sports and Recreation")
            SportsChecked = "checked"
        else:
            SportsChecked = ""
+
+       if ToxicologyTopic=="on":
+           Topics.append("Toxicology")
+           ToxicologyChecked = "checked"
+       else:
+           ToxicologyChecked = ""
+
+       if UrbanTopic=="on":
+           Topics.append("Urban Planning")
+           UrbanChecked = "checked"
+       else:
+           UrbanChecked = ""
+        
        if VeterinaryTopic=="on":
            Topics.append("Veterinary")
            VeterinaryChecked = "checked"
@@ -1013,6 +1089,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
