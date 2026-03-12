@@ -1085,8 +1085,8 @@ def recordsdata():
         CongenitalChecked = ""
         CriticalChecked = ""
         EarChecked = ""
-        EarChecked = ""
         EmergencyChecked = ""
+        EyeChecked = ""
         GeriatricsChecked = ""
         InfectionChecked = ""
         InflammatoryChecked = ""
@@ -1161,6 +1161,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
