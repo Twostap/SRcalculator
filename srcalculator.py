@@ -522,9 +522,9 @@ def recordsdata():
 
        if Algorithmic=="on":
            GreyLiteratureSelection.append("Algorithmic and visualization tools")
-           AlgorithmicCheckedChecked = "checked"
+           AlgorithmicChecked = "checked"
        else:
-           AlgorithmicCheckedChecked = ""
+           AlgorithmicChecked = ""
 
        if AuthorSearch=="on":
            GreyLiteratureSelection.append("Author search")
@@ -1160,6 +1160,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
