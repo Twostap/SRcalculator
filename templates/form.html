@@ -98,6 +98,10 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <tr><td class="topics" ><input type="checkbox" id="EducationTopic" name="EducationTopic" {{ EducationChecked }} /><label for="EducationTopic">Education</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="EngineeringTopic" name="EngineeringTopic" {{ EngineeringChecked }} /><label for="EngineeringTopic">Engineering</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="EnvironmentalTopic" name="EnvironmentalTopic" {{ EnvironmentalChecked }} /><label for="EnvironmentalTopic">Environmental Science</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="ForensicTopic" name="ForensicTopic" {{ ForensicChecked }} /><label for="ForensicTopic">Forensic Science</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="HealthInformaticsTopic" name="HealthInformaticsTopic" {{ HealthInformaticsChecked }} /><label for="HealthInformaticsTopic">Health Informatics</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="LawEthicsTopic" name="LawEthicsTopic" {{ LawEthicsChecked }} /><label for="LawEthicsTopic">Law and Ethics</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="LibraryScienceTopic" name="LibraryScienceTopic" {{ LibraryScienceChecked }} /><label for="LibraryScienceTopic">Library and Information Science</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="MedicineTopic" name="MedicineTopic" onclick="MedicineToggle()" {{ MedicineChecked }} /><label for="MedicineTopic">Medicine</label></td></tr>
 <tr id="MedicineSubTopics" style="{{MedicineDisplay}}"><td><table style="font-size:.9em;">
 		<tr><td class="topics"  style="padding-left:15px; padding-top:5px;"><input {{ MedicineDisabled }} type="checkbox" id="BloodTopic" name="BloodTopic" {{ BloodChecked }} /><label for="BloodTopic">Blood and hematology</label></td></tr>
@@ -126,10 +130,16 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 		<tr><td class="topics"  style="padding-left:15px; padding-bottom:5px;"><input {{ MedicineDisabled }} type="checkbox" id="GeneralTopic" name="GeneralTopic" {{ GeneralChecked }} /><label for="GeneralTopic">General and public health and safety</label></td></tr>
 </td></tr></table>
 <tr><td class="topics" ><input type="checkbox" id="NursingTopic" name="NursingTopic" {{ NursingChecked }} /><label for="NursingTopic">Nursing</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="PharmacyTopic" name="PharmacyTopic" {{ PharmacyChecked }} /><label for="PharmacyTopic">Pharmacy</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="PhysicalTopic" name="PhysicalTopic" {{ PhysicalChecked }} /><label for="PhysicalTopic">Physical Sciences and Mathematics</label></td></tr>
-<tr><td class="topics" ><input type="checkbox" id="PsychologyTopic" name="PsychologyTopic" {{PsychologyChecked }} /><label for="PsychologyTopic">Psychology, Psychiaty, and Mental Health</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="PoliticalTopic" name="PhysicalTopic" {{ PoliticalChecked }} /><label for="PoliticalTopic">Political Science</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="PsychologyTopic" name="PsychologyTopic" {{ PsychologyChecked }} /><label for="PsychologyTopic">Psychology, Psychiaty, and Mental Health</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="ResearchTopic" name="ResearchTopic" {{ ResearchChecked }} /><label for="ResearchTopic">Research Methods</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="SociologyTopic" name="SociologyTopic" {{ SociologyChecked }} /><label for="SociologyTopic">Sociology</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="SportsTopic" name="SportsTopic" {{ SportsChecked }} /><label for="SportsTopic">Sports and Recreation</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="ToxicologyTopic" name="ToxicologyTopic" {{ ToxicologyChecked }} /><label for="ToxicologyTopic">Toxicology</label></td></tr>
 <tr><td class="topics" ><input type="checkbox" id="VeterinaryTopic" name="VeterinaryTopic" {{ VeterinaryChecked }} /><label for="VeterinaryTopic">Veterinary</label></td></tr>
+<tr><td class="topics" ><input type="checkbox" id="UrbanTopic" name="UrbanTopic" {{ UrbanChecked }} /><label for="UrbanTopic">Urban Planning</label></td></tr>
 </tr>
 </table>
 </div>
@@ -660,6 +670,7 @@ function AddResult(selectedid) {
 </script>
 
 </html>
+
 
 
 
