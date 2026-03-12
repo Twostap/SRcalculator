@@ -389,11 +389,35 @@ def recordsdata():
        else:
            SpiritualChecked = ""
 
+       if Algorithmic=="on":
+           GreyLiteratureSelection.append("Algorithmic and visualization tools")
+           AlgorithmicCheckedChecked = "checked"
+       else:
+           AlgorithmicCheckedChecked = ""
+
+       if AuthorSearch=="on":
+           GreyLiteratureSelection.append("Author search")
+           AuthorSearchChecked = "checked"
+       else:
+           AuthorSearchChecked = ""
+
        if Citations=="on":
            GreyLiteratureSelection.append("Citation searching (forward or backward)")
            CitationsChecked = "checked"
        else:
            CitationsChecked = ""
+
+       if Citations=="on":
+           GreyLiteratureSelection.append("Citation searching (forward or backward)")
+           CitationsChecked = "checked"
+       else:
+           CitationsChecked = ""
+
+       if Discovery=="on":
+           GreyLiteratureSelection.append("Discovery tools and union catalogues")
+           DiscoveryChecked = "checked"
+       else:
+           DiscoveryChecked = ""
 
        if GeneralGrey=="on":
            GreyLiteratureSelection.append("General grey literature search tools (OpenGrey, SIGLE, etc)")
@@ -401,17 +425,89 @@ def recordsdata():
        else:
            GeneralGreyChecked = ""
 
+       if GeneralWeb=="on":
+           GreyLiteratureSelection.append("General web searches")
+           GeneralWebChecked = "checked"
+       else:
+           GeneralWebChecked = ""
+
+       if Guidelines=="on":
+           GreyLiteratureSelection.append("Guidelines")
+           GuidelinesChecked = "checked"
+       else:
+           GuidelinesChecked = ""
+
        if Hand=="on":
            GreyLiteratureSelection.append("Hand searching (specific journals, conferences, websites)")
            HandChecked = "checked"
        else:
            HandChecked = ""
-        
+
+       if HealthTechnology=="on":
+           GreyLiteratureSelection.append("Health technology assessments")
+           HealthTechnologyChecked = "checked"
+       else:
+           HealthTechnologyChecked = ""
+
+       if Institutional=="on":
+           GreyLiteratureSelection.append("Institutional repositories")
+           InstitutionalChecked = "checked"
+       else:
+           InstitutionalChecked = ""
+
+       if National=="on":
+           GreyLiteratureSelection.append("National repositories")
+           NationalChecked = "checked"
+       else:
+           NationalChecked = ""
+
+       if PersonalCommunication=="on":
+           GreyLiteratureSelection.append("Personal communication")
+           PersonalCommunicationChecked = "checked"
+       else:
+           PersonalCommunicationChecked = ""
+
+       if Preprints=="on":
+           GreyLiteratureSelection.append("Preprints")
+           PreprintsChecked = "checked"
+       else:
+           PreprintsChecked = ""
+
+       if PointOfCare=="on":
+           GreyLiteratureSelection.append("Point of care")
+           PointOfCareChecked = "checked"
+       else:
+           PointOfCareChecked = ""
+
+       if PreviousReviews=="on":
+           GreyLiteratureSelection.append("Previous reviews")
+           PreviousReviewsChecked = "checked"
+       else:
+           PreviousReviewsChecked = ""
+
+       if PriorKnowledge=="on":
+           GreyLiteratureSelection.append("Prior knowledge")
+           PriorKnowledgeChecked = "checked"
+       else:
+           PriorKnowledgeChecked = ""
+
+       if Protocols=="on":
+           GreyLiteratureSelection.append("Protocols")
+           ProtocolsChecked = "checked"
+       else:
+           ProtocolsChecked = ""
+
        if Scholarly=="on":
            GreyLiteratureSelection.append("Scholarly search engines (Google Scholar, ResearchGate, etc)")
            ScholarlyChecked = "checked"
        else:
            ScholarlyChecked = ""
+
+       if SubjectSearch=="on":
+           GreyLiteratureSelection.append("Subject repositories and search tools")
+           SubjectSearchChecked = "checked"
+       else:
+           SubjectSearchChecked = ""
 
        if Theses=="on":
            GreyLiteratureSelection.append("Theses or dissertations")
@@ -419,6 +515,23 @@ def recordsdata():
        else:
            ThesesChecked = ""
 
+       if TrialRegistries=="on":
+           GreyLiteratureSelection.append("Trial registries")
+           TrialRegistriesChecked = "checked"
+       else:
+           TrialRegistriesChecked = ""
+
+       if UnknownUnclear=="on":
+           GreyLiteratureSelection.append("Unknown/unclear")
+           UnknownUnclearChecked = "checked"
+       else:
+           UnknownUnclearChecked = ""
+
+       if UpdatesAlerts=="on":
+           GreyLiteratureSelection.append("Updates or alerts")
+           UpdatesAlertsChecked = "checked"
+       else:
+           UpdatesAlertsChecked = ""
 
        Topics = "; ".join(Topics)
        
@@ -899,6 +1012,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
