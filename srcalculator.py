@@ -1018,12 +1018,20 @@ def recordsdata():
 # TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
 
+       TopicsRows = Topicdf.shape[0]
+       print(TopicsRows)
+
+       MedlineRows = Medlinedf.shape[0]
+       print(MedlineRows)    
+        
        UniqueCombined = Topicdf.query('`Databases used` == @DatabaseListString')['UniquePercent'].mean(numeric_only=True)
-       print(UniqueCombined)
+       UniqueRows = UniqueCombined.shape[0]
+       print(UniqueRows)
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
            IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['DatabaseIncludesPercent'].mean(numeric_only=True)
+           IncludesRows = IncludesPercent.shape[0]
            print(IncludesPercent)
 
        else: 
