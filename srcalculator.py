@@ -1029,7 +1029,7 @@ def recordsdata():
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
-           GreyLitMatches = ""
+           GreyLitMatches = "0"
            IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['DatabaseIncludesPercent'].mean(numeric_only=True)
 
        else: 
