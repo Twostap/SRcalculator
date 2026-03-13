@@ -696,7 +696,8 @@ def recordsdata():
        df = pd.read_excel(EXCEL_FILE_PATH)
        df.head()
 
-       Medlinedf = df.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99 & Topics.str.contains(@Topics)')
+       Topicdf = df.query('Topics.str.contains(@Topics)')
+       Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
         
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
@@ -1188,6 +1189,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
