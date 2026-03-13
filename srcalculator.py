@@ -696,6 +696,7 @@ def recordsdata():
        df.head()
 
        Topic0 = str(Topics[0])
+       print(Topic0)
        Topic1 = str(Topics[1])
        Topic2 = str(Topics[2]) 
        Topic3 = str(Topics[3]) 
@@ -1200,6 +1201,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
