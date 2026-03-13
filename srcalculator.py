@@ -710,7 +710,7 @@ def recordsdata():
        Topic12 = str(Topics[12]) 
        Topic13 = str(Topics[13]) 
         
-       Topicdf = df.query('Topics.str.contains(Topic0) & 'Topics.str.contains(Topic1))
+       Topicdf = df.query('Topics.str.contains(Topic0) & 'Topics.str.contains(Topic1)')
        print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
        print("Created Medline dataframe")
@@ -1200,6 +1200,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
