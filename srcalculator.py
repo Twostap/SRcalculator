@@ -136,7 +136,6 @@ def recordsdata():
        Topics = []
        GreyLiteratureSelection = []
        DatabaseList = []
-       DatabaseList.append('Medline')
        TotalMedline = float(TotalMedline) 
 
        if AgricultureTopic=="on":
@@ -1189,6 +1188,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
