@@ -688,12 +688,6 @@ def recordsdata():
            UpdatesAlertsChecked = ""
 
        GreyLiteratureSelection = sorted(GreyLiteratureSelection)
-       Topics = "; ".join(Topics)
-       
-       pd.options.display.float_format = '{:.0f}'.format
-       EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
-       df = pd.read_excel(EXCEL_FILE_PATH)
-       df.head()
 
        Topic0 = str(Topics[0])
        print(Topic0)
@@ -711,6 +705,12 @@ def recordsdata():
        Topic12 = str(Topics[12]) 
        Topic13 = str(Topics[13]) 
         
+       pd.options.display.float_format = '{:.0f}'.format
+       EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
+       df = pd.read_excel(EXCEL_FILE_PATH)
+       df.head()
+
+       print("starting query")
        Topicdf = df.query('Topics.str.contains(Topic0) & Topics.str.contains(Topic1)')
        print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
@@ -1201,6 +1201,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
