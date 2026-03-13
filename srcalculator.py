@@ -568,12 +568,6 @@ def recordsdata():
        else:
            CitationsChecked = ""
 
-       if Citations=="on":
-           GreyLiteratureSelection.append("Citation searching (forward or backward)")
-           CitationsChecked = "checked"
-       else:
-           CitationsChecked = ""
-
        if Discovery=="on":
            GreyLiteratureSelection.append("Discovery tools and union catalogues")
            DiscoveryChecked = "checked"
@@ -1195,6 +1189,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
