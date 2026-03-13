@@ -1053,7 +1053,7 @@ def recordsdata():
        elif TotalScreen==TotalMedline:
            TotalScreen="No results"
        else:
-           TotalScreen = int(TotalScreen)
+           TotalScreen = int(float(TotalScreen))
 
        if pd.isna(TotalScreen) or pd.isna(UniqueCombined):
            UniqueAverage = "No data"
