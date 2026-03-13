@@ -980,6 +980,7 @@ def recordsdata():
                 DatabaseSelection10Records = DatabaseSelection10Average.round(0).astype(int)
        DatabaseList = sorted(DatabaseList)
        DatabaseListString = "; ".join(DatabaseList)
+       print("database string done")
 
 # TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
@@ -1184,6 +1185,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
