@@ -993,18 +993,16 @@ def recordsdata():
 # print(TopicsUnique)
 
        UniqueCombined = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['UniquePercent'].mean(numeric_only=True)
-       print(UniqueCombined)
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
            IncludesPercent = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['DatabaseIncludesPercent'].mean(numeric_only=True)
-           print(IncludesPercent)
 
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
+           print(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
            IncludesPercent = df.query('`Databases used` == @DatabaseListString & Topics.str.contains(@Topics)')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
-           print(IncludesPercent)
 
            if pd.isna(GreyLiteratureAverage):
                 GreyLiteratureAverage = "No data"
@@ -1197,6 +1195,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
