@@ -1022,22 +1022,23 @@ def recordsdata():
 
        MedlineMatches = Medlinedf.shape[0]  
         
-       UniqueCombined = Topicdf.query('`Databases used` == @DatabaseListString')['UniquePercent'].mean(numeric_only=True)
+       UniqueCombined = Topicdf.query('`Databases used`.str.contains(@DatabaseListString)')['UniquePercent'].mean(numeric_only=True)
+        
        print(UniqueCombined)      
-       DataMatch = Topicdf.query('`Databases used` == @DatabaseListString')
+       DataMatch = Topicdf.query('`Databases used`.str.contains(@DatabaseListString)')
        DatabaseMatches = DataMatch.shape[0]
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
            GreyLitMatches = "0"
-           IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['DatabaseIncludesPercent'].mean(numeric_only=True)
+           IncludesPercent = Topicdf.query('`Databases used`.str.contains(@DatabaseListString)')['DatabaseIncludesPercent'].mean(numeric_only=True)
 
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
            GreyLitMatch = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')
            GreyLitMatches = GreyLitMatch.shape[0]
-           IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
+           IncludesPercent = Topicdf.query('`Databases used`.str.contains(@DatabaseListString)')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
 
            if pd.isna(GreyLiteratureAverage):
                 GreyLiteratureAverage = "No data"
