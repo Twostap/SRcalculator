@@ -691,15 +691,58 @@ def recordsdata():
 
        for idx, val in enumerate(Topics):
            globals()[f'Topic_{idx}'] = val
-        
-       print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7, Topic_8, Topic_9, Topic_10)
-        
+              
        pd.options.display.float_format = '{:.0f}'.format
        EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
        df = pd.read_excel(EXCEL_FILE_PATH)
        df.head()
 
        print("starting query")
+
+       if 'Topic_10' in globals():
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7, Topic_8, Topic_9, Topic_10)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5) & Topics.str.contains(@Topic_6) & Topics.str.contains(@Topic_7) & Topics.str.contains(@Topic_8) & Topics.str.contains(@Topic_9) & Topics.str.contains(@Topic_10)')      
+
+       elif 'Topic_9' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7, Topic_8, Topic_9)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5) & Topics.str.contains(@Topic_6) & Topics.str.contains(@Topic_7) & Topics.str.contains(@Topic_8) & Topics.str.contains(@Topic_9)')      
+    
+       elif 'Topic_8' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7, Topic_8)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5) & Topics.str.contains(@Topic_6) & Topics.str.contains(@Topic_7) & Topics.str.contains(@Topic_8)')      
+        
+       elif 'Topic_7' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5) & Topics.str.contains(@Topic_6) & Topics.str.contains(@Topic_7)')      
+        
+       elif 'Topic_6' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5) & Topics.str.contains(@Topic_6)')      
+        
+       elif 'Topic_5' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4) & Topics.str.contains(@Topic_5)')      
+     
+       elif 'Topic_4' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3) & Topics.str.contains(@Topic_4)')      
+        
+       elif 'Topic_3' in globals(): 
+           print(Topic_0, Topic_1, Topic_2, Topic_3)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2) & Topics.str.contains(@Topic_3)')      
+        
+       elif 'Topic_2' in globals(): 
+           print(Topic_0, Topic_1, Topic_2)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1) & Topics.str.contains(@Topic_2)')      
+        
+       elif 'Topic_1' in globals(): 
+           print(Topic_0, Topic_1)
+           Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1)')      
+        
+       elif 'Topic_0' in globals(): 
+           print(Topic_0,)
+           Topicdf = df.query('Topics.str.contains(@Topic_0)')      
+              
        Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1)')
        print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
@@ -1190,6 +1233,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
