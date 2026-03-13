@@ -562,7 +562,7 @@ def recordsdata():
            AuthorSearchChecked = ""
 
        if Citations=="on":
-           GreyLiteratureSelection.append("Citation searching (forward or backward)")
+           GreyLiteratureSelection.append("Citation searching")
            CitationsChecked = "checked"
        else:
            CitationsChecked = ""
@@ -574,7 +574,7 @@ def recordsdata():
            DiscoveryChecked = ""
 
        if GeneralGrey=="on":
-           GreyLiteratureSelection.append("General grey literature search tools (OpenGrey, SIGLE, etc)")
+           GreyLiteratureSelection.append("General grey literature search tools")
            GeneralGreyChecked = "checked"
        else:
            GeneralGreyChecked = ""
@@ -592,7 +592,7 @@ def recordsdata():
            GuidelinesChecked = ""
 
        if Hand=="on":
-           GreyLiteratureSelection.append("Hand searching (specific journals, conferences, websites)")
+           GreyLiteratureSelection.append("Hand searching")
            HandChecked = "checked"
        else:
            HandChecked = ""
@@ -652,7 +652,7 @@ def recordsdata():
            ProtocolsChecked = ""
 
        if Scholarly=="on":
-           GreyLiteratureSelection.append("Scholarly search engines (Google Scholar, ResearchGate, etc)")
+           GreyLiteratureSelection.append("Scholarly search engines")
            ScholarlyChecked = "checked"
        else:
            ScholarlyChecked = ""
