@@ -695,7 +695,22 @@ def recordsdata():
        df = pd.read_excel(EXCEL_FILE_PATH)
        df.head()
 
-       Topicdf = df.query('Topics.str.contains(@Topics)')
+       Topic0 = str(Topics[0])
+       Topic1 = str(Topics[1])
+       Topic2 = str(Topics[2]) 
+       Topic3 = str(Topics[3]) 
+       Topic4 = str(Topics[4]) 
+       Topic5 = str(Topics[5]) 
+       Topic6 = str(Topics[6]) 
+       Topic7 = str(Topics[7]) 
+       Topic8 = str(Topics[8]) 
+       Topic9 = str(Topics[9]) 
+       Topic10 = str(Topics[10]) 
+       Topic11 = str(Topics[11]) 
+       Topic12 = str(Topics[12]) 
+       Topic13 = str(Topics[13]) 
+        
+       Topicdf = df.query('Topics.str.contains(Topic0) & 'Topics.str.contains(Topic1))
        print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
        print("Created Medline dataframe")
@@ -1185,6 +1200,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
