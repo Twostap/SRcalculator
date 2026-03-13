@@ -749,7 +749,7 @@ def recordsdata():
        if CochraneLibraryDatabase=="on":
            CochraneLibraryChecked = "checked"
            CochraneLibraryAverage = Medlinedf['Cochrane Library'].mean(numeric_only=True)
-           DatabaseList.append('Cochrane Library (if not specified which component)')
+           DatabaseList.append('Cochrane Library')
            if pd.isna(CochraneLibraryAverage):
                 CochraneLibraryAverage = "No data"
            else:
@@ -842,7 +842,7 @@ def recordsdata():
        if WebOfScienceDatabase=="on":
            WebOfScienceChecked = "checked"
            WebOfScienceAverage = Medlinedf['Web of Science'].mean(numeric_only=True)
-           DatabaseList.append('Web of Science (any)')
+           DatabaseList.append('Web of Science')
            if pd.isna(WebOfScienceAverage):
                 WebOfScienceAverage = "No data"
            else:
