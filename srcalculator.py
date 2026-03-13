@@ -37,8 +37,12 @@ def recordsdata():
        
        ArtTopic = request.form.get("ArtTopic")
        AudiologyTopic = request.form.get("AudiologyTopic")
+       CaregivingTopic = request.form.get("CaregivingTopic") 
+       ChiropracticTopic = request.form.get("ChiropracticTopic") 
        DieteticsTopic = request.form.get("DieteticsTopic") 
        ImagingTopic = request.form.get("ImagingTopic") 
+       InfectionPreventionTopic = request.form.get("InfectionPreventionTopic") 
+       MidwiferyTopic = request.form.get("MidwiferyTopic") 
        OccupationalTopic = request.form.get("OccupationalTopic")
        PhysiotherapyTopic = request.form.get("PhysiotherapyTopic")
        PrehospitalTopic = request.form.get("PrehospitalTopic")
@@ -469,6 +473,19 @@ def recordsdata():
            AudiologyChecked = "checked"
        else:
            AudiologyChecked = ""
+
+       if CaregivingTopic=="on":
+           Topics.append("Caregiving")
+           CaregivingChecked = "checked"
+       else:
+           CaregivingChecked = ""
+
+       if ChiropracticTopic=="on":
+           Topics.append("Chiropractic")
+           ChiropracticyChecked = "checked"
+       else:
+           ChiropracticChecked = ""
+
        if DieteticsTopic=="on":
            Topics.append("Dietetics")
            DieteticsChecked = "checked"
@@ -479,6 +496,19 @@ def recordsdata():
            ImagingChecked = "checked"
        else:
            ImagingChecked = ""
+
+       if InfectionPreventionTopic=="on":
+           Topics.append("Infection prevention and control")
+           InfectionPreventionChecked = "checked"
+       else:
+           InfectionPreventionChecked = ""
+
+       if MidwiferyTopic=="on":
+           Topics.append("Midwifery")
+           MidwiferyChecked = "checked"
+       else:
+           MidwiferyChecked = ""
+    
        if OccupationalTopic=="on":
            Topics.append("Occupational therapy")
            OccupationalChecked = "checked"
@@ -1111,8 +1141,12 @@ def recordsdata():
         GeneralChecked = ""
         ArtChecked = ""
         AudiologyChecked = ""
+        CaregivingChecked = ""
+        ChiropracticChecked = ""
         DieteticsChecked = ""
         ImagingChecked = ""
+        InfectionPreventionChecked = ""
+        MidwiferyChecked = ""
         OccupationalChecked = ""
         PhysiotherapyChecked = ""
         PrehospitalChecked = ""
@@ -1156,10 +1190,11 @@ def recordsdata():
         UpdatesAlertsChecked = ""
         UnknownUnclearChecked = ""
         
-    return render_template("form.html",CINAHLRecords = CINAHLAverage, CochraneLibraryRecords = CochraneLibraryAverage, CochraneCentralRecords = CochraneCentralAverage, ERICRecords = ERICAverage, PEDroRecords = PEDroAverage, PsycINFORecords = PsycINFOAverage, WebOfScienceRecords = WebOfScienceAverage, EmbaseRecords = EmbaseAverage, ScopusRecords = ScopusAverage, IncludesRecords = IncludesAverage, UniqueRecords = UniqueAverage, TotalScreen=TotalScreen, MedlineRecords=TotalMedline, GreyLiteratureRecords=GreyLiteratureAverage, display1 = display1, display2 = display2, display3 = display3, display4 = display4, display5 = display5, display6 = display6, display7 = display7, display8 = display8, display9 = display9, display10 = display10, DatabaseSelection1Name = DatabaseSelection1, DatabaseSelection1Records = DatabaseSelection1Records, DatabaseSelection2Name = DatabaseSelection2, DatabaseSelection2Records = DatabaseSelection2Records, DatabaseSelection3Name = DatabaseSelection3, DatabaseSelection3Records = DatabaseSelection3Records, DatabaseSelection4Name = DatabaseSelection4, DatabaseSelection4Records = DatabaseSelection4Records, DatabaseSelection5Name = DatabaseSelection5, DatabaseSelection5Records = DatabaseSelection5Records, DatabaseSelection6Name = DatabaseSelection6, DatabaseSelection6Records = DatabaseSelection6Records, DatabaseSelection7Name = DatabaseSelection7, DatabaseSelection7Records = DatabaseSelection7Records, DatabaseSelection8Name = DatabaseSelection8, DatabaseSelection8Records = DatabaseSelection8Records, DatabaseSelection9Name = DatabaseSelection9, DatabaseSelection9Records = DatabaseSelection9Records, DatabaseSelection10Name = DatabaseSelection10, DatabaseSelection10Records = DatabaseSelection10Records, MedicineDisplay = MedicineDisplay, AlliedDisplay = AlliedDisplay, AgricultureChecked = AgricultureChecked, AlliedChecked = AlliedChecked, BiochemistryChecked = BiochemistryChecked, BusinessChecked = BusinessChecked, DentistryChecked = DentistryChecked, DrugsChecked = DrugsChecked, EcologyChecked = EcologyChecked, EducationChecked = EducationChecked, EngineeringChecked = EngineeringChecked, EnvironmentalChecked = EnvironmentalChecked, MedicineChecked = MedicineChecked, NursingChecked = NursingChecked, PhysicalChecked = PhysicalChecked, PsychologyChecked = PsychologyChecked, SportsChecked = SportsChecked, VeterinaryChecked = VeterinaryChecked, BloodChecked = BloodChecked, CancerChecked = CancerChecked, CardiovascularChecked = CardiovascularChecked, ComplementaryChecked = ComplementaryChecked, CongenitalChecked = CongenitalChecked, EarChecked = EarChecked, EyeChecked = EyeChecked, GeriatricsChecked = GeriatricsChecked, InfectionChecked = InfectionChecked, InflammatoryChecked = InflammatoryChecked, InjuriesChecked = InjuriesChecked, MetabolicChecked = MetabolicChecked, MusculoskeletalChecked = MusculoskeletalChecked, NeurologicalChecked = NeurologicalChecked, OralChecked = OralChecked, PediatricsChecked = PediatricsChecked, RenalChecked = RenalChecked, ReproductiveChecked = ReproductiveChecked, RespiratoryTherapyChecked = RespiratoryTherapyChecked, SkinChecked = SkinChecked, SleepChecked = SleepChecked, StrokeChecked = StrokeChecked, SurgeryChecked = SurgeryChecked, GeneralChecked = GeneralChecked, ArtChecked = ArtChecked, AudiologyChecked = AudiologyChecked, DieteticsChecked = DieteticsChecked, ImagingChecked = ImagingChecked, OccupationalChecked = OccupationalChecked, PhysiotherapyChecked = PhysiotherapyChecked, PrehospitalChecked = PrehospitalChecked, ProstheticsChecked = ProstheticsChecked, RecreationChecked = RecreationChecked, RespiratoryChecked = RespiratoryChecked, SocialChecked = SocialChecked, SpiritualChecked = SpiritualChecked, AlliedDisabled = AlliedDisabled, MedicineDisabled = MedicineDisabled, CINAHLChecked = CINAHLChecked, CochraneLibraryChecked = CochraneLibraryChecked, CochraneCentralChecked = CochraneCentralChecked, EmbaseChecked = EmbaseChecked, ERICChecked = ERICChecked, PEDroChecked = PEDroChecked, PsycINFOChecked = PsycINFOChecked, ScopusChecked = ScopusChecked, WebOfScienceChecked = WebOfScienceChecked, ThesesChecked = ThesesChecked, CitationsChecked = CitationsChecked, ScholarlyChecked = ScholarlyChecked, HandChecked = HandChecked, GeneralGreyChecked = GeneralGreyChecked, AlgorithmicChecked = AlgorithmicChecked, AuthorSearchChecked = AuthorSearchChecked, DiscoveryChecked = DiscoveryChecked, GeneralWebChecked = GeneralWebChecked, GuidelinesChecked = GuidelinesChecked, HealthTechnologyChecked = HealthTechnologyChecked, InstitutionalChecked = InstitutionalChecked, NationalChecked = NationalChecked, PersonalCommunicationChecked = PersonalCommunicationChecked, PreprintsChecked = PreprintsChecked, PointOfCareChecked = PointOfCareChecked, PreviousReviewsChecked = PreviousReviewsChecked, PriorKnowledgeChecked = PriorKnowledgeChecked, ProtocolsChecked = ProtocolsChecked, SubjectSearchedChecked = SubjectSearchedChecked, TrialRegistriesChecked = TrialRegistriesChecked, UpdatesAlertsChecked = UpdatesAlertsChecked, UnknownUnclearChecked = UnknownUnclearChecked, ForensicChecked = ForensicChecked, HealthInformaticsChecked = HealthInformaticsChecked, LawEthicsChecked = LawEthicsChecked, LibraryScienceChecked = LibraryScienceChecked, PharmacyChecked = PharmacyChecked, PoliticalChecked = PoliticalChecked, ResearchChecked = ResearchChecked, SociologyChecked = SociologyChecked, ToxicologyChecked = ToxicologyChecked, UrbanChecked = UrbanChecked, CriticalChecked = CriticalChecked, EmergencyChecked = EmergencyChecked, OccupationalMedChecked = OccupationalMedChecked, PalliativeChecked = PalliativeChecked, PathologyChecked = PathologyChecked, SpaceChecked = SpaceChecked, TelemedicineChecked = TelemedicineChecked)
+    return render_template("form.html",CINAHLRecords = CINAHLAverage, CochraneLibraryRecords = CochraneLibraryAverage, CochraneCentralRecords = CochraneCentralAverage, ERICRecords = ERICAverage, PEDroRecords = PEDroAverage, PsycINFORecords = PsycINFOAverage, WebOfScienceRecords = WebOfScienceAverage, EmbaseRecords = EmbaseAverage, ScopusRecords = ScopusAverage, IncludesRecords = IncludesAverage, UniqueRecords = UniqueAverage, TotalScreen=TotalScreen, MedlineRecords=TotalMedline, GreyLiteratureRecords=GreyLiteratureAverage, display1 = display1, display2 = display2, display3 = display3, display4 = display4, display5 = display5, display6 = display6, display7 = display7, display8 = display8, display9 = display9, display10 = display10, DatabaseSelection1Name = DatabaseSelection1, DatabaseSelection1Records = DatabaseSelection1Records, DatabaseSelection2Name = DatabaseSelection2, DatabaseSelection2Records = DatabaseSelection2Records, DatabaseSelection3Name = DatabaseSelection3, DatabaseSelection3Records = DatabaseSelection3Records, DatabaseSelection4Name = DatabaseSelection4, DatabaseSelection4Records = DatabaseSelection4Records, DatabaseSelection5Name = DatabaseSelection5, DatabaseSelection5Records = DatabaseSelection5Records, DatabaseSelection6Name = DatabaseSelection6, DatabaseSelection6Records = DatabaseSelection6Records, DatabaseSelection7Name = DatabaseSelection7, DatabaseSelection7Records = DatabaseSelection7Records, DatabaseSelection8Name = DatabaseSelection8, DatabaseSelection8Records = DatabaseSelection8Records, DatabaseSelection9Name = DatabaseSelection9, DatabaseSelection9Records = DatabaseSelection9Records, DatabaseSelection10Name = DatabaseSelection10, DatabaseSelection10Records = DatabaseSelection10Records, MedicineDisplay = MedicineDisplay, AlliedDisplay = AlliedDisplay, AgricultureChecked = AgricultureChecked, AlliedChecked = AlliedChecked, BiochemistryChecked = BiochemistryChecked, BusinessChecked = BusinessChecked, DentistryChecked = DentistryChecked, DrugsChecked = DrugsChecked, EcologyChecked = EcologyChecked, EducationChecked = EducationChecked, EngineeringChecked = EngineeringChecked, EnvironmentalChecked = EnvironmentalChecked, MedicineChecked = MedicineChecked, NursingChecked = NursingChecked, PhysicalChecked = PhysicalChecked, PsychologyChecked = PsychologyChecked, SportsChecked = SportsChecked, VeterinaryChecked = VeterinaryChecked, BloodChecked = BloodChecked, CancerChecked = CancerChecked, CardiovascularChecked = CardiovascularChecked, ComplementaryChecked = ComplementaryChecked, CongenitalChecked = CongenitalChecked, EarChecked = EarChecked, EyeChecked = EyeChecked, GeriatricsChecked = GeriatricsChecked, InfectionChecked = InfectionChecked, InflammatoryChecked = InflammatoryChecked, InjuriesChecked = InjuriesChecked, MetabolicChecked = MetabolicChecked, MusculoskeletalChecked = MusculoskeletalChecked, NeurologicalChecked = NeurologicalChecked, OralChecked = OralChecked, PediatricsChecked = PediatricsChecked, RenalChecked = RenalChecked, ReproductiveChecked = ReproductiveChecked, RespiratoryTherapyChecked = RespiratoryTherapyChecked, SkinChecked = SkinChecked, SleepChecked = SleepChecked, StrokeChecked = StrokeChecked, SurgeryChecked = SurgeryChecked, GeneralChecked = GeneralChecked, ArtChecked = ArtChecked, AudiologyChecked = AudiologyChecked, DieteticsChecked = DieteticsChecked, ImagingChecked = ImagingChecked, OccupationalChecked = OccupationalChecked, PhysiotherapyChecked = PhysiotherapyChecked, PrehospitalChecked = PrehospitalChecked, ProstheticsChecked = ProstheticsChecked, RecreationChecked = RecreationChecked, RespiratoryChecked = RespiratoryChecked, SocialChecked = SocialChecked, SpiritualChecked = SpiritualChecked, AlliedDisabled = AlliedDisabled, MedicineDisabled = MedicineDisabled, CINAHLChecked = CINAHLChecked, CochraneLibraryChecked = CochraneLibraryChecked, CochraneCentralChecked = CochraneCentralChecked, EmbaseChecked = EmbaseChecked, ERICChecked = ERICChecked, PEDroChecked = PEDroChecked, PsycINFOChecked = PsycINFOChecked, ScopusChecked = ScopusChecked, WebOfScienceChecked = WebOfScienceChecked, ThesesChecked = ThesesChecked, CitationsChecked = CitationsChecked, ScholarlyChecked = ScholarlyChecked, HandChecked = HandChecked, GeneralGreyChecked = GeneralGreyChecked, AlgorithmicChecked = AlgorithmicChecked, AuthorSearchChecked = AuthorSearchChecked, DiscoveryChecked = DiscoveryChecked, GeneralWebChecked = GeneralWebChecked, GuidelinesChecked = GuidelinesChecked, HealthTechnologyChecked = HealthTechnologyChecked, InstitutionalChecked = InstitutionalChecked, NationalChecked = NationalChecked, PersonalCommunicationChecked = PersonalCommunicationChecked, PreprintsChecked = PreprintsChecked, PointOfCareChecked = PointOfCareChecked, PreviousReviewsChecked = PreviousReviewsChecked, PriorKnowledgeChecked = PriorKnowledgeChecked, ProtocolsChecked = ProtocolsChecked, SubjectSearchedChecked = SubjectSearchedChecked, TrialRegistriesChecked = TrialRegistriesChecked, UpdatesAlertsChecked = UpdatesAlertsChecked, UnknownUnclearChecked = UnknownUnclearChecked, ForensicChecked = ForensicChecked, HealthInformaticsChecked = HealthInformaticsChecked, LawEthicsChecked = LawEthicsChecked, LibraryScienceChecked = LibraryScienceChecked, PharmacyChecked = PharmacyChecked, PoliticalChecked = PoliticalChecked, ResearchChecked = ResearchChecked, SociologyChecked = SociologyChecked, ToxicologyChecked = ToxicologyChecked, UrbanChecked = UrbanChecked, CriticalChecked = CriticalChecked, EmergencyChecked = EmergencyChecked, OccupationalMedChecked = OccupationalMedChecked, PalliativeChecked = PalliativeChecked, PathologyChecked = PathologyChecked, SpaceChecked = SpaceChecked, TelemedicineChecked = TelemedicineChecked, CaregivingChecked = CaregivingChecked, ChiropracticChecked = ChiropracticChecked, InfectionPreventionChecked = InfectionPreventionChecked, MidwiferyChecked = MidwiferyChecked)
 
 if __name__=='__main__':
    app.run()
+
 
 
 
