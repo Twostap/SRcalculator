@@ -698,7 +698,7 @@ def recordsdata():
 
        pd.options.display.float_format = '{:.0f}'.format
        CSV_FILE_PATH = Path.cwd() / 'SR Calculator Github.csv'
-       df = pd.read_csv(CSV_FILE_PATH)
+       df = pd.read_csv(CSV_FILE_PATH, dtype={'UniquePercentNoGrey': 'float64','UniquePercent': 'float64', 'DatabaseIncludesPercent':'float64','GreyLiteratureIncludesPercent':'float64'})
        df.head()
 
        print("starting query")
