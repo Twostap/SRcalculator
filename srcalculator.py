@@ -694,6 +694,8 @@ def recordsdata():
        else:
            UpdatesAlertsChecked = ""
 
+       GreyLiteratureSelection = sorted(GreyLiteratureSelection)
+       print(GreyLiteratureSelection)
        Topics = "; ".join(Topics)
        
        pd.options.display.float_format = '{:.0f}'.format
@@ -703,6 +705,125 @@ def recordsdata():
 
        Medlinedf = df.query('Medline - @TotalMedline <= 99 & Medline - @TotalMedline > -99 & Topics.str.contains(@Topics)')
         
+       if CINAHLDatabase=="on":
+           CINAHLChecked = "checked"
+           CINAHLAverage = Medlinedf['CINAHL'].mean(numeric_only=True)
+           DatabaseList.append('CINAHL')
+           if pd.isna(CINAHLAverage):
+                CINAHLAverage = "No data"
+           else:
+                CINAHLAverage = CINAHLAverage.round(0).astype(int)
+
+       else:
+           CINAHLAverage = ""
+           CINAHLChecked = ""
+
+       if CochraneLibraryDatabase=="on":
+           CochraneLibraryChecked = "checked"
+           CochraneLibraryAverage = Medlinedf['Cochrane Library'].mean(numeric_only=True)
+           DatabaseList.append('Cochrane Library (if not specified which component)')
+           if pd.isna(CochraneLibraryAverage):
+                CochraneLibraryAverage = "No data"
+           else:
+                CochraneLibraryAverage = CochraneLibraryAverage.round(0).astype(int)
+
+       else:
+           CochraneLibraryChecked = ""
+           CochraneLibraryAverage = ""
+
+       if CochraneCentralDatabase=="on":
+           CochraneCentralChecked = "checked"
+           CochraneCentralAverage = Medlinedf['Cochrane Central'].mean(numeric_only=True)
+           DatabaseList.append('Cochrane Central')
+           if pd.isna(CochraneCentralAverage):
+                CochraneCentralAverage = "No data"
+           else:
+                CochraneCentralAverage = CochraneCentralAverage.round(0).astype(int)
+
+       else:
+           CochraneCentralChecked = ""
+           CochraneCentralAverage = ""        
+      
+       if EmbaseDatabase=="on":
+           EmbaseChecked = "checked"
+           EmbaseAverage = Medlinedf['Embase'].mean(numeric_only=True)
+           DatabaseList.append('Embase')
+           if pd.isna(EmbaseAverage):
+                EmbaseAverage = "No data"
+           else:
+                EmbaseAverage = EmbaseAverage.round(0).astype(int)
+
+       else:
+           EmbaseAverage = ""
+           EmbaseChecked = ""
+
+       if ERICDatabase=="on":
+           ERICChecked = "checked"
+           ERICAverage = Medlinedf['ERIC'].mean(numeric_only=True)
+           DatabaseList.append('ERIC')
+           if pd.isna(ERICAverage):
+                ERICAverage = "No data"
+           else:
+                ERICAverage = ERICAverage.round(0).astype(int)
+
+       else:
+           ERICChecked = ""
+           ERICAverage = ""
+
+       if PEDroDatabase=="on":
+           PEDroChecked = "checked"
+           PEDroAverage = Medlinedf['PEDro'].mean(numeric_only=True)
+           DatabaseList.append('PEDro')
+           if pd.isna(PEDroAverage):
+                PEDroAverage = "No data"
+           else:
+                PEDroAverage = PEDroAverage.round(0).astype(int)
+
+       else:
+           PEDroChecked = ""
+           PEDroAverage = ""
+
+
+       if PsycINFODatabase=="on":
+           PsycINFOChecked = "checked"
+           PsycINFOAverage = Medlinedf['PsycINFO'].mean(numeric_only=True)
+           DatabaseList.append('PsycINFO')
+           if pd.isna(PsycINFOAverage):
+                PsycINFOAverage = "No data"
+           else:
+                PsycINFOAverage = PsycINFOAverage.round(0).astype(int)
+
+       else:
+           PsycINFOChecked = ""
+           PsycINFOAverage = ""
+        
+       if ScopusDatabase=="on":
+           ScopusChecked = "checked"
+           ScopusAverage = Medlinedf['Scopus'].mean(numeric_only=True)
+           DatabaseList.append('Scopus')
+           if pd.isna(ScopusAverage):
+                ScopusAverage = "No data"
+           else:
+                ScopusAverage = ScopusAverage.round(0).astype(int)
+
+       else:
+           ScopusAverage = ""
+           ScopusChecked = ""
+
+
+       if WebOfScienceDatabase=="on":
+           WebOfScienceChecked = "checked"
+           WebOfScienceAverage = Medlinedf['Web of Science'].mean(numeric_only=True)
+           DatabaseList.append('Web of Science (any)')
+           if pd.isna(WebOfScienceAverage):
+                WebOfScienceAverage = "No data"
+           else:
+                WebOfScienceAverage = WebOfScienceAverage.round(0).astype(int)
+
+       else:
+           WebOfScienceChecked = ""
+           WebOfScienceAverage = ""
+
        if DatabaseSelection1=="selectone":
            display1 = "display: none;"
            DatabaseSelection1 = ""
@@ -862,126 +983,8 @@ def recordsdata():
                 DatabaseSelection10Records = "No data"
            else:
                 DatabaseSelection10Records = DatabaseSelection10Average.round(0).astype(int)
-
-       if CINAHLDatabase=="on":
-           CINAHLChecked = "checked"
-           CINAHLAverage = Medlinedf['CINAHL'].mean(numeric_only=True)
-           DatabaseList.append('CINAHL')
-           if pd.isna(CINAHLAverage):
-                CINAHLAverage = "No data"
-           else:
-                CINAHLAverage = CINAHLAverage.round(0).astype(int)
-
-       else:
-           CINAHLAverage = ""
-           CINAHLChecked = ""
-
-       if CochraneLibraryDatabase=="on":
-           CochraneLibraryChecked = "checked"
-           CochraneLibraryAverage = Medlinedf['Cochrane Library'].mean(numeric_only=True)
-           DatabaseList.append('Cochrane Library (if not specified which component)')
-           if pd.isna(CochraneLibraryAverage):
-                CochraneLibraryAverage = "No data"
-           else:
-                CochraneLibraryAverage = CochraneLibraryAverage.round(0).astype(int)
-
-       else:
-           CochraneLibraryChecked = ""
-           CochraneLibraryAverage = ""
-
-       if CochraneCentralDatabase=="on":
-           CochraneCentralChecked = "checked"
-           CochraneCentralAverage = Medlinedf['Cochrane Central'].mean(numeric_only=True)
-           DatabaseList.append('Cochrane Central')
-           if pd.isna(CochraneCentralAverage):
-                CochraneCentralAverage = "No data"
-           else:
-                CochraneCentralAverage = CochraneCentralAverage.round(0).astype(int)
-
-       else:
-           CochraneCentralChecked = ""
-           CochraneCentralAverage = ""        
-      
-       if EmbaseDatabase=="on":
-           EmbaseChecked = "checked"
-           EmbaseAverage = Medlinedf['Embase'].mean(numeric_only=True)
-           DatabaseList.append('Embase')
-           if pd.isna(EmbaseAverage):
-                EmbaseAverage = "No data"
-           else:
-                EmbaseAverage = EmbaseAverage.round(0).astype(int)
-
-       else:
-           EmbaseAverage = ""
-           EmbaseChecked = ""
-
-       if ERICDatabase=="on":
-           ERICChecked = "checked"
-           ERICAverage = Medlinedf['ERIC'].mean(numeric_only=True)
-           DatabaseList.append('ERIC')
-           if pd.isna(ERICAverage):
-                ERICAverage = "No data"
-           else:
-                ERICAverage = ERICAverage.round(0).astype(int)
-
-       else:
-           ERICChecked = ""
-           ERICAverage = ""
-
-       if PEDroDatabase=="on":
-           PEDroChecked = "checked"
-           PEDroAverage = Medlinedf['PEDro'].mean(numeric_only=True)
-           DatabaseList.append('PEDro')
-           if pd.isna(PEDroAverage):
-                PEDroAverage = "No data"
-           else:
-                PEDroAverage = PEDroAverage.round(0).astype(int)
-
-       else:
-           PEDroChecked = ""
-           PEDroAverage = ""
-
-
-       if PsycINFODatabase=="on":
-           PsycINFOChecked = "checked"
-           PsycINFOAverage = Medlinedf['PsycINFO'].mean(numeric_only=True)
-           DatabaseList.append('PsycINFO')
-           if pd.isna(PsycINFOAverage):
-                PsycINFOAverage = "No data"
-           else:
-                PsycINFOAverage = PsycINFOAverage.round(0).astype(int)
-
-       else:
-           PsycINFOChecked = ""
-           PsycINFOAverage = ""
-        
-       if ScopusDatabase=="on":
-           ScopusChecked = "checked"
-           ScopusAverage = Medlinedf['Scopus'].mean(numeric_only=True)
-           DatabaseList.append('Scopus')
-           if pd.isna(ScopusAverage):
-                ScopusAverage = "No data"
-           else:
-                ScopusAverage = ScopusAverage.round(0).astype(int)
-
-       else:
-           ScopusAverage = ""
-           ScopusChecked = ""
-
-
-       if WebOfScienceDatabase=="on":
-           WebOfScienceChecked = "checked"
-           WebOfScienceAverage = Medlinedf['Web of Science'].mean(numeric_only=True)
-           DatabaseList.append('Web of Science (any)')
-           if pd.isna(WebOfScienceAverage):
-                WebOfScienceAverage = "No data"
-           else:
-                WebOfScienceAverage = WebOfScienceAverage.round(0).astype(int)
-
-       else:
-           WebOfScienceChecked = ""
-           WebOfScienceAverage = ""
-       
+       DatabaseList = sorted(DatabaseList)
+       print(DatabaseList)
        DatabaseListString = "; ".join(DatabaseList)
        print(DatabaseListString)
 
@@ -1194,6 +1197,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
