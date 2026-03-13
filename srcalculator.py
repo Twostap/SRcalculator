@@ -689,9 +689,12 @@ def recordsdata():
 
        GreyLiteratureSelection = sorted(GreyLiteratureSelection)
 
+        
        for idx, val in enumerate(Topics):
            globals()[f'Topic_{idx}'] = val
-              
+       print("defined topic variables")
+
+       print("openingspreadsheet")
        pd.options.display.float_format = '{:.0f}'.format
        EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
        df = pd.read_excel(EXCEL_FILE_PATH)
@@ -1233,6 +1236,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
