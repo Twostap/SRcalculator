@@ -716,7 +716,20 @@ function AddResult(selectedid) {
   } 
 }
 
+const limit = 10;
+// Get the container element
+const TopicSelections = document.getElementById('topicselections');
 
+if (TopicSelections) {
+    TopicSelections.addEventListener('change', function(event) {
+        const CheckedBoxes = TopicSelections.querySelectorAll('input[type="checkbox"]:checked');
+
+        if (CheckedBoxes.length > limit) {
+            event.target.checked = false;
+            alert("You can select a maximum of 10 topics");
+        }
+    });
+}
 </script>
 
 </html>
