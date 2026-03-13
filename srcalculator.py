@@ -1025,6 +1025,7 @@ def recordsdata():
        print(MedlineMatches)    
         
        UniqueCombined = Topicdf.query('`Databases used` == @DatabaseListString')['UniquePercent'].mean(numeric_only=True)
+       print(UniqueCombined)      
        DataMatch = Topicdf.query('`Databases used` == @DatabaseListString')
        DatabaseMatches = DataMatch.shape[0]
        print(DatabaseMatches)
