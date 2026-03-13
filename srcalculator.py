@@ -1056,7 +1056,7 @@ def recordsdata():
        else:
            TotalScreen = int(float(TotalScreen))
 
-       if pd.isna(TotalScreen) or pd.isna(UniqueCombined):
+       if pd.isna(TotalScreen) or pd.isna(UniqueCombined) or UniqueCombined==0:
            UniqueAverage = "No data"
        else:
            UniqueAverage = TotalScreen * UniqueCombined
