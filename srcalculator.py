@@ -1034,8 +1034,8 @@ def recordsdata():
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
-           GreyLitdf = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')
-           GreyLitMatches = GreyLitdf.shape[0]
+           GreyLitMatch = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')
+           GreyLitMatches = GreyLitMatch.shape[0]
            IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
 
            if pd.isna(GreyLiteratureAverage):
