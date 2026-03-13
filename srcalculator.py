@@ -689,21 +689,10 @@ def recordsdata():
 
        GreyLiteratureSelection = sorted(GreyLiteratureSelection)
 
-       Topic0 = str(Topics[0])
-       print(Topic0)
-       Topic1 = str(Topics[1])
-       Topic2 = str(Topics[2]) 
-       Topic3 = str(Topics[3]) 
-       Topic4 = str(Topics[4]) 
-       Topic5 = str(Topics[5]) 
-       Topic6 = str(Topics[6]) 
-       Topic7 = str(Topics[7]) 
-       Topic8 = str(Topics[8]) 
-       Topic9 = str(Topics[9]) 
-       Topic10 = str(Topics[10]) 
-       Topic11 = str(Topics[11]) 
-       Topic12 = str(Topics[12]) 
-       Topic13 = str(Topics[13]) 
+       for idx, val in enumerate(Topics):
+           globals()[f'Topic_{idx}'] = val
+        
+       print(Topic_0, Topic_1, Topic_2, Topic_3, Topic_4, Topic_5, Topic_6, Topic_7, Topic_8, Topic_9, Topic_10)
         
        pd.options.display.float_format = '{:.0f}'.format
        EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
@@ -711,7 +700,7 @@ def recordsdata():
        df.head()
 
        print("starting query")
-       Topicdf = df.query('Topics.str.contains(Topic0) & Topics.str.contains(Topic1)')
+       Topicdf = df.query('Topics.str.contains(@Topic_0) & Topics.str.contains(@Topic_1)')
        print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
        print("Created Medline dataframe")
@@ -1201,6 +1190,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
