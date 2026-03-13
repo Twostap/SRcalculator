@@ -688,7 +688,6 @@ def recordsdata():
            UpdatesAlertsChecked = ""
 
        GreyLiteratureSelection = sorted(GreyLiteratureSelection)
-       print(GreyLiteratureSelection)
        Topics = "; ".join(Topics)
        
        pd.options.display.float_format = '{:.0f}'.format
@@ -697,7 +696,9 @@ def recordsdata():
        df.head()
 
        Topicdf = df.query('Topics.str.contains(@Topics)')
+       print("Created topic dataframe")
        Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
+       print("Created Medline dataframe")
         
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
@@ -978,13 +979,10 @@ def recordsdata():
            else:
                 DatabaseSelection10Records = DatabaseSelection10Average.round(0).astype(int)
        DatabaseList = sorted(DatabaseList)
-       print(DatabaseList)
        DatabaseListString = "; ".join(DatabaseList)
-       print(DatabaseListString)
 
 # TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
-# print(TopicsUnique)
 
        UniqueCombined = Topicdf.query('`Databases used` == @DatabaseListString')['UniquePercent'].mean(numeric_only=True)
         
@@ -994,7 +992,6 @@ def recordsdata():
 
        else: 
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
-           print(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
            IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
 
@@ -1020,14 +1017,12 @@ def recordsdata():
        else:
            UniqueAverage = TotalScreen * UniqueCombined
            UniqueAverage = UniqueAverage.round(0).astype(int)
-           print(UniqueAverage)
 
        if pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            IncludesAverage = "No data"
        else:
            IncludesAverage = TotalScreen * IncludesPercent
            IncludesAverage = IncludesAverage.round(0).astype(int)
-           print(IncludesAverage)
     
     
     else:
@@ -1189,6 +1184,7 @@ def recordsdata():
 
 if __name__=='__main__':
    app.run()
+
 
 
 
