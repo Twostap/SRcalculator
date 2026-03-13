@@ -1019,16 +1019,13 @@ def recordsdata():
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
 
        TopicMatches = Topicdf.shape[0]
-       print(TopicMatches)
 
-       MedlineMatches = Medlinedf.shape[0]
-       print(MedlineMatches)    
+       MedlineMatches = Medlinedf.shape[0]  
         
        UniqueCombined = Topicdf.query('`Databases used` == @DatabaseListString')['UniquePercent'].mean(numeric_only=True)
        print(UniqueCombined)      
        DataMatch = Topicdf.query('`Databases used` == @DatabaseListString')
        DatabaseMatches = DataMatch.shape[0]
-       print(DatabaseMatches)
         
        if not GreyLiteratureSelection:
            GreyLiteratureAverage = ""
@@ -1038,7 +1035,7 @@ def recordsdata():
            GreyLiteratureSelection = "; ".join(GreyLiteratureSelection)
            GreyLiteratureAverage = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')['Grey Literature'].mean(numeric_only=True)
            GreyLitdf = Medlinedf.query('`Other sources searched` == @GreyLiteratureSelection')
-           GreyLitMatches = Topicdf.shape[0]
+           GreyLitMatches = GreyLitdf.shape[0]
            IncludesPercent = Topicdf.query('`Databases used` == @DatabaseListString')['GreyLiteratureIncludesPercent'].mean(numeric_only=True)
 
            if pd.isna(GreyLiteratureAverage):
