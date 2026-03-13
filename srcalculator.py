@@ -697,8 +697,8 @@ def recordsdata():
        print("openingspreadsheet")
 
        pd.options.display.float_format = '{:.0f}'.format
-       EXCEL_FILE_PATH = Path.cwd() / 'SR Calculator Github.xlsx'
-       df = pd.read_excel(EXCEL_FILE_PATH)
+       CSV_FILE_PATH = Path.cwd() / 'SR Calculator Github.csv'
+       df = pd.read_csv(CSV_FILE_PATH)
        df.head()
 
        print("starting query")
