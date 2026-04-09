@@ -55,7 +55,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <div class="wrapper" style="width:100%">
 <div class="headersection">
 <div class="header">
-<h1 style="font-family: calibri; font-size:1.5em">SR Record Calculator</h1>
+<h1 style="font-family: Helvetica; font-size:1.5em">SR Record Calculator</h1>
 </div>
 <div class="intro">
 <div class="introbody">
@@ -66,12 +66,12 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </div>
 <div class="formdiv">
 <form class="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
-<div class="records" style="font-family: calibri; padding-right:15px;">
-<p style="font-size:.8em; font-family: calibri"><label for="TotalMedline"><b>Total Number of Medline or PubMed records:</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:calibri; font-size:.9em;" placeholder="enter a number" required>
+<div class="records" style="font-family: Helvetica; padding-right:15px;">
+<p style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline"><b>Total Number of Medline or PubMed records:</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:calibri; font-size:.9em;" placeholder="enter a number" required>
 </p></div>
 <div class="selections">
 <div class="topic" id="topicselections">
-<table class="topictable" style="font-size:.8em; font-family: calibri; padding:5px;">
+<table class="topictable" style="font-size:.8em; font-family: Helvetica; padding:5px;">
 <tr><td class="topics" style="vertical-align:top; padding-bottom:10px;"><b>Topics</b></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
@@ -155,7 +155,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </table>
 </div>
 <div class="databasediv">
-<table class="databasetable" style="font-size:.8em; font-family: calibri; max-width:150px; padding:5px;">
+<table class="databasetable" style="font-size:.8em; font-family: Helvetica; max-width:150px; padding:5px;">
 <tr><td class="Database" style="padding-bottom:10px"><b>Databases</b></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" {{ CINAHLChecked }} /><label for="CINAHL">CINAHL</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" {{ CochraneLibraryChecked }} /><label for="CochraneLibrary">Cochrane Library</label></td></tr>
@@ -171,7 +171,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </div>
 </td></tr></table></div>
 <div class="greylitdiv">
-<table class="greylittable" style="font-size:.8em; font-family: calibri; max-width:150px; padding:5px; min-width:200px;">
+<table class="greylittable" style="font-size:.8em; font-family: Helvetica; max-width:150px; padding:5px; min-width:200px;">
 <tr><td style="padding-bottom:10px" colspan="2"><b>Grey Literature</b></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Algorithmic" name="Algorithmic" {{ AlgorithmicChecked }} /><label for="Algorithmic">Algorithmic and Visualization Tools</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="AuthorSearch" name="AuthorSearch" {{ AuthorSearchChecked }} /><label for="AuthorSearch">Author Search</label></td></tr>
@@ -201,7 +201,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </div>
 </div>
 <div class="resultcalculate">
-<div class="resultdiv" style="font-family: calibri;">
+<div class="resultdiv" style="font-family: Helvetica;">
 <span style="font-size:1.5em;"><strong>Results</strong></span><br><br>
 <table id="DatabaseResults" style="font-size:1em; color:white;">
 <tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
@@ -253,7 +253,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </div>
 <div class="footer">
 <div class="copyright">
-<p class="copyright" style="font-size:1em; font-family: Calibri;">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p>
+<p class="copyright" style="font-size:1em; font-family: Helvetica;">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p>
 </div>
 </div>
 </div>
