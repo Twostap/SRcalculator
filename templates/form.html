@@ -6,6 +6,8 @@
 .choosefile {padding-left:5px;}
 .topics {white-space:nowrap; color:white;}
 .Database {white-space:nowrap;}
+.databasetable {color:white}
+.greylittable {color:white}
 .resultdiv {font-size: .8em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px;}
 .navwrapper {font-family:calibri; font-size:.8em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:stretch;}
 .header {text-align:center;}
@@ -125,7 +127,7 @@ font-size: 1.2em;
 <div class="dropdown-container">
 <div class="selections">
 <div class="topic" id="topicselections">
-<table class="topictable" style="font-size:.7em; font-family: Helvetica; padding:5px;">
+<table class="topictable" style="font-size:.7em; font-family: Helvetica;">
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
 <tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.95em;">
@@ -214,7 +216,7 @@ font-size: 1.2em;
 </button>
 <div class="dropdown-container">
 <div class="databasediv">
-<table class="databasetable" style="font-size:.7em; font-family: Helvetica; max-width:150px; padding:5px; min-width:140px;">
+<table class="databasetable" style="font-size:.7em; font-family: Helvetica;">
 <tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" {{ CINAHLChecked }} /><label for="CINAHL">CINAHL</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" {{ CochraneLibraryChecked }} /><label for="CochraneLibrary">Cochrane Library</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" {{ CochraneCentralChecked }} /><label for="CochraneCentral">Cochrane Central</label></td></tr>
@@ -234,7 +236,7 @@ font-size: 1.2em;
 </button>
 <div class="dropdown-container">
 <div class="greylitdiv">
-<table class="greylittable" style="font-size:.7em; font-family: Helvetica; max-width:150px; padding:5px; min-width:200px;">
+<table class="greylittable" style="font-size:.7em; font-family: Helvetica;">
 <tr><td class="greylitcolumn"><input type="checkbox" id="Algorithmic" name="Algorithmic" {{ AlgorithmicChecked }} /><label for="Algorithmic">Algorithmic and Visualization Tools</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="AuthorSearch" name="AuthorSearch" {{ AuthorSearchChecked }} /><label for="AuthorSearch">Author Search</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Citations" name="Citations" {{ CitationsChecked }} /><label for="Citations">Citation Searching (Forward or Backward)</label></td></tr>
@@ -259,7 +261,6 @@ font-size: 1.2em;
 <tr><td class="greylitcolumn"><input type="checkbox" id="UpdatesAlerts" name="UpdatesAlerts" {{ UpdatesAlertsChecked }} /><label for="UpdatesAlerts">Updates or Alerts</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="UnknownUnclear" name="UnknownUnclear" {{ UnknownUnclearChecked }} /><label for="UnknownUnclear">Unknown or Unclear</label></td></tr>
 </table>
-<br>
 </div>
 </div>
 </div>
