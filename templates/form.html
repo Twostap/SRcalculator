@@ -6,71 +6,123 @@
 .choosefile {padding-left:5px;}
 .topics {white-space:nowrap;}
 .Database {white-space:nowrap;}
-.formdiv {text-align: left; display:inline-flex;}
-.resultdiv {font-size: 1em; display: inline-block; vertical-align:top; text-align:left; background-color:darkcyan; color:white; margin-left:15px; padding: 15px; min-width:200px; border: solid thin black; max-width:200px;}
+.resultdiv {font-size: 1em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px;}
+.navwrapper {font-family:calibri; font-size:.8em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:stretch;}
 .header {text-align:center;}
-.wrapper {text-align:center; font-family:Helvetica; font-size:.8em; display: flex; flex-direction: column; align-content: center; justify-content: center; flex-wrap: wrap;}
+.wrapper {margin-left:10px; text-align:center; font-family:calibri; font-size:.8em; display: inline-flex; flex-direction: column; align-content: center; flex-wrap: wrap;}
 .intro {text-align:left;}
 .introbody {text-align:left;}
-.topic {display:inline-block; border: inset 1px; margin:5px;}
-.databasediv {display:inline-block; vertical-align:top; margin-left:15px; border: inset 1px; margin:5px;}
-.greylitdiv {display:inline-block; vertical-align:top; margin-left:15px; min-width:200px; border: inset 1px; margin:5px;}
+.topic {display:block;}
+.databasediv {display:inline-block; vertical-align:top;}
+.greylitdiv {display:inline-block; vertical-align:top;}
 .footer {text-align:left; font-size:.6em;}
 .copyright {margin-right:260px;}
 .resultscolumn {width: 55%; border: 1px inset grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:.8em; white-space:no-wrap;}
-.selectlist {background-color:white; max-width:120px;}
 .DatabaseResults {max-width:200px;}
 .DatabaseInResults {white-space:wrap; min-width:120px;}
-.refreshbutton {background-color:white; font-size:.7em; font-family: Helvetica; border: solid thin white; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px;}
-.refresh {text-align:right; margin-top:10px;}
-.calculate {text-align:right;}
-.selections {display:inline-flex; background-color:#f7f7f7; border:outset 1px;}
-.resultcalculate {display:inline-block; vertical-align: top;}
-.selectlist {font-size:1em; font-family:Helvetica}
+.refreshbutton {margin-left:10px; border:solid thin black; background-color:white; font-size:.7em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
+.refresh {margin-top:10px; padding-left:5px;}
+.calculatediv {margin-top:10px;}
+.calculatebuttondiv {width:100%; text-align:left}
+.calculatebutton {color: black; background-color: orange; border:solid thin black; font-size: .7em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
+.selections {color: white;}
+.resultcalculate {display:flex; flex-direction: row; vertical-align: top;}
+.selectlist {font-size:1em; font-family:Calibri}
+.topictable {color:white;}
 .greylitcolumn {padding-left: 2.0em; text-indent: -1.8em;}
-input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; height: .8em; accent-color:darkcyan;}
-.headersection {display:flex; flex-direction: column; align-items:start;}
-
-@media only screen and (max-width: 900px) {
+.copyright {margin-top:10px;}
+input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; height: .8em;}
+.headersection {display:flex; flex-direction: column;}
+.sidenav {
+  width: 200px;
+  display:inline-flex;
+  flex-direction:column;
+  border-radius:2px;
+  top: 0;
+  left: 0;
+  background-color: #008b8b;
+  padding-top: 5px;
+  height:100%;
+}
+.sidenav a, .dropdown-btn {
+  padding: 2px 2px 2px 2px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+.active {
+  color: white;
+}
+.dropdown-container {
+  display: none;
+  font-size:.6em;
+  color:white;
+  padding-left:5px;
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 5px;
+}
+.dropdown-btn {
+font-size:.6em;
+font-weight:600;
+color:white;
+width:200px;
+padding-top:10px;
+padding-left:5px;
+}
+.fa {
+color:white;
+font-size: 1.2em;
+}
+@media only screen and (max-width: 775px) {
   .database {min-width: none;}
   .databasediv {margin-left:1px; display:block; margin-top:4px;}
   .greylitdiv {margin-left:1px; display:block; margin-top:4px; white-space:nowrap; max-width:none; min-width:none;}
   .topic {display: block; margin-left:1px;}
   .copyright {margin-right:0px; display:block; text-align:left}
-  .resultdiv {margin-left:1px; display:block; margin-top:30px; max-width:none; min-width:none;}
+  .resultdiv {margin-left:1px; display:block; margin-top:5px; max-width:none; min-width:none;}
   .greylitcolumn {white-space:nowrap;}
   .footer {display:block}
   .formdiv {display:block}
   .intro {text-align:left}
-  .header {text-align:left}
+  .header {text-align:center}
   .calculate {text-align:left}
   .databasetable {border: none;}
   .topictable {border: none;}
   .greylittable {border: none;}
   .resultcalculate {display:block; vertical-align: top;}
-  .headersection {align-items: center;}
-  .selectlist {background-color:white; max-width:9999px;}
-  .selections {display:block; border: none;}}
+  .sidenav {padding-top: 5px; width:100%; height:auto;}
+  .dropdown-btn {width:100%}
+  .selections {display:block; border: none;}
+  .formwrapper {width:100%;}
+  .wrapper {width:100%; align-items:center; margin-left:0px;}
+  .calculatebuttondiv {text-align:center;}}
 </style>
 </head>
 <body>
-<div class="wrapper" style="width:100%">
-<div class="headersection">
-<div class="header">
-<h1 style="font-family: Helvetica; font-size:1.5em">SR Record Calculator</h1>
-</div>
-<div class="intro">
-<div class="introbody">
-<span style="font-size:.8em; text-align:left;">This calculator can be used to determine overall number of anticipated records for knowledge synthesis projects based on preliminary Medline results.</span><br><br>
-<span style="font-size:.8em; text-align:left;">Consult the <a href="https://github.com/Twostap/SRcalculator" target="_blank">Github repository</a> for additional information</span>
-</div>
-</div>
-</div>
-<div class="formdiv">
+<div class="navwrapper">
 <form class="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
-<div class="records" style="font-family: Helvetica; padding-right:15px;">
-<p style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline"><b>Total Number of Medline or PubMed records:</b></label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:Helvetica; font-size:.9em;" placeholder="enter a number" required>
-</p></div>
+<div class="sidenav">
+<button class="dropdown-btn" type="button">Medline Records
+<span class="fa fa-caret-down">&#9662;</span>
+</button>
+<div class="dropdown-container" style="margin-left:5px; margin-bottom:5px;">
+<span style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:Helvetica; font-size:.9em;" placeholder="enter a number"></span>
+</div>
+<button class="dropdown-btn" type="button">Topics
+<span class="fa fa-caret-down">&#9662;</span>
+</button>
+<div class="dropdown-container">
 <div class="selections">
 <div class="topic" id="topicselections">
 <table class="topictable" style="font-size:.7em; font-family: Helvetica; padding:5px;">
@@ -156,6 +208,12 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 </tr>
 </table>
 </div>
+</div>
+</div>
+<button class="dropdown-btn" type="button">Databases
+<span class="fa fa-caret-down">&#9662;</span>
+</button>
+<div class="dropdown-container">
 <div class="databasediv">
 <table class="databasetable" style="font-size:.7em; font-family: Helvetica; max-width:150px; padding:5px; min-width:140px;">
 <tr><td class="Database" style="padding-bottom:10px; font-size:1.1em;"><b>Databases</b></td></tr>
@@ -172,6 +230,11 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <div id="AdditionalDatabase"><br>
 </div>
 </td></tr></table></div>
+</div>
+<button class="dropdown-btn" type="button">Grey Literature
+<span class="fa fa-caret-down">&#9662;</span>
+</button>
+<div class="dropdown-container">
 <div class="greylitdiv">
 <table class="greylittable" style="font-size:.7em; font-family: Helvetica; max-width:150px; padding:5px; min-width:200px;">
 <tr><td style="padding-bottom:10px; font-size:1.1em;" colspan="2"><b>Grey Literature</b></td></tr>
@@ -202,10 +265,29 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <br>
 </div>
 </div>
+</div>
+<div class="wrapper">
+<div class="headersection">
+<div class="header">
+<h1 style="font-family: Helvetica; font-size:1.5em">SR Record Calculator</h1>
+</div>
+<div class="intro">
+<div class="introbody">
+<span style="font-size:.8em; text-align:left;">This calculator can be used to determine overall number of anticipated records for knowledge synthesis projects based on preliminary Medline results.</span><br><br>
+<span style="font-size:.8em; text-align:left;">Use the menu on the left to input your search parameters and then click calculate.</span><br><br>
+<span style="font-size:.8em; text-align:left;">Consult the <a href="https://github.com/Twostap/SRcalculator" target="_blank">Github repository</a> for additional information</span>
+</div>
+</div>
+</div>
+<div class="calculatebuttondiv">
+<div class="calculateddiv">
+<button class="calculatebutton" type="submit"}>Calculate</button><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button>
+</div>
+</div>
 <div class="resultcalculate">
 <div class="resultdiv" style="font-family: Helvetica;">
-<span style="font-size:1.3em;"><strong>Results</strong></span><br><br>
-<table id="DatabaseResults" style="font-size:.9em; color:white;">
+<span class="resultsheader" style="font-size:1.3em;"><strong>Results</strong></span><br><br>
+<table id="DatabaseResults" style="font-size:.9em; color:black;">
 <tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
 <tr><td class="DatabaseInResults">CINAHL</td><td class="resultscolumn">{{ CINAHLRecords }}</td></tr>
 <tr><td class="DatabaseInResults">Cochrane Library</td><td class="resultscolumn">{{ CochraneLibraryRecords }}</td></tr>
@@ -227,7 +309,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <tr id="DatabaseSelection9Row" style="{{ display9 }}"><td class="DatabaseInResults">{{ DatabaseSelection9Name }}</td><td class="resultscolumn">{{ DatabaseSelection9Records }}</td></tr>
 <tr id="DatabaseSelection10Row" style="{{ display10 }}"><td class="DatabaseInResults">{{ DatabaseSelection10Name }}</td><td class="resultscolumn">{{ DatabaseSelection10Records }}</td></tr>
 </table>
-<table style="font-size:.9em; color:white;">
+<table style="font-size:.9em; color:black;">
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
 <tr><td class="DatabaseInResults">Grey Literature:</td><td class="resultscolumn">{{ GreyLiteratureRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
@@ -241,23 +323,15 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 <tr><td class="DatabaseInResults" style="font-size:.9em;">Grey Literature Sources:</td><td style="font-size:.9em;" class="resultscolumn">{{ GreyLitMatches }}</td></tr>
 <tr><td class="DatabaseInResults" style="font-size:.9em;">Unique/Includes Sources:</td><td style="font-size:.9em;" class="resultscolumn">{{ DatabaseMatches }}</td></tr>
 </table>
-<div class="refresh"><button class="refreshbutton" onClick="window.location.href=window.location.href;">Clear form</button><br>
 </div>
-</div>
-<div>
-<p class="calculate"><button type="submit" style="font-size: .8em; color: black; background-color: orange; border:solid thin black; padding:4px 10px; border-radius:2px; font-weight:500;"}>Calculate</button></p>
-</div>
-</div>
-</form>
-</div>
-<div class="logo">
-<img class="logoimage" width="250px" src="{{ url_for('static', filename='images/prisma.png') }}"/>
 </div>
 <div class="footer">
 <div class="copyright">
 <p class="copyright" style="font-size:1em; font-family: Helvetica;">© Copyright 2025 Askin, Dingwall, Matheson, Epp, Ostapyk</p>
 </div>
 </div>
+</div>
+</form>
 </div>
 </body>
 <script type="text/javascript">
@@ -731,6 +805,21 @@ if (TopicSelections) {
         }
     });
 }
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}	
 </script>
 
 </html>
