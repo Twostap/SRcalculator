@@ -4,9 +4,9 @@
 .AlliedSubTopics {color:white;}
 .MedicineSubTopics {color:white;}
 .choosefile {padding-left:5px;}
-.topics {white-space:nowrap;}
+.topics {white-space:nowrap; color:white;}
 .Database {white-space:nowrap;}
-.resultdiv {font-size: 1em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px;}
+.resultdiv {font-size: .8em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px;}
 .navwrapper {font-family:calibri; font-size:.8em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:stretch;}
 .header {text-align:center;}
 .wrapper {margin-left:10px; text-align:center; font-family:calibri; font-size:.8em; display: inline-flex; flex-direction: column; align-content: center; flex-wrap: wrap;}
@@ -128,8 +128,8 @@ font-size: 1.2em;
 <table class="topictable" style="font-size:.7em; font-family: Helvetica; padding:5px;">
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
-<tr class="AlliedSubTopics" id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.95em;">
-	<tr><td class="topics"style="color:white; padding-left:15px; padding-top:5px;"><input {{ AlliedDisabled }} type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
+<tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.95em;">
+	<tr><td class="topics" style="padding-left:15px; padding-top:5px;"><input {{ AlliedDisabled }} type="checkbox" id="ArtTopic" name="ArtTopic" {{ ArtChecked }} /><label for="ArtTopic">Art/music/drama therapy</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="AudiologyTopic" name="AudiologyTopic" {{ AudiologyChecked }} /><label for="AudiologyTopic">Audiology and speech-language pathology</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="CaregivingTopic" name="CaregivingTopic" {{ CaregivingChecked }} /><label for="CaregivingTopic">Caregiving</label></td></tr>
 	<tr><td class="topics" style="padding-left:15px;"><input {{ AlliedDisabled }} type="checkbox" id="ChiropracticTopic" name="ChiropracticTopic" {{ ChiropracticChecked }} /><label for="ChiropracticTopic">Chiropractic</label></td></tr>
