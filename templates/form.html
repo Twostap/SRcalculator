@@ -117,8 +117,8 @@ font-size: 1.2em;
 <button class="dropdown-btn" type="button">Medline Records
 <span class="fa fa-caret-down">&#9662;</span>
 </button>
-<div class="dropdown-container" style="margin-bottom:5px;">
-<span style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label>   <input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:Helvetica; font-size:.9em;" placeholder="enter a number" required></span>
+<div class="dropdown-container" style="margin-bottom:5px; padding-left:5px;">
+<span style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label><br><input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border; 0; font-family:Helvetica; font-size:.9em;" placeholder="enter a number" required></span>
 </div>
 <button class="dropdown-btn" type="button">Topics
 <span class="fa fa-caret-down">&#9662;</span>
@@ -226,7 +226,7 @@ font-size: 1.2em;
 <tr><td class="Database"><input type="checkbox" id="Scopus" name="Scopus" {{ ScopusChecked }} /><label for="Scopus">Scopus</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="Web of Science" name="Web of Science" {{ WebOfScienceChecked }} /><label for="Web of Science">Web of Science</label></td></tr>
 <tr><td class="Database" style="padding-top:10px;"><button type="button" onclick="AddDatabase()" style="border: solid thin black; font-size:.93em;">Add another database</button>
-<div id="AdditionalDatabase"><br>
+<div id="AdditionalDatabase" style="padding-left:5px;"><br>
 </div>
 </td></tr></table></div>
 </div>
