@@ -8,31 +8,31 @@
 .topics {color:white; padding-left:5px; text-indent:-5px;}
 .databasetable {color:white}
 .greylittable {color:white}
-.resultdiv {font-size: .8em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px; margin-top:10px;}
-.navwrapper {font-family:calibri; font-size:.8em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:flex-start; height:100%}
+.resultdiv {font-size: 1em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px; margin-top:10px;}
+.navwrapper {font-family:calibri; font-size:1em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:flex-start; height:100%}
 .header {text-align:center;}
-.wrapper {margin-left:10px; text-align:center; font-family:calibri; font-size:.8em; display: inline-flex; flex-direction: column; align-content: center; flex-wrap: nowrap; overflow-y:auto; height:100%; width:84%; align-items: center;}
+.wrapper {margin-left:10px; text-align:center; font-family:calibri; font-size:1em; display: inline-flex; flex-direction: column; align-content: center; flex-wrap: nowrap; overflow-y:auto; height:100%; width:84%; align-items: center;}
 .intro {text-align:left;}
 .introbody {text-align:left;}
 .topic {display:block;}
 .databasediv {display:inline-block; vertical-align:top;}
 .greylitdiv {display:inline-block; vertical-align:top;}
-.footer {text-align:left; font-size:.6em; margin-top:10px; width:100%}
-.resultscolumn {width: 55%; border: .5px solid grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:.8em; white-space:no-wrap;}
+.footer {text-align:left; font-size:.8em; margin-top:10px; width:100%}
+.resultscolumn {width: 55%; border: .5px solid grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:1em; white-space:no-wrap;}
 .DatabaseResults {max-width:200px;}
 .DatabaseInResults {white-space:wrap; min-width:90px;}
-.refreshbutton {margin-left:10px; border:solid thin black; background-color:white; font-size:.7em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
+.refreshbutton {margin-left:10px; border:solid thin black; background-color:white; font-size:.9em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
 .refresh {margin-top:10px; padding-left:5px;}
 .calculatediv {margin-top:10px;}
 .calculatebuttondiv {width:100%; text-align:left; margin-top:10px;}
-.calculatebutton {color: black; background-color: orange; border:solid thin black; font-size: .7em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
+.calculatebutton {color: black; background-color: orange; border:solid thin black; font-size: .9em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
 .selections {color: white;}
 .resultcalculate {display:flex; flex-direction: row; vertical-align: top;}
 .selectlist {font-size:1em; font-family:Calibri; max-width:70%}
 .topictable {color:white;}
 .greylitcolumn {padding-left:5px; text-indent:-5px;}
 .copyright {margin-top:10px; text-align:right; margin-right:5px;}
-input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; height: .8em;}
+input[type='checkbox'] {position:relative; vertical-align:middle; width: 1em; height: 1em;}
 .headersection {display:flex; flex-direction: column;}
 .sidenav {
   width: 14%;
@@ -68,7 +68,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
 }
 .dropdown-container {
   display: none;
-  font-size:.6em;
+  font-size:.8em;
   color:white;
   padding-right:5px;
 }
@@ -77,7 +77,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: .8em; h
   padding-right: 5px;
 }
 .dropdown-btn {
-font-size:.6em;
+font-size:.8em;
 color:white;
 width:95%;
 padding-top:10px;
@@ -124,7 +124,7 @@ font-size: 1.2em;
 <span class="fa fa-caret-down">&#9662;</span>
 </button>
 <div class="dropdown-container" style="margin-top:5px; margin-bottom:5px; padding-left:5px;">
-<span style="font-size:.8em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label><br><input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:.9em;" placeholder="enter a number" required></span>
+<span style="font-size:1em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label><br><input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:1.1em;" placeholder="enter a number" required></span>
 </div>
 <button class="dropdown-btn" type="button">Topics
 <span class="fa fa-caret-down">&#9662;</span>
@@ -132,7 +132,7 @@ font-size: 1.2em;
 <div class="dropdown-container">
 <div class="selections">
 <div class="topic" id="topicselections">
-<table class="topictable" style="font-size:.7em; font-family: Helvetica;">
+<table class="topictable" style="font-size:.9em; font-family: Helvetica;">
 <tr><td class="topics"><input type="checkbox" id="AgricultureTopic" name="AgricultureTopic" {{ AgricultureChecked }} /><label for="AgricultureTopic">Agriculture</label></td></tr>
 <tr><td class="topics"><input type="checkbox" id="AlliedTopic" name="AlliedTopic" onclick="AlliedToggle()" {{ AlliedChecked }} /><label for="AlliedTopic">Allied Health</label></td></tr>
 <tr id="AlliedSubTopics" style="{{ AlliedDisplay }}"><td><table style="font-size:.95em;">
@@ -221,7 +221,7 @@ font-size: 1.2em;
 </button>
 <div class="dropdown-container">
 <div class="databasediv">
-<table class="databasetable" style="font-size:.7em; font-family: Helvetica;">
+<table class="databasetable" style="font-size:.9em; font-family: Helvetica;">
 <tr><td class="Database"><input type="checkbox" id="CINAHL" name="CINAHL" {{ CINAHLChecked }} /><label for="CINAHL">CINAHL</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneLibrary" name="CochraneLibrary" {{ CochraneLibraryChecked }} /><label for="CochraneLibrary">Cochrane Library</label></td></tr>
 <tr><td class="Database"><input type="checkbox" id="CochraneCentral" name="CochraneCentral" {{ CochraneCentralChecked }} /><label for="CochraneCentral">Cochrane Central</label></td></tr>
@@ -241,7 +241,7 @@ font-size: 1.2em;
 </button>
 <div class="dropdown-container">
 <div class="greylitdiv">
-<table class="greylittable" style="font-size:.7em; font-family: Helvetica;">
+<table class="greylittable" style="font-size:.9em; font-family: Helvetica;">
 <tr><td class="greylitcolumn"><input type="checkbox" id="Algorithmic" name="Algorithmic" {{ AlgorithmicChecked }} /><label for="Algorithmic">Algorithmic and Visualization Tools</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="AuthorSearch" name="AuthorSearch" {{ AuthorSearchChecked }} /><label for="AuthorSearch">Author Search</label></td></tr>
 <tr><td class="greylitcolumn"><input type="checkbox" id="Citations" name="Citations" {{ CitationsChecked }} /><label for="Citations">Citation Searching (Forward or Backward)</label></td></tr>
@@ -272,13 +272,13 @@ font-size: 1.2em;
 <div class="wrapper">
 <div class="headersection">
 <div class="header">
-<h1 style="font-family: Helvetica; font-size:1.5em">SR Record Calculator</h1>
+<h1 style="font-family: Helvetica; font-size:1.7em">SR Record Calculator</h1>
 </div>
 <div class="intro">
 <div class="introbody">
-<span style="font-size:.8em; text-align:left;">This calculator can be used to determine overall number of anticipated records for knowledge synthesis projects based on preliminary Medline results.</span><br><br>
-<span style="font-size:.8em; text-align:left;">Use the menu on the left to input your search parameters and then click calculate.</span><br><br>
-<span style="font-size:.8em; text-align:left;">Consult the <a href="https://github.com/Twostap/SRcalculator" target="_blank">Github repository</a> for additional information</span>
+<span style="font-size:1em; text-align:left;">This calculator can be used to determine overall number of anticipated records for knowledge synthesis projects based on preliminary Medline results.</span><br><br>
+<span style="font-size:1em; text-align:left;">Use the menu on the left to input your search parameters and then click calculate.</span><br><br>
+<span style="font-size:1em; text-align:left;">Consult the <a href="https://github.com/Twostap/SRcalculator" target="_blank">Github repository</a> for additional information</span>
 </div>
 </div>
 <div class="calculatebuttondiv">
@@ -289,7 +289,7 @@ font-size: 1.2em;
 <div class="resultcalculate">
 <div class="resultdiv" style="font-family: Helvetica;">
 <span class="resultsheader" style="font-size:1.3em;"><strong>Results</strong></span><br><br>
-<table id="DatabaseResults" style="font-size:.9em; color:black;">
+<table id="DatabaseResults" style="font-size:1.1em; color:black;">
 <tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
 <tr><td class="DatabaseInResults">CINAHL</td><td class="resultscolumn">{{ CINAHLRecords }}</td></tr>
 <tr><td class="DatabaseInResults">Cochrane Library</td><td class="resultscolumn">{{ CochraneLibraryRecords }}</td></tr>
@@ -311,7 +311,7 @@ font-size: 1.2em;
 <tr id="DatabaseSelection9Row" style="{{ display9 }}"><td class="DatabaseInResults">{{ DatabaseSelection9Name }}</td><td class="resultscolumn">{{ DatabaseSelection9Records }}</td></tr>
 <tr id="DatabaseSelection10Row" style="{{ display10 }}"><td class="DatabaseInResults">{{ DatabaseSelection10Name }}</td><td class="resultscolumn">{{ DatabaseSelection10Records }}</td></tr>
 </table>
-<table style="font-size:.9em; color:black;">
+<table style="font-size:1.1em; color:black;">
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
 <tr><td class="DatabaseInResults">Grey Literature:</td><td class="resultscolumn">{{ GreyLiteratureRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
@@ -320,11 +320,11 @@ font-size: 1.2em;
 <tr><td class="DatabaseInResults">Total Includes:</td><td class="resultscolumn">{{ IncludesRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px"></td></tr>
 <tr><td class="DatabaseInResults sourcescolumn" colspan="2" style="font-size:1.3em"><strong>Sources</strong></td><td style="padding-top:10px"></td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;"></td><td style="font-size:.9em;"></td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;">Total Matching Topic:</td><td style="font-size:.9em;" class="resultscolumn">{{ TopicMatches }}</td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;">Matching Medline/Topic:</td><td style="font-size:.9em;" class="resultscolumn">{{ MedlineMatches }}</td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;">Grey Literature Sources:</td><td style="font-size:.9em;" class="resultscolumn">{{ GreyLitMatches }}</td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;">Unique/Includes Sources:</td><td style="font-size:.9em;" class="resultscolumn">{{ DatabaseMatches }}</td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;"></td><td style="font-size:1.1em;"></td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;">Total Matching Topic:</td><td style="font-size:1.1em;" class="resultscolumn">{{ TopicMatches }}</td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;">Matching Medline/Topic:</td><td style="font-size:1.1em;" class="resultscolumn">{{ MedlineMatches }}</td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;">Grey Literature Sources:</td><td style="font-size:1.1em;" class="resultscolumn">{{ GreyLitMatches }}</td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;">Unique/Includes Sources:</td><td style="font-size:1.1em;" class="resultscolumn">{{ DatabaseMatches }}</td></tr>
 </table>
 </div>
 </div>
