@@ -8,7 +8,7 @@
 .topics {color:white; padding-left:5px; text-indent:-5px;}
 .databasetable {color:white}
 .greylittable {color:white}
-.resultdiv {font-size: 1em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:200px; margin-top:10px;}
+.resultdiv {font-size: 1em; display: block; vertical-align:top; text-align:left; background-color:white; color:black; padding-top: 5px; min-width:400px; margin-top:10px;}
 .navwrapper {font-family:calibri; font-size:1em; display: flex; flex-direction: row; flex-wrap: wrap; align-content: flex-start; align-items:flex-start; height:100%}
 .header {text-align:center;}
 .wrapper {margin-left:10px; text-align:center; font-family:calibri; font-size:1em; display: inline-flex; flex-direction: column; align-content: center; flex-wrap: nowrap; overflow-y:auto; height:100%; width:84%; align-items: center;}
@@ -20,7 +20,7 @@
 .footer {text-align:left; font-size:.8em; margin-top:10px; width:100%}
 .resultscolumn {width: 55%; border: .5px solid grey; padding-left:5px; margin-left:10px; align:left; background-color:white; color:black; font-size:1em; white-space:no-wrap;}
 .DatabaseResults {max-width:200px;}
-.DatabaseInResults {white-space:wrap; min-width:90px;}
+.DatabaseInResults {white-space:wrap; min-width:200px;}
 .refreshbutton {margin-left:10px; border:solid thin black; background-color:white; font-size:.9em; font-family: calibri; padding-top:3px; padding-bottom:3px; padding-left:5px; padding-right:5px; border-radius:2px; display:inline-block;}
 .refresh {margin-top:10px; padding-left:5px;}
 .calculatediv {margin-top:10px;}
@@ -77,7 +77,7 @@ input[type='checkbox'] {position:relative; vertical-align:middle; width: 1em; he
   padding-right: 5px;
 }
 .dropdown-btn {
-font-size:.8em;
+font-size: 1em;
 color:white;
 width:95%;
 padding-top:10px;
@@ -289,7 +289,7 @@ font-size: 1.2em;
 <div class="resultcalculate">
 <div class="resultdiv" style="font-family: Helvetica;">
 <span class="resultsheader" style="font-size:1.3em;"><strong>Results</strong></span><br><br>
-<table id="DatabaseResults" style="font-size:1.1em; color:black;">
+<table id="DatabaseResults" style="font-size: 1em; color:black;">
 <tr><td class="DatabaseInResults">Medline</td><td class="resultscolumn">{{ MedlineRecords }}</td></tr>
 <tr><td class="DatabaseInResults">CINAHL</td><td class="resultscolumn">{{ CINAHLRecords }}</td></tr>
 <tr><td class="DatabaseInResults">Cochrane Library</td><td class="resultscolumn">{{ CochraneLibraryRecords }}</td></tr>
@@ -311,7 +311,7 @@ font-size: 1.2em;
 <tr id="DatabaseSelection9Row" style="{{ display9 }}"><td class="DatabaseInResults">{{ DatabaseSelection9Name }}</td><td class="resultscolumn">{{ DatabaseSelection9Records }}</td></tr>
 <tr id="DatabaseSelection10Row" style="{{ display10 }}"><td class="DatabaseInResults">{{ DatabaseSelection10Name }}</td><td class="resultscolumn">{{ DatabaseSelection10Records }}</td></tr>
 </table>
-<table style="font-size:1.1em; color:black;">
+<table style="font-size: 1em; color:black;">
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
 <tr><td class="DatabaseInResults">Grey Literature:</td><td class="resultscolumn">{{ GreyLiteratureRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px;"></td></tr>
@@ -320,7 +320,7 @@ font-size: 1.2em;
 <tr><td class="DatabaseInResults">Total Includes:</td><td class="resultscolumn">{{ IncludesRecords }}</td></tr>
 <tr><td class="DatabaseInResults"></td><td style="padding-top:10px"></td></tr>
 <tr><td class="DatabaseInResults sourcescolumn" colspan="2" style="font-size:1.3em"><strong>Sources</strong></td><td style="padding-top:10px"></td></tr>
-<tr><td class="DatabaseInResults" style="font-size:1em;"></td><td style="font-size:1.1em;"></td></tr>
+<tr><td class="DatabaseInResults" style="font-size:1em;"></td><td style="font-size:1em;"></td></tr>
 <tr><td class="DatabaseInResults" style="font-size:1em;">Total Matching Topic:</td><td style="font-size:1.1em;" class="resultscolumn">{{ TopicMatches }}</td></tr>
 <tr><td class="DatabaseInResults" style="font-size:1em;">Matching Medline/Topic:</td><td style="font-size:1.1em;" class="resultscolumn">{{ MedlineMatches }}</td></tr>
 <tr><td class="DatabaseInResults" style="font-size:1em;">Grey Literature Sources:</td><td style="font-size:1.1em;" class="resultscolumn">{{ GreyLitMatches }}</td></tr>
