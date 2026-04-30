@@ -89,7 +89,13 @@ font-family: Helvetica;
 color:white;
 font-size: 1.2em;
 }
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1300px) {
+  .selectlist {max-width: 50%;}
+  .medlinenumber {max-width:90%;}}
+	
+	
+@media only screen and (max-width: 1100px) {
   .database {min-width: none;}
   .databasediv {margin-left:1px; display:block; margin-top:4px;}
   .greylitdiv {margin-left:1px; display:block; margin-top:4px; white-space:nowrap; max-width:none; min-width:none;}
@@ -125,7 +131,7 @@ font-size: 1.2em;
 <span class="fa fa-caret-down">&#9662;</span>
 </button>
 <div class="dropdown-container" style="margin-top:5px; margin-bottom:5px; padding-left:5px;">
-<span style="font-size:.9em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label><br><input min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:1.1em;" placeholder="enter a number" required></span>
+<span style="font-size:.9em; font-family: Helvetica"><label for="TotalMedline">Total Number of Medline or PubMed records:</label><br><input class="medlinenumber" min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:1.1em;" placeholder="enter a number" required></span>
 </div>
 <button class="dropdown-btn" type="button">Topics
 <span class="fa fa-caret-down">&#9662;</span>
