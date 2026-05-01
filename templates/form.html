@@ -857,9 +857,10 @@ function MedlineAlert() {
     return false;
   }
   var checkeddatabase = document.getElementById('databasediv').querySelectorAll('input[type="checkbox"]:checked').length;
+  alert(checkeddatabase)
   var checkedadditionaldatabase = document.getElementById('AdditionalDatabase').innerHTML;
   alert(checkedadditionaldatabase)
-  if (!checkedadditionaldatabase && checkeddatabase < 1) {
+  if (checkedadditionaldatabase === '' && checkeddatabase < 1) {
     alert("Please select at least one database");
     return false;
   }
