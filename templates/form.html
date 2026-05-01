@@ -849,8 +849,7 @@ function MedlineAlert() {
   alert(checkedtopic)
   checkedtopiclength = checkedtopic.querySelectorAll('input[type="checkbox"]:checked').length;
   alert(checkedtopiclength)
-  alert(checkedtopic)
-  if (checkedtopic < 1) {
+  if (checkedtopiclength < 1) {
     alert("Please select a topic");
     return false;
   }
