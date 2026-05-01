@@ -1051,19 +1051,19 @@ def recordsdata():
        TotalScreen = sum(x if not isinstance(x,str) else 0 for x in TotalScreen)
            
        if TotalScreen==0:
-           TotalScreen="No results"
+           TotalScreen="No data"
        elif TotalScreen==TotalMedline:
-           TotalScreen="No results"
+           TotalScreen="No data"
        else:
            TotalScreen = int(float(TotalScreen))
 
-       if TotalScreen=="No results" or pd.isna(TotalScreen) or pd.isna(UniqueCombined) or UniqueCombined==0:
+       if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(UniqueCombined) or UniqueCombined==0:
            UniqueAverage = "No data"
        else:
            UniqueAverage = TotalScreen * UniqueCombined
            UniqueAverage = UniqueAverage.round(0).astype(int)
 
-       if TotalScreen=="No results" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+       if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            IncludesAverage = "No data"
        else:
            IncludesAverage = TotalScreen * IncludesPercent
