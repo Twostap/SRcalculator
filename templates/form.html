@@ -846,6 +846,7 @@ function MedlineAlert() {
     return false;
   }
   var checkedtopic = getElementsByClassName('topicscheck').querySelectorAll('input[type="checkbox"]:checked').length;  
+  alert(checkedtopic)
   if (checkedtopic < 1) {
     alert("Please select a topic");
     return false;
