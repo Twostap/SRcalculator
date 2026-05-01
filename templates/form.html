@@ -845,9 +845,9 @@ function MedlineAlert() {
     alert("The Medline/Pubmed record number is required");
     return false;
   }
-  if ($('input[class="topics"]:checked').length) {
-  } else {
-    console.error("Please select a topic");
+  var checkedtopic = getElementsByClassName('topics').querySelectorAll('input[type="checkbox"]:checked').length;  
+  if (checkedtopic < 1) {
+    alert("Please select a topic");
     return false;
   }
 }
