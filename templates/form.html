@@ -132,13 +132,13 @@ font-size: 1.2em;
 </head>
 <body>
 <div class="navwrapper">
-<form class="formwrapper" name="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
+<form class="formwrapper" onsubmit="return MedlineAlert()" name="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
 <div class="sidenav">
 <button class="dropdown-btn" type="button" style="padding-top:5px;">Medline Records
 <span class="fa fa-caret-down">&#9662;</span>
 </button>
 <div class="dropdown-container" style="margin-top:5px; margin-bottom:5px; padding-left:5px;">
-<span style="font-size:.9em; font-family: Helvetica"><label for="TotalMedline">Total Medline/PubMed records:</label><br><input class="medlinenumber" min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:1.1em;" placeholder="enter a number" required></span>
+<span style="font-size:.9em; font-family: Helvetica"><label for="TotalMedline">Total Medline/PubMed records:</label><br><input class="medlinenumber" min="0" type="number" id="TotalMedline" name="TotalMedline" style="margin-top:5px; border: 0; font-family:Helvetica; font-size:1.1em;" placeholder="enter a number"></span>
 </div>
 <button class="dropdown-btn" type="button">Topics
 <span class="fa fa-caret-down">&#9662;</span>
