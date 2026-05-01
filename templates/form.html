@@ -845,7 +845,13 @@ function MedlineAlert() {
     alert("The Medline/Pubmed record number is required");
     return false;
   }
+  if ($('input[class="topics"]:checked').length) {
+  } else {
+    console.error("Please select a topic");
+    return false;
+  }
 }
+
 </script>
 
 </html>
