@@ -860,7 +860,10 @@ function MedlineAlert() {
   alert(checkeddatabase)
   var checkedadditionaldatabase = document.getElementById('AdditionalDatabase').innerHTML;
   alert(checkedadditionaldatabase)
-  if (checkedadditionaldatabase === "") {
+  if checkedadditionaldatabase === "" {
+	  alert("nodatabasesinselectlist")
+  }
+  if (checkeddatabase < 1) {
     alert("Please select at least one database");
     return false;
   }
