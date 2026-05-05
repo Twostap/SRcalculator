@@ -481,7 +481,7 @@ def recordsdata():
 
        if ChiropracticTopic=="on":
            Topics.append("Chiropractic")
-           ChiropracticyChecked = "checked"
+           ChiropracticChecked = "checked"
        else:
            ChiropracticChecked = ""
 
