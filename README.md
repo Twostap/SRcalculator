@@ -48,11 +48,11 @@ INTERPRETING TIME REQUIRED:
 
 Screen Titles/Abstracts is the anticipated number of hours it will take to screen titles/abstracts for single reviewer screening. If double screening, this number should be doubled.
 
-Retrieve Full-text is the amount of time anticipated for retrieving the full-text for records that will be full-text screened.
+Retrieve Full-Text is the amount of time anticipated for retrieving the full-text for records that will be full-text screened.
 
-Screen Full-text is the anticipated number of hours it will take to screen full-text for single reviewer screening. If double screening, this number should be doubled.
+Screen Full-Text is the anticipated number of hours it will take to screen full-text for single reviewer screening. If double screening, this number should be doubled.
 
-Data extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.
+Data Extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.
 
 
 INTERPRETING DATA SOURCES:
@@ -67,7 +67,7 @@ Grey Literature Sources is the number of reviews that matched Medline/Topic and 
 
 Unique/Includes sources are reviews that included your selected databases and contained your selected topics. An average from these reviews is used to calculate total number of unique records and total number of included records.
 
-If you do not find matches based on your selection "No data" will display. You can try altering the Medline record number to find additional data sources as the calculator will only match to reviews that retrieved Medline results within 100 of the input number.
+If you do not find matches based on your selection "No data" will display. You can try altering the Medline record number to find additional data sources.
 
 
 RESETTING THE FORM:
