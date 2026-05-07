@@ -1084,7 +1084,7 @@ def recordsdata():
        if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            AbstractScreenTime = "No data"
        else:
-           FullTextRecordsCalc = float("0.274")
+           FullTextRecordsCalc = float("0.035")
            FullTextRecords = UniqueAverage * FullTextRecordsCalc
            FullTextRecords = round(FullTextRecords)
            FullTextScreenCalc = float("4.65")
