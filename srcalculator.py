@@ -1075,8 +1075,11 @@ def recordsdata():
            AbstractScreenAverage = "1.5"
            AbstractScreenAverage = float(AbstractScreenAverage)
            AbstractScreenTime = TotalScreen * AbstractScreenAverage
-           AbstractScreenTime = round(AbstractScreenTime, 0)
-           AbstractScreenTime = str(AbstractScreenTime) + " minutes"
+           HoursCalc = "60"
+           HoursCalc = float(HoursCalc)
+           AbstractScreenTime = AbstractScreenTime / HoursCalc
+           AbstractScreenTime = round(AbstractScreenTime)
+           AbstractScreenTime = str(AbstractScreenTime) + " hours"
 
     
     else:
