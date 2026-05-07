@@ -1,3 +1,26 @@
+################################################################################
+#
+#© Copyright 2026, Tyler Ostapyk
+#This program is free software: you can redistribute it and/or modify it
+#under the terms of the GNU General Public License as published by the Free
+#Software Foundation, either version 3 of the License, or (at your option)
+#any later version.
+#
+#This program is distributed in the hope that it will be useful, but WITHOUT
+#ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+#FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+#You may have received a copy of the GNU General Public License along with
+#this program. If not, see <https://www.gnu.org/licenses/>.
+#
+#################################################################################
+
+#Name: SRCalculator
+#Description: This code produces a flask app for calculating anticipating total number of records and time required for knowledge synthesis projects based on preliminary Medline results.
+#Author: Tyler Ostapyk (tyler.ostapyk@umanitoba.ca)
+#Date: May 7, 2026
+
+
 from flask import Flask, request, render_template
 import pandas as pd
 from pathlib import Path
