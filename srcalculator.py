@@ -1069,7 +1069,7 @@ def recordsdata():
            IncludesAverage = TotalScreen * IncludesPercent
            IncludesAverage = IncludesAverage.round(0).astype(int)
 
-       if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+       if UniqueAverage=="No data" or pd.isna(UniqueAverage):
            AbstractScreenTime = "No data"
        else:
            AbstractScreenAverage = "1.5"
@@ -1081,8 +1081,10 @@ def recordsdata():
            AbstractScreenTime = round(AbstractScreenTime)
            AbstractScreenTime = str(AbstractScreenTime) + " hrs per reviewer"
 
-       if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
-           AbstractScreenTime = "No data"
+       if UniqueAverage=="No data" or pd.isna(UniqueAverage):
+           FullTextRecords = "No data"
+           FullTextScreenTime = "No data"
+           FullTextRetrievalTime = "No data"
        else:
            FullTextRecordsCalc = float("0.035")
            FullTextRecords = UniqueAverage * FullTextRecordsCalc
@@ -1098,6 +1100,14 @@ def recordsdata():
            FullTextRetrievalTime = round(FullTextRetrievalTime)
            FullTextRetrievalTime = str(FullTextRetrievalTime) + " hrs"
            FullTextRecords = str(FullTextRecords)
+           DataExtractionCalc = float("53")
+           if IncludesAverage=="No data" or pd.isna(IncludesAverage):
+                DataExtractionTime = "No data"
+           else:
+                DataExtractionTime = IncludesAverage * DataExtractionCalc
+                DataExtractionTime = DataExtractionTime / HoursCalcFull
+                DataExtractionTime = round(DataExtractionTime)
+                DataExtractionTime = str(DataExtractionTime) + " hrs per reviewer"
     
     else:
         CINAHLAverage = ""
