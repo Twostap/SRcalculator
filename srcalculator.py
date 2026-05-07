@@ -1069,12 +1069,12 @@ def recordsdata():
            IncludesAverage = TotalScreen * IncludesPercent
            IncludesAverage = IncludesAverage.round(0).astype(int)
 
-       if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+       if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            AbstractScreenTime = "No data"
        else:
            AbstractScreenAverage = "1.5"
            AbstractScreenAverage = float(AbstractScreenAverage)
-           AbstractScreenTime = TotalScreen * AbstractScreenAverage
+           AbstractScreenTime = UniqueAverage * AbstractScreenAverage
            HoursCalc = "60"
            HoursCalc = float(HoursCalc)
            AbstractScreenTime = AbstractScreenTime / HoursCalc
