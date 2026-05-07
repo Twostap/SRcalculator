@@ -1075,7 +1075,8 @@ def recordsdata():
            AbstractScreenAverage = "1.5"
            AbstractScreenAverage = AbstractScreenAverage.astype(int)
            AbstractScreenTime = TotalScreen * AbstractScreenAverage
-           AbstractScreenTime = AbstractScreenTime + "minutes"
+           AbstractScreenTime = AbstractScreenTime.round(0).astype(int)
+           AbstractScreenTime = AbstractScreenTime + " minutes"
 
     
     else:
