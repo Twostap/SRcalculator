@@ -1110,7 +1110,7 @@ def recordsdata():
            FullTextRetrievalTime = "No data"
            DataExtractionTime = "No data"
        else:
-           FullTextRecordsCalc = float("0.035")
+           FullTextRecordsCalc = float("0.1")
            FullTextRecords = UniqueAverage * FullTextRecordsCalc
            FullTextRecords = round(FullTextRecords)
            FullTextScreenCalc = float("4.65")
