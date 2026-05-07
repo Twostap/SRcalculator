@@ -12,7 +12,7 @@ Haddaway NR, Westgate MJ. Predicting the time needed for environmental systemati
 
 Nussbaumer-Streit B, Ellen M, Klerings I, et al. Resource use during systematic review production varies widely: a scoping review. Journal of Clinical Epidemiology. 2021;139:287-296. doi: 10.1016/j.jclinepi.2021.05.019
 
-Lefebvre C, Glanville J, Briscoe S, Featherstone R, Littlewood A, Metzendorf M-I, Noel-Storr A, Paynter R, Rader T, Thomas J, Wieland LS. Chapter 4: Searching for and selecting studies. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, et al, editor(s). Cochrane Handbook for Systematic Reviews of Interventions version 6.5.1 Cochrane; 2025. Available from: cochrane.org/handbook.https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04
+Lefebvre C, Glanville J, Briscoe S, Featherstone R, Littlewood A, Metzendorf M-I, Noel-Storr A, Paynter R, Rader T, Thomas J, Wieland LS. Chapter 4: Searching for and selecting studies. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, et al, editor(s). Cochrane Handbook for Systematic Reviews of Interventions version 6.5.1 Cochrane; 2025. Available from: https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04
 
 
 USING THE CALCULATOR:
