@@ -1,3 +1,5 @@
+PURPOSE AND DESCRIPTION:
+
 This calculator can be used to determine total number of records and time required for knowledge synthesis (KS) projects based on preliminary Medline results.
 
 The calculator is currently a prototype and may undergo changes that could affect the reliability/consistency of results.
