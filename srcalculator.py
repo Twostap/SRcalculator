@@ -1068,7 +1068,15 @@ def recordsdata():
        else:
            IncludesAverage = TotalScreen * IncludesPercent
            IncludesAverage = IncludesAverage.round(0).astype(int)
-    
+
+       if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+           AbstractScreenTime = "No data"
+       else:
+           AbstractScreenAverage = "1.5"
+           AbstractScreenAverage = AbstractScreenAverage.astype(int)
+           AbstractScreenTime = TotalScreen * AbstractScreenAverage
+           AbstractScreenTime = AbstractScreenTime + "minutes"
+
     
     else:
         CINAHLAverage = ""
