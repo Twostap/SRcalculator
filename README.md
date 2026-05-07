@@ -41,7 +41,7 @@ If grey literature sources were selected the total will be found next to the gre
 
 Total records are the sum total of anticipated records retrieved from all databases (including duplicates).
 
-Abstract/Title screen are the number of unique (i.e. deduplicated) records.
+Abstract/Title screen are the number of records anticipated for abstract/title screening. This is the number of anticipated unique (i.e. deduplicated) records.
 
 Full-Text Screen is the anticipated number of records that will remain for full-text screening after abstract/title screening.
 
