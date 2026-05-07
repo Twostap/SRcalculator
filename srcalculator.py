@@ -1081,6 +1081,21 @@ def recordsdata():
            AbstractScreenTime = round(AbstractScreenTime)
            AbstractScreenTime = str(AbstractScreenTime) + " hours"
 
+       if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
+           AbstractScreenTime = "No data"
+       else:
+           FullTextRecordsCalc = float("0.035")
+           FullTextRecords = UniqueAverage * FullTextRecordsCalc
+           FullTextRecords = round(FullTextRecords)
+           FullTextScreenCalc = float("4.65")
+           FullTextScreenTime = FullTextRecords * FullTextScreenCalc
+           HoursCalcFull = float("60")
+           FullTextScreenTime = FullTextScreenTime / HoursCalcFull
+           FullTextScreenTime = str(FullTextScreenTime) + " hours"
+           FullTextRetrievalTime = FullTextRecords * float("4")
+           FullTextRetrievalTime = FullTextRetrievalTime / HoursCalcFull
+           FullTextRetrievalTime = str(FullTextRetrievalTime) + " hours"
+           FullTextRecords = string(FullTextRecords)
     
     else:
         CINAHLAverage = ""
