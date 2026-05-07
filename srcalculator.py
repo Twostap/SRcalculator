@@ -1091,6 +1091,7 @@ def recordsdata():
            FullTextScreenTime = FullTextRecords * FullTextScreenCalc
            HoursCalcFull = float("60")
            FullTextScreenTime = FullTextScreenTime / HoursCalcFull
+           FullTextScreenTime = round(FullTextScreenTime)
            FullTextScreenTime = str(FullTextScreenTime) + " hrs per reviewer"
            FullTextRetrievalTime = FullTextRecords * float("4")
            FullTextRetrievalTime = FullTextRetrievalTime / HoursCalcFull
