@@ -1079,7 +1079,7 @@ def recordsdata():
            HoursCalc = float(HoursCalc)
            AbstractScreenTime = AbstractScreenTime / HoursCalc
            AbstractScreenTime = round(AbstractScreenTime)
-           AbstractScreenTime = str(AbstractScreenTime) + " hours"
+           AbstractScreenTime = str(AbstractScreenTime) + " hrs per reviewer"
 
        if UniqueAverage=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            AbstractScreenTime = "No data"
@@ -1091,10 +1091,10 @@ def recordsdata():
            FullTextScreenTime = FullTextRecords * FullTextScreenCalc
            HoursCalcFull = float("60")
            FullTextScreenTime = FullTextScreenTime / HoursCalcFull
-           FullTextScreenTime = str(FullTextScreenTime) + " hours"
+           FullTextScreenTime = str(FullTextScreenTime) + " hrs per reviewer"
            FullTextRetrievalTime = FullTextRecords * float("4")
            FullTextRetrievalTime = FullTextRetrievalTime / HoursCalcFull
-           FullTextRetrievalTime = str(FullTextRetrievalTime) + " hours"
+           FullTextRetrievalTime = str(FullTextRetrievalTime) + " hrs"
            FullTextRecords = str(FullTextRecords)
     
     else:
