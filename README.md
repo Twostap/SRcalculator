@@ -29,7 +29,7 @@ INTERPRETING RESULTS:
 The results will be displayed in the center of the page. 
 
 
-Interpreting Number of Records:
+INTERPRETING NUMBER OF RECORDS:
 
 Anticipated number of records will be displayed for each database that was selected.
 
@@ -44,7 +44,7 @@ Full-Text Screen is the anticipated number of records that will remain for full-
 Includes is the total number of anticipated included citations for the KS project.
 
 
-Interpreting Time Required:
+INTERPRETING TIME REQUIRED:
 
 Screen Titles/Abstracts is the anticipated number of hours it will take to screen titles/abstracts for single reviewer screening. If double screening, this number should be doubled.
 
@@ -55,7 +55,7 @@ Screen Full-text is the anticipated number of hours it will take to screen full-
 Data extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.
 
 
-Interpreting Data Sources:
+INTERPRETING DATA SOURCES:
 
 The data sources are provided to give a sense of how many matches there were for your query in the dataset. 
 
