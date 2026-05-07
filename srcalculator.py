@@ -1095,7 +1095,7 @@ def recordsdata():
            FullTextRetrievalTime = FullTextRecords * float("4")
            FullTextRetrievalTime = FullTextRetrievalTime / HoursCalcFull
            FullTextRetrievalTime = str(FullTextRetrievalTime) + " hours"
-           FullTextRecords = string(FullTextRecords)
+           FullTextRecords = str(FullTextRecords)
     
     else:
         CINAHLAverage = ""
