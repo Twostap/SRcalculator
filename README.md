@@ -6,7 +6,7 @@ The calculator is currently a prototype and may undergo changes that could affec
 
 It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of time required for KS projects.
 
-Records estimates with the exception of Full-text screen records are calculated using data extracted from 7,300+ systematic reviews published in 2023 and retrieved in Scopus.
+Records estimates with the exception of full-text screen records are calculated using data extracted from 7,300+ systematic reviews published in 2023 and retrieved in Scopus.
 
 Full-text screen record numbers and time estimates are based on numbers provided in the following sources: 
 
