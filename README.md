@@ -83,7 +83,7 @@ The data sources are provided to give a sense of how many matches there were for
 
 Total Matching Topic is the number of reviews that include all of the topics selected.
 
-Matching Medline/Topic is the number of reviews that included all of the topics selected AND had Medline results that fell within 200 (i.e. 99 above, 99 below) the Medline record number input in your query. There are the reviews that are used to get average record number for your selected databases.
+Matching Medline/Topic is the number of reviews that included all of the topics selected AND had Medline results that fell within 200 (i.e. 99 above, 99 below) the Medline record number input in your query. These are the reviews that are used to get average record number for your selected databases.
 
 Grey Literature Sources is the number of reviews that matched Medline/Topic and included the grey literature sources selected. These are the reviews that are used to calculate the average grey literature number.
 
