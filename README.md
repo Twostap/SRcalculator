@@ -13,26 +13,23 @@ Records estimates with the exception of full-text screen record numbers are calc
 
 Time estimates are based on numbers provided in the following sources: 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nussbaumer-Streit B, Ellen M, Klerings I, et al. Resource use during systematic review production varies widely: a scoping review. Journal of Clinical Epidemiology. 2021;139:287-296. doi: 10.1016/j.jclinepi.2021.05.019
+<li>Nussbaumer-Streit B, Ellen M, Klerings I, et al. Resource use during systematic review production varies widely: a scoping review. Journal of Clinical Epidemiology. 2021;139:287-296. doi: 10.1016/j.jclinepi.2021.05.019</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lefebvre C, Glanville J, Briscoe S, Featherstone R, Littlewood A, Metzendorf M-I, Noel-Storr A, Paynter R, Rader T, Thomas J, Wieland LS. Chapter 4: Searching for and selecting studies. In: Higgins JP, Thomas J,   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chandler J, Cumpston M, Li T, Page MJ, et al, editor(s). Cochrane Handbook for Systematic Reviews of Interventions version 6.5.1 Cochrane; 2025. Available from: https://www.cochrane.org/authors/handbooks-and-  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manuals/handbook/current/chapter-04
+<li>Lefebvre C, Glanville J, Briscoe S, Featherstone R, Littlewood A, Metzendorf M-I, Noel-Storr A, Paynter R, Rader T, Thomas J, Wieland LS. Chapter 4: Searching for and selecting studies. In: Higgins JP, Thomas J,   Chandler J, Cumpston M, Li T, Page MJ, et al, editor(s). Cochrane Handbook for Systematic Reviews of Interventions version 6.5.1 Cochrane; 2025. Available from: https://www.cochrane.org/authors/handbooks-and-  manuals/handbook/current/chapter-04</li>
 
 The full-text record number is based on an average from several sources including:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Haddaway NR, Westgate MJ. Predicting the time needed for environmental systematic reviews and systematic maps. Conserv Biol. 2019;33(2):434-443. doi: 10.1111/cobi.13231.
+<li>Haddaway NR, Westgate MJ. Predicting the time needed for environmental systematic reviews and systematic maps. Conserv Biol. 2019;33(2):434-443. doi: 10.1111/cobi.13231.</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mateen FJ, Oh J, Tergas AI, Bhayani NH, Kamdar BB. Titles versus titles and abstracts for initial screening of articles for systematic reviews. Clin Epidemiol. 2013;5:89-95. doi: 10.2147/CLEP.S43118. 
+<li>Mateen FJ, Oh J, Tergas AI, Bhayani NH, Kamdar BB. Titles versus titles and abstracts for initial screening of articles for systematic reviews. Clin Epidemiol. 2013;5:89-95. doi: 10.2147/CLEP.S43118.</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polanin JR, Pigott TD, Espelage DL, Grotpeter JK. Best practice guidelines for abstract screening large‐evidence systematic reviews and meta‐analyses. Res Synth Methods. 2019 Sep;10(3):330–42. doi: 10.1002/jrsm.1354.
+<li>Polanin JR, Pigott TD, Espelage DL, Grotpeter JK. Best practice guidelines for abstract screening large‐evidence systematic reviews and meta‐analyses. Res Synth Methods. 2019 Sep;10(3):330–42. doi: 10.1002/jrsm.1354.</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Systematic Reviews: 5. Screen Results. Durham (NC): Duke University Medical Center Library & Archives; 2026. Available from: https://guides.mclibrary.duke.edu/sysreview/screen
+<li>Systematic Reviews: 5. Screen Results. Durham (NC): Duke University Medical Center Library & Archives; 2026. Available from: https://guides.mclibrary.duke.edu/sysreview/screen</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Waffenschmidt S, Sieben W, Jakubeit T, Knelangen M, Overesch I, Bühn S, Pieper D, Skoetz N, Hausner E. Increasing the efficiency of study selection for systematic reviews using prioritization tools and a single-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;screening approach. Syst Rev. 2023 Sep 14;12(1):161. doi: 10.1186/s13643-023-02334-x.
+<li>Waffenschmidt S, Sieben W, Jakubeit T, Knelangen M, Overesch I, Bühn S, Pieper D, Skoetz N, Hausner E. Increasing the efficiency of study selection for systematic reviews using prioritization tools and a single-screening approach. Syst Rev. 2023 Sep 14;12(1):161. doi: 10.1186/s13643-023-02334-x.</li>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.<br><br>
+<li>Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.</li>
 
 
   
