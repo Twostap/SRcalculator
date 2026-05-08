@@ -4,7 +4,8 @@ This calculator can be used to determine total number of records and time requir
 
 The calculator is currently a prototype and may undergo changes that could affect the reliability/consistency of results.
 
-It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of screening/data extraction time required for KS projects.
+It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of screening/data extraction time required for KS projects.  
+
 
 SOURCES OF DATA:
 
@@ -34,6 +35,7 @@ The full-text record number is based on an average from several sources includin
   Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.
 
 
+  
 USING THE CALCULATOR:
 
 In the left-hand menu:
@@ -44,12 +46,13 @@ In the left-hand menu:
 4. If you are planning to include any grey literature sources, you can select these under grey literature.
 5. Click calculate
 
-
+  
 INTERPRETING RESULTS:
 
 The results will be displayed in the center of the page. 
 
 
+  
 INTERPRETING NUMBER OF RECORDS:
 
 Anticipated number of records will be displayed for each database that was selected.
@@ -65,6 +68,7 @@ Full-Text Screen is the anticipated number of records that will remain for full-
 Includes is the total number of anticipated included citations for the KS project.
 
 
+  
 INTERPRETING TIME REQUIRED:
 
 Screen Titles/Abstracts is the anticipated number of hours it will take to screen titles/abstracts for single reviewer screening. If double screening, this number should be doubled.
@@ -76,6 +80,7 @@ Screen Full-Text is the anticipated number of hours it will take to screen full-
 Data Extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.
 
 
+  
 INTERPRETING DATA SOURCES:
 
 The data sources are provided to give a sense of how many matches there were for your query in the dataset. 
@@ -93,6 +98,7 @@ If you do not find matches based on your selection "No data" will display. You c
 If you are still retrieving no data based for similar Medline record numbers you can try using a general topic such as Medicine or Allied Health without any subtopics.
 
 
+  
 RESETTING THE FORM:
 
 Click the clear form button to start a new query. 
