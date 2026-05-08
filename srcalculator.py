@@ -16,7 +16,7 @@
 #################################################################################
 
 #Name: SRCalculator
-#Description: This code produces a flask app for calculating anticipating total number of records and time required for knowledge synthesis projects based on preliminary Medline results.
+#Description: This code produces a flask app for calculating anticipated total number of records and time required for knowledge synthesis projects based on preliminary Medline results.
 #Author: Tyler Ostapyk (tyler.ostapyk@umanitoba.ca)
 #Date: May 7, 2026
 
