@@ -29,7 +29,7 @@ The full-text record number is based on an average from several sources includin
 
 <li>Waffenschmidt S, Sieben W, Jakubeit T, Knelangen M, Overesch I, Bühn S, Pieper D, Skoetz N, Hausner E. Increasing the efficiency of study selection for systematic reviews using prioritization tools and a single-screening approach. Syst Rev. 2023 Sep 14;12(1):161. doi: 10.1186/s13643-023-02334-x.</li>
 
-<li>Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.</li>
+<li>Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.</li><br><br>
 
 
   
