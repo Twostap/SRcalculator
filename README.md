@@ -77,6 +77,8 @@ Unique/Includes sources are reviews that included your selected databases and co
 
 If you do not find matches based on your selection "No data" will display. You can try altering the Medline record number to find additional data sources.
 
+If you are still retrieving no data based for similar Medline record numbers you can try using a general topic such as Medicine or Allied Health without any subtopics.
+
 
 RESETTING THE FORM:
 
