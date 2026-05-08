@@ -8,13 +8,17 @@ It has not been validated or tested and the results may not accurately reflect r
 
 Records estimates with the exception of full-text screen records are calculated using data extracted from 7,300+ systematic reviews published in 2023 and retrieved in Scopus.
 
-Full-text screen record numbers and time estimates are based on numbers provided in the following sources: 
-
-Haddaway NR, Westgate MJ. Predicting the time needed for environmental systematic reviews and systematic maps. Conserv Biol. 2019;33(2):434-443. doi: 10.1111/cobi.13231.
+Time estimates are based on numbers provided in the following sources: 
 
 Nussbaumer-Streit B, Ellen M, Klerings I, et al. Resource use during systematic review production varies widely: a scoping review. Journal of Clinical Epidemiology. 2021;139:287-296. doi: 10.1016/j.jclinepi.2021.05.019
 
 Lefebvre C, Glanville J, Briscoe S, Featherstone R, Littlewood A, Metzendorf M-I, Noel-Storr A, Paynter R, Rader T, Thomas J, Wieland LS. Chapter 4: Searching for and selecting studies. In: Higgins JP, Thomas J, Chandler J, Cumpston M, Li T, Page MJ, et al, editor(s). Cochrane Handbook for Systematic Reviews of Interventions version 6.5.1 Cochrane; 2025. Available from: https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04
+
+The full-text record number is based on numbers from several sources including:
+
+Haddaway NR, Westgate MJ. Predicting the time needed for environmental systematic reviews and systematic maps. Conserv Biol. 2019;33(2):434-443. doi: 10.1111/cobi.13231.
+
+[NEED TO ADD OTHERS]
 
 
 USING THE CALCULATOR:
