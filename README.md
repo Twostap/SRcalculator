@@ -4,7 +4,7 @@ This calculator can be used to determine total number of records and time requir
 
 The calculator is currently a prototype and may undergo changes that could affect the reliability/consistency of results.
 
-It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of time required for KS projects.
+It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of screening/data extraction time required for KS projects.
 
 SOURCES OF DATA:
 
