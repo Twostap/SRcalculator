@@ -4,7 +4,7 @@ This calculator can be used to determine total number of records and time requir
 
 The calculator is currently a prototype and may undergo changes that could affect the reliability/consistency of results.
 
-It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of screening/data extraction time required for KS projects.  
+It has not been validated or tested and the results may not accurately reflect real-word KS projects. The results may be useful for planning or for the purposes of demonstrating the amount of screening/data extraction time required for KS projects.  <br><br>
 
 
 SOURCES OF DATA:
@@ -32,7 +32,7 @@ The full-text record number is based on an average from several sources includin
   Waffenschmidt S, Sieben W, Jakubeit T, Knelangen M, Overesch I, Bühn S, Pieper D, Skoetz N, Hausner E. Increasing the efficiency of study selection for systematic reviews using prioritization tools and a single-
   screening approach. Syst Rev. 2023 Sep 14;12(1):161. doi: 10.1186/s13643-023-02334-x.
 
-  Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.
+  Wang Z, Nayfeh T, Tetzlaff J, O'Blenis P, Murad MH. Error rates of human reviewers during abstract screening in systematic reviews. PLoS One. 2020 Jan 14;15(1):e0227742. doi: 10.1371/journal.pone.0227742.<br><br>
 
 
   
@@ -44,12 +44,12 @@ In the left-hand menu:
 2. Choose topics reflecting the topic of the review.
 3. Select the additional databases that will be used for the review. You can add additional databases beyond the options available by clicking on "Add Database" and selecting one of the databases from this list.
 4. If you are planning to include any grey literature sources, you can select these under grey literature.
-5. Click calculate
+5. Click calculate<br><br>
 
   
 INTERPRETING RESULTS:
 
-The results will be displayed in the center of the page. 
+The results will be displayed in the center of the page. <br><br>
 
 
   
@@ -65,7 +65,7 @@ Abstract/Title screen are the number of records anticipated for abstract/title s
 
 Full-Text Screen is the anticipated number of records that will remain for full-text screening after abstract/title screening.
 
-Includes is the total number of anticipated included citations for the KS project.
+Includes is the total number of anticipated included citations for the KS project.<br><br>
 
 
   
@@ -77,7 +77,7 @@ Retrieve Full-Text is the amount of time anticipated for retrieving the full-tex
 
 Screen Full-Text is the anticipated number of hours it will take to screen full-text for single reviewer screening. If double screening, this number should be doubled.
 
-Data Extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.
+Data Extraction is the number of hours it is anticipated to take a single reviewer to extract and validate data from the included records.<br><br>
 
 
   
