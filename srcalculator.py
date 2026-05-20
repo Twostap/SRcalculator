@@ -19,6 +19,7 @@
 #Description: This code produces a flask app for calculating anticipated total number of records and screening/extraction time required for knowledge synthesis projects based on preliminary Medline results.
 #Author: Tyler Ostapyk (tyler.ostapyk@umanitoba.ca)
 #Date: May 7, 2026
+#Version: 1.0
 
 
 from flask import Flask, request, render_template
