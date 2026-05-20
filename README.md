@@ -1,4 +1,4 @@
-PRODUCT Name: SRCalculator
+PRODUCT NAME: SRCalculator
 
 PURPOSE AND DESCRIPTION:
 
