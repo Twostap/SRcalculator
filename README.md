@@ -1,3 +1,5 @@
+PRODUCT Name: SRCalculator
+
 PURPOSE AND DESCRIPTION:
 
 This calculator can be used to determine total number of records and extraction/screening time required for knowledge synthesis (KS) projects based on preliminary Medline results.
@@ -36,9 +38,9 @@ USING THE CALCULATOR:
 
 In the left-hand menu:
 
-1. Input the number of Medline records from preliminary Medline search.
+1. Input the number of Medline records from a preliminary Medline search.
 2. Choose topics reflecting the topic of the review.
-3. Select the additional databases that will be used for the review. You can add additional databases beyond the options available by clicking on "Add Database" and selecting one of the databases from this list.
+3. Select the additional databases that will be used for the review. You can add additional databases beyond the options available by clicking on "Add Database" and selecting one of the databases from the drop-down list.
 4. If you are planning to include any grey literature sources, you can select these under grey literature.
 5. Click calculate<br><br>
 
@@ -83,7 +85,7 @@ The data sources are provided to give a sense of how many matches there were for
 
 Total Matching Topic is the number of reviews that include all of the topics selected.
 
-Matching Medline/Topic is the number of reviews that included all of the topics selected AND had Medline results that fell within 200 (i.e. 99 above, 99 below) the Medline record number input in your query. These are the reviews that are used to get average record number for your selected databases.
+Matching Medline/Topic is the number of reviews that included all of the topics selected AND had Medline results that fell within 200 (i.e. 99 above, 99 below) the Medline record number input in your query. These are the reviews that are used to get the average record number for your selected databases.
 
 Grey Literature Sources is the number of reviews that matched Medline/Topic and included the grey literature sources selected. These are the reviews that are used to calculate the average grey literature number.
 
@@ -91,7 +93,7 @@ Unique/Includes sources are reviews that included your selected databases and co
 
 If you do not find matches based on your selection "No data" will display. You can try altering the Medline record number to find additional data sources.
 
-If you are still retrieving no data based for similar Medline record numbers you can try using a general topic such as Medicine or Allied Health without any subtopics.<br><br>
+If you are still retrieving no data for similar Medline record numbers you can try using a general topic such as Medicine or Allied Health without any subtopics.<br><br>
 
 
   
