@@ -10,6 +10,7 @@ Version: 1.0 -->
 <!DOCTYPE html>
 <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+.body {overflow:hidden;}
 .AlliedSubTopics {color:white;}
 .formwrapper {width:100%; height:100%}
 .MedicineSubTopics {color:white;}
@@ -149,10 +150,11 @@ font-size: 1.2em;
   .sourcescolumn {text-align:center;}
   .resultdiv {min-width:300px;}
   .DatabaseInResults {text-align:left;}
+  .body {overflow:auto;}
   .selectlist {max-width:none;}}
 </style>
 </head>
-<body>
+<body class="body">
 <div class="navwrapper">
 <form class="formwrapper" onsubmit="return MedlineAlert()" name="formwrapper" action="{{ url_for("recordsdata")}}" method="post" enctype="multipart/form-data">
 <div class="sidenav">
