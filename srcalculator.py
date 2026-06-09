@@ -1037,7 +1037,6 @@ def recordsdata():
                 DatabaseSelection10Records = DatabaseSelection10Average.round(0).astype(int)
        DatabaseList = sorted(DatabaseList)
        DatabaseListString = "; ".join(DatabaseList)
-       print(DatabaseListString)
 
 # TopicsUniquedf = df[df['Topics'].str.contains(Topics)]
 # TopicsUnique = TopicsUniquedf['UniquePercent'].mean(numeric_only=True)
@@ -1048,7 +1047,6 @@ def recordsdata():
         
        UniqueCombined = Topicdf.query('DatabasesUsed.str.contains(@DatabaseListString)')['UniquePercent'].mean(numeric_only=True)
         
-       print(UniqueCombined)      
        DataMatch = Topicdf.query('DatabasesUsed.str.contains(@DatabaseListString)')
        DatabaseMatches = DataMatch.shape[0]
         
