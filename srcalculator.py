@@ -192,7 +192,7 @@ def recordsdata():
        else:
            DentistryChecked = ""
        if DrugsTopic=="on":
-           Topics.append("Drugs and Supplements (not toxicology)")    
+           Topics.append("Drugs and Supplements")    
            DrugsChecked = "checked"
        else:
            DrugsChecked = ""
