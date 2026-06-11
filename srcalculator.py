@@ -22,7 +22,7 @@
 #Version: 1.0
 
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, abort
 import pandas as pd
 from pathlib import Path
 
@@ -161,10 +161,9 @@ def recordsdata():
        GreyLiteratureSelection = []
        DatabaseList = []
        if not TotalMedline:
-           TotalMedline = "999999"
-           TotalMedline = float(TotalMedline)
-       else:
-           TotalMedline = float(TotalMedline) 
+           abort(400, description="Required input missing (e.g. Medline record number, Topic, or Database.")
+
+       TotalMedline = float(TotalMedline) 
 
        if AgricultureTopic=="on":
            Topics.append("Agriculture")
