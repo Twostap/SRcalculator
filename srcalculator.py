@@ -161,7 +161,7 @@ def recordsdata():
        GreyLiteratureSelection = []
        DatabaseList = []
        if not TotalMedline:
-           abort(400, description="Required input missing (e.g. Medline record number, Topic, or Database.")
+           abort(400, description="Medline record number is required.")
 
        TotalMedline = float(TotalMedline) 
 
