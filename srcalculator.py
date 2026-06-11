@@ -716,6 +716,8 @@ def recordsdata():
 
        GreyLiteratureSelection = sorted(GreyLiteratureSelection)
 
+       if not Topics:
+           abort(400, description="Selection of at least one topic is required.")
         
        for idx, val in enumerate(Topics):
            globals()[f'Topic_{idx}'] = val
