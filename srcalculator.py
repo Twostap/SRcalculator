@@ -160,7 +160,11 @@ def recordsdata():
        Topics = []
        GreyLiteratureSelection = []
        DatabaseList = []
-       TotalMedline = float(TotalMedline) 
+       if TotalMedline is None:
+           TotalMedline = "999999"
+           TotalMedline = float(TotalMedline)
+       else:
+           TotalMedline = float(TotalMedline) 
 
        if AgricultureTopic=="on":
            Topics.append("Agriculture")
