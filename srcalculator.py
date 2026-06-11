@@ -160,7 +160,7 @@ def recordsdata():
        Topics = []
        GreyLiteratureSelection = []
        DatabaseList = []
-       if TotalMedline is None:
+       if not TotalMedline:
            TotalMedline = "999999"
            TotalMedline = float(TotalMedline)
        else:
