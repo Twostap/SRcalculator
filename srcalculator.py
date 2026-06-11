@@ -759,10 +759,7 @@ def recordsdata():
        elif 'Topic_0' in globals(): 
            Topicdf = df.query('Topics.str.contains(@Topic_0)')      
 
-       if not Topicdf:
-           Medlinedf = "999999"
-       else:      
-           Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
+       Medlinedf = Topicdf.query('MedlineAverage - @TotalMedline <= 99 & MedlineAverage - @TotalMedline > -99')
         
        if CINAHLDatabase=="on":
            CINAHLChecked = "checked"
