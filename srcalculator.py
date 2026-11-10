@@ -1051,6 +1051,7 @@ def recordsdata():
        MedlineMatches = Medlinedf.shape[0]  
         
        UniqueCombined = Topicdf.query('DatabasesUsed.str.contains(@DatabaseListString)')['UniquePercent'].mean(numeric_only=True)
+       FullTextCombined = Topicdf.query('DatabasesUsed.str.contains(@DatabaseListString)')['FullTextPercent'].mean(numeric_only=True)
         
        DataMatch = Topicdf.query('DatabasesUsed.str.contains(@DatabaseListString)')
        DatabaseMatches = DataMatch.shape[0]
@@ -1090,6 +1091,12 @@ def recordsdata():
            UniqueAverage = TotalScreen * UniqueCombined
            UniqueAverage = UniqueAverage.round(0).astype(int)
 
+       if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(FullTextCombined) or FullTextCombined==0:
+           FullTextAverage = "No data"
+       else:
+           FullTextAverage = TotalScreen * FullTextCombined
+           FullTextAverage = FullTextAverage.round(0).astype(int)
+
        if TotalScreen=="No data" or pd.isna(TotalScreen) or pd.isna(IncludesPercent):
            IncludesAverage = "No data"
        else:
@@ -1108,15 +1115,13 @@ def recordsdata():
            AbstractScreenTime = round(AbstractScreenTime)
            AbstractScreenTime = str(AbstractScreenTime) + " hrs per reviewer"
 
-       if UniqueAverage=="No data" or pd.isna(UniqueAverage):
+       if FullTextAverage=="No data" or pd.isna(FullTextAverage):
            FullTextRecords = "No data"
            FullTextScreenTime = "No data"
            FullTextRetrievalTime = "No data"
            DataExtractionTime = "No data"
        else:
-           FullTextRecordsCalc = float("0.1")
-           FullTextRecords = UniqueAverage * FullTextRecordsCalc
-           FullTextRecords = round(FullTextRecords)
+           FullTextRecords = FullTextAverage
            FullTextScreenCalc = float("4.65")
            FullTextScreenTime = FullTextRecords * FullTextScreenCalc
            HoursCalcFull = float("60")
@@ -1128,14 +1133,14 @@ def recordsdata():
            FullTextRetrievalTime = round(FullTextRetrievalTime)
            FullTextRetrievalTime = str(FullTextRetrievalTime) + " hrs"
            FullTextRecords = str(FullTextRecords)
+       if IncludesAverage=="No data" or pd.isna(IncludesAverage):
+           DataExtractionTime = "No data"
+       else:
            DataExtractionCalc = float("53")
-           if IncludesAverage=="No data" or pd.isna(IncludesAverage):
-                DataExtractionTime = "No data"
-           else:
-                DataExtractionTime = IncludesAverage * DataExtractionCalc
-                DataExtractionTime = DataExtractionTime / HoursCalcFull
-                DataExtractionTime = round(DataExtractionTime)
-                DataExtractionTime = str(DataExtractionTime) + " hrs per reviewer"
+           DataExtractionTime = IncludesAverage * DataExtractionCalc
+           DataExtractionTime = DataExtractionTime / HoursCalcFull
+           DataExtractionTime = round(DataExtractionTime)
+           DataExtractionTime = str(DataExtractionTime) + " hrs per reviewer"
     
     else:
         CINAHLAverage = ""
